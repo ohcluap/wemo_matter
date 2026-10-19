@@ -1,0 +1,25 @@
+{
+  "file": "wemo_gpl_snsv2_package-11420.tar.gz",
+  "bytes": 307286090,
+  "sha256": "4f4648e8765a891bc995c868a6ebeb835a5d4c1e8d92f4fcd1e0162d9a1955e6",
+  "entries": [
+    {
+      "path": "FW_LICENSE_WeMo_SNSv2_v2.00.11420.pdf",
+      "size": 1007661,
+      "type": "0",
+      "link": null
+    },
+    {
+      "path": "README.txt",
+      "size": 445,
+      "type": "0",
+      "link": null
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420.tar.gz",
+      "size": 306359953,
+      "type": "0",
+      "link": null
+    }
+  ]
+}

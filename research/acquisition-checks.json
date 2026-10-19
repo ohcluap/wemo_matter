@@ -1,0 +1,18 @@
+[
+  {
+    "host": "fw.xbcs.net",
+    "dns_error": "[Errno 8] nodename nor servname provided, or not known"
+  },
+  {
+    "host": "firmware.xbcs.net",
+    "dns_error": "[Errno 8] nodename nor servname provided, or not known"
+  },
+  {
+    "url": "https://fw.xbcs.net/plugin/device/firmware.txt",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "url": "https://web.archive.org/cdx/search/cdx?url=fw.xbcs.net/*11565*&output=json&filter=statuscode:200&collapse=urlkey",
+    "error": "The read operation timed out"
+  }
+]

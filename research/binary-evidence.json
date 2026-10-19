@@ -1,0 +1,333 @@
+{
+  "scope": "Older SNSV2 11420 release; not installed 11565",
+  "files": [
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libAddlInfra.so",
+      "bytes": 151669,
+      "sha256": "9ee50e36879ec6b3de171938c351b6a99ba8699c6b1c364c8891e71e1897e51c",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libDeviceControl.so",
+      "bytes": 54978,
+      "sha256": "3d7981d2df7e1038425ee64abca88888edd651daed624106b40cc0d7d352239a",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libNetworkControl.so",
+      "bytes": 41435,
+      "sha256": "d03ab76dd98111e79831dfe9d823bc2e07c1ed23c0f6b7bbf88dfad897a58d83",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libPluginHndlr.so",
+      "bytes": 71323,
+      "sha256": "43419db45524585011987db80a9af8c5de69e37f60dc7c259ace86040885263a",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libRemoteAccess.so",
+      "bytes": 247759,
+      "sha256": "94001f7c7447939caca62540582da3ba51927c5ed80298d993657fd8f9f6bcb8",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/tmp/Belkin_settings/nvram_settings.sh",
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libUPnPHndlr.so",
+      "bytes": 455461,
+      "sha256": "8873584413902933a19a7de5de7a00c9a6276df9fc53fa55b08d174eb51a239d",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "StartIperf",
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libWemoDB.so",
+      "bytes": 14275,
+      "sha256": "93a0fd714bc8caddfcd2c5e2ae341f98f45a6a6379bdae05acffa64ab656a8ad",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libbelkin_api.so",
+      "bytes": 35648,
+      "sha256": "75b01a17e1b870435d62a76eb72add2119a47ecd6e3184485037d3d49f7c0417",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libbelkin_nvram.so",
+      "bytes": 49275,
+      "sha256": "76fdfc5e20758d9efc60341ceed510c1dfdf5283ee43f49cebd0f2169c286e53",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libhkstore.so",
+      "bytes": 57859,
+      "sha256": "6f28bccc3443677d336bdc95fc539ce06b700f6d8e5e6448f3cdfb7635ef2220",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libulog.so",
+      "bytes": 13437,
+      "sha256": "1b9f8f23dfe06c1ecc0404de6beea77c7dfba6603cf8ea782768ac83baeb58c6",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/libwemoengine.so",
+      "bytes": 7203,
+      "sha256": "5695451d42a05c59dffd313dbff96094e809cf4f7c3272746f99c8028b67ee1a",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": []
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/modules/3.18.27/mt7628.ko",
+      "bytes": 1145692,
+      "sha256": "00875165f90f8547b49b7a0908ed2502978c8e49bedd4c209aee520b7c4993f0",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": []
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/lib/modules/3.18.27/myadd.ko",
+      "bytes": 3352,
+      "sha256": "d231643f9ceef6d4681ba06cc1fefe58a7e2e96863697936c6c5197660ffbdee",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": []
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/BCT_Test",
+      "bytes": 13207,
+      "sha256": "9afbf2a0f7d84d343c0b1917e60a0ef2f84196325d75fe685cdce0a55d7d7b4b",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/IPv4LLAddr",
+      "bytes": 11911,
+      "sha256": "4bf2c3034aa51985e5d04a396dd13b7d3e9a736dda5378d49e09c938101f8b2f",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0",
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/fw_check",
+      "bytes": 17407,
+      "sha256": "edc297f9b48414867bc55398ea6d1af970265376629b4d0ea0b61ec1866e0fb7",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0",
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/fw_schedule",
+      "bytes": 6539,
+      "sha256": "3e6848bc163ea7d644484301ce07dbe2e259cea5ded0df028bf9b8540f995e7d",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0",
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/hkstore",
+      "bytes": 13931,
+      "sha256": "c82d72d12433addc4fbad6317b86bf97abd7903e68b5cf14470beb1c1f972bc9",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/homekitcli",
+      "bytes": 8039,
+      "sha256": "4650f772b09396c0e68e8c64b0328b5198f6064903c8a1c37b750dbe88bba437",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/image_tool",
+      "bytes": 6695,
+      "sha256": "39753f0fd033bad6ee6c4523fa399913bcb337b99c1c8041ba1ca17387c26271",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/nvram",
+      "bytes": 15335,
+      "sha256": "790e69c562b81537eb1aa35bba4afb13547a4509d55c57281e08a1dff615551a",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/pmortemd",
+      "bytes": 7463,
+      "sha256": "1e56abecd1d15a06157f673ece45db4f07ca6905e8454bfd02b018129acd810b",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/waspd",
+      "bytes": 138103,
+      "sha256": "4b35daca9eb31e409cf1eae70b1e534c5a7165d0fcf840b9fd1677aad389209c",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/wemoApp",
+      "bytes": 20919,
+      "sha256": "b74e13974f9e4604c4d02d0cffc026d4e8ff3fc75e95856dfcb169340a6f124a",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0",
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/wemo_client",
+      "bytes": 16791,
+      "sha256": "fa7925b754b22154ee1ad2521e0b4cfa1b9a0d58dc0ceda85b5514586f2393b9",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/wemo_ctrl",
+      "bytes": 58343,
+      "sha256": "b28ab9be91ceac3e8d6b71b3eb1fe641c65114e47083c9d635d56331743f1fbc",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0",
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/wemohap",
+      "bytes": 509127,
+      "sha256": "e48532f9ea7cb0c44fc1042dbda696691a76f9b0a887fd732c78088da4a59c29",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": [
+        "/lib/ld-uClibc.so.0",
+        "system"
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/usr/lib/libWasp.so",
+      "bytes": 30743,
+      "sha256": "a9d9e94bfa9ccefefc04dc1f4adfbace0899712df066fd875ad0fcc7084b659c",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": []
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/usr/lib/libsrp.so",
+      "bytes": 18371,
+      "sha256": "3f81309b1870155e8fb169079a7e0974c6abd1244ca41a57ad0885d038f17f59",
+      "elf_class": 1,
+      "elf_endianness": 1,
+      "elf_machine": 8,
+      "selected_strings": []
+    }
+  ]
+}
