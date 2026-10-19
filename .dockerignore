@@ -2,3 +2,6 @@
 !toolchains/
 !toolchains/Dockerfile.offline-tests
 !toolchains/Dockerfile.musl-tests
+
+!toolchains/Dockerfile.matter-app
+!toolchains/requirements-matter.txt

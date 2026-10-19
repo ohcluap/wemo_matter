@@ -84,7 +84,11 @@ No device commands, firmware updates, resets, exploitation, or uploads were perf
 
 Validation: synthetic archive test checks traversal, absolute paths, symbolic links, skipped dependencies, non-executable output, and refusal to reuse an existing extraction directory. Static analysis successfully processed the downloaded product binaries. The unrelated parent project's Bun/Jest suite does not apply to this standalone Python research repository.
 
-## Current offline port milestone
+## Complete offline simulator
+
+A full Linux ARM64 Matter outlet app now passes discovery, commissioning, on/off/toggle readbacks, simulated relay callbacks, and control after restart without re-pairing. See the [full-app report](research/full-app.md) and [test results](research/commissioning-results.json). Testing uses an isolated internal Docker network, with no Wemo changes. This is a native protocol simulator; the complete MIPS application remains to be ported.
+
+## MIPS component port milestone
 
 The [soft-float runtime and Matter component report](research/runtime-port.md) supersedes the initial runtime blocker below. An OpenWrt GCC 13.3.0/musl toolchain now produces static soft-float binaries that pass on QEMU's 24KEc model. Actual Matter SDK TLV and crypto implementations run, including 53 upstream AES-CCM vectors and P-256 signing/verification. See [test output](research/musl-tests.txt).
 

@@ -1,0 +1,33 @@
+{
+  "sdk_commit": "3bcdd56ba54fb88b2afb4bfef575014671df7aa7",
+  "target": "Linux ARM64; full native simulator/controller, not Wemo firmware",
+  "zap_version": "v2026.05.12-nightly",
+  "zap_sha256": "a6774a14a0fa957d8d830f6517140c3dd949531c1b1696fda0b52688c0566984",
+  "submodules": {
+    "third_party/pigweed/repo": "8bc35d07baf8000f8db57674a23c5e06f7516d79",
+    "third_party/nlassert/repo": "c5892c5ae43830f939ed660ff8ac5f1b91d336d3",
+    "third_party/nlio/repo": "0e725502c2b17bb0a0c22ddd4bcaee9090c8fb5c",
+    "third_party/jsoncpp/repo": "8519b8381f3c741ad1421f88237b1deda0b11412",
+    "examples/common/QRCode/repo": "8518684c0f33d004fa93971be2c6a8eca3167d1e",
+    "third_party/nanopb/repo": "98bf4db69897b53434f3d0ba72e0a3ab1a902824",
+    "third_party/uriparser/repo": "04d8b8df5e0c6bf6c06e472540c015943a613bd2",
+    "third_party/editline/repo": "79c39d2756d02db6887b4669c45cce0eae05f9c8",
+    "third_party/perfetto/repo": "c1bbc165292877349b219a12498c1e768015a9e8",
+    "third_party/libwebsockets/repo": "98fcfb5a3e24db7d7bfde2855e64d69a19382433",
+    "third_party/mbedtls/repo": "6a58fa8122c9bb8ee1644733d21b5677c93f1169"
+  },
+  "outputs": [
+    {
+      "path": "artifacts/full-app/native/chip-lighting-app",
+      "bytes": 1939672,
+      "sha256": "8086fb06f0df9122ecaff7977f569d31c761214d33786e722ccbe6b4a2be61f0"
+    },
+    {
+      "path": "artifacts/full-app/controller/chip-tool",
+      "bytes": 13431808,
+      "sha256": "03b3743a227f7e16839ba3c5b53fa75f68936fff89c35b99fb5107f8069ab87e"
+    }
+  ],
+  "app_gn_args": "is_debug = false\nchip_support_thread_meshcop = false\nsymbol_level = 0\nmatter_enable_tracing_support = false\nis_clang = false\nchip_inet_config_enable_ipv4 = true\nchip_config_network_layer_ble = false\nchip_enable_wifi = false\nchip_enable_thread = false\nchip_mdns = \"minimal\"\n",
+  "controller_gn_args": "is_debug = false\nchip_support_thread_meshcop = false\nsymbol_level = 0\nis_clang = false\nmatter_enable_tracing_support = false\nchip_inet_config_enable_ipv4 = true\nchip_config_network_layer_ble = false\nchip_mdns = \"minimal\"\n"
+}

@@ -1,0 +1,16 @@
+cbor2==6.1.5
+cffi==2.1.1
+click==8.5.0
+coloredlogs==15.0.1
+cryptography==50.0.2
+dacite==1.9.2
+ecdsa==0.19.2
+humanfriendly==10.0
+Jinja2==3.1.6
+lark==1.3.1
+MarkupSafe==3.0.4
+pycparser==3.11
+pyparsing==3.3.3
+python-path==0.1.3
+PyYAML==6.0.3
+six==1.17.0

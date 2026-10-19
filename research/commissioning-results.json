@@ -1,0 +1,22 @@
+{
+  "run_id": "4e1f2ad3",
+  "utc": "2026-10-19T02:07:05.166130+00:00",
+  "target": "Linux arm64 simulated outlet; not Wemo/MIPS",
+  "tests": [
+    "commissioning",
+    "outlet-device-type",
+    "off-command",
+    "off-readback",
+    "on-command",
+    "on-readback",
+    "toggle-command",
+    "toggle-readback",
+    "simulated-relay-callbacks",
+    "restart-session-read",
+    "restart-on-command",
+    "restart-on-readback"
+  ],
+  "passed": true,
+  "internal_network_verified": true,
+  "network_removed": true
+}
