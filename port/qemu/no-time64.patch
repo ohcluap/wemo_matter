@@ -1,0 +1,13 @@
+--- a/linux-user/syscall.c
++++ b/linux-user/syscall.c
+@@ -8608,0 +8609,10 @@
++#ifdef TARGET_NR_clock_gettime64
++    /* Offline test: make Linux 5.1 time64 syscalls unavailable. This is
++     * selected fault injection, not a complete Linux 3.18 emulation. */
++    if (getenv("WEMO_TEST_NO_TIME64") &&
++        num >= TARGET_NR_clock_gettime64 &&
++        num <= TARGET_NR_sched_rr_get_interval_time64) {
++        return -TARGET_ENOSYS;
++    }
++#endif
++

@@ -1,0 +1,28 @@
+#!/bin/sh /etc/rc.common
+# Development service; no boot enablement or physical relay implementation.
+START=95
+USE_PROCD=1
+
+start_service() {
+  config_load wemo-matter
+  local enabled backend interface
+  config_get_bool enabled main enabled 0
+  [ "$enabled" = 1 ] || return 0
+  config_get backend main backend simulated
+  config_get interface main interface ra0
+  [ "$backend" = simulated ] || return 1
+  if [ ! -f /etc/wemo-matter/development-mode ]; then
+    logger -t wemo-matter 'Development identity acknowledgement is missing'
+    return 1
+  fi
+  [ -n "$interface" ] || return 1
+  umask 077
+  mkdir -p /etc/wemo-matter/state || return 1
+  chmod 700 /etc/wemo-matter/state || return 1
+  procd_open_instance
+  procd_set_param command /usr/bin/wemo-matter-outlet \
+    --KVS /etc/wemo-matter/state/wemo.kvs --interface-id "$interface"
+  procd_set_param stdout 1
+  procd_set_param stderr 1
+  procd_close_instance
+}

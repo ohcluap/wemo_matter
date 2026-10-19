@@ -39,3 +39,7 @@ The device command is `qemu-mipsel -cpu 24KEc /bin-output/chip-lighting-app`. Th
 QEMU user emulation executes MIPS instructions and translates Linux system calls into the Docker VM's modern host kernel. It does not emulate the Wemo's board, original kernel, flash layout, Wi-Fi, GPIO, RAM capacity or timing. Static musl linking avoids dependence on the stock uClibc loader but does not establish old-kernel compatibility. This is an executable, not an installable firmware image or a validated deployment path.
 
 Commissioning uses SDK test identities and the controller's development trust store. Physical relay controls, production attestation/provisioning, hardware resource validation, exact firmware acquisition, recovery and deployment remain outside this test. No Wemo changes are made.
+
+## Subsequent firmware integration
+
+The [firmware readiness assessment](firmware-readiness.md) adds stripped payload measurements, bounded-memory protocol tests, tested clock fallback and a persistent-storage firmware profile. It records remaining board, kernel, Wi-Fi, relay and installation requirements.

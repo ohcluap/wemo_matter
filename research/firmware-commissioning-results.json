@@ -1,0 +1,193 @@
+{
+  "run_id": "36ebbc01",
+  "utc": "2026-10-19T02:40:47.623997+00:00",
+  "target": "MIPS32r2 soft-float full outlet under QEMU 24KEc user emulation",
+  "physical_device_tested": false,
+  "tests": [
+    "commissioning",
+    "outlet-device-type",
+    "off-command",
+    "off-readback",
+    "on-command",
+    "on-readback",
+    "toggle-command",
+    "toggle-readback",
+    "simulated-relay-callbacks",
+    "restart-session-read",
+    "restart-on-command",
+    "restart-on-readback"
+  ],
+  "passed": true,
+  "persistent_storage_profile": true,
+  "time64_enosys_injection": true,
+  "app_sha256": "0b92c2b8a549838add560dc0365b77668b0bb7243a2688d7779136634e4bcc27",
+  "internal_network_verified": true,
+  "memory_limit_bytes": 67108864,
+  "swap_disabled": true,
+  "resource_samples": [
+    {
+      "label": "startup",
+      "cgroup_current_bytes": 15577088,
+      "cgroup_peak_bytes": 16613376,
+      "process_status": [
+        "VmPeak:\t 2311720 kB",
+        "VmSize:\t 2311720 kB",
+        "VmHWM:\t   14448 kB",
+        "VmRSS:\t   14448 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "commissioning",
+      "cgroup_current_bytes": 20336640,
+      "cgroup_peak_bytes": 20951040,
+      "process_status": [
+        "VmPeak:\t 2312492 kB",
+        "VmSize:\t 2312492 kB",
+        "VmHWM:\t   19296 kB",
+        "VmRSS:\t   19296 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "outlet-device-type",
+      "cgroup_current_bytes": 21008384,
+      "cgroup_peak_bytes": 21508096,
+      "process_status": [
+        "VmPeak:\t 2312492 kB",
+        "VmSize:\t 2312492 kB",
+        "VmHWM:\t   19388 kB",
+        "VmRSS:\t   19388 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "off-command",
+      "cgroup_current_bytes": 19968000,
+      "cgroup_peak_bytes": 21508096,
+      "process_status": [
+        "VmPeak:\t 2312492 kB",
+        "VmSize:\t 2312492 kB",
+        "VmHWM:\t   19396 kB",
+        "VmRSS:\t   19396 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "off-readback",
+      "cgroup_current_bytes": 20557824,
+      "cgroup_peak_bytes": 21508096,
+      "process_status": [
+        "VmPeak:\t 2312492 kB",
+        "VmSize:\t 2312492 kB",
+        "VmHWM:\t   19404 kB",
+        "VmRSS:\t   19404 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "on-command",
+      "cgroup_current_bytes": 19976192,
+      "cgroup_peak_bytes": 21508096,
+      "process_status": [
+        "VmPeak:\t 2312492 kB",
+        "VmSize:\t 2312492 kB",
+        "VmHWM:\t   19408 kB",
+        "VmRSS:\t   19408 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "on-readback",
+      "cgroup_current_bytes": 19951616,
+      "cgroup_peak_bytes": 21508096,
+      "process_status": [
+        "VmPeak:\t 2312492 kB",
+        "VmSize:\t 2312492 kB",
+        "VmHWM:\t   19412 kB",
+        "VmRSS:\t   19412 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "toggle-command",
+      "cgroup_current_bytes": 20500480,
+      "cgroup_peak_bytes": 21508096,
+      "process_status": [
+        "VmPeak:\t 2312492 kB",
+        "VmSize:\t 2312492 kB",
+        "VmHWM:\t   19416 kB",
+        "VmRSS:\t   19416 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "toggle-readback",
+      "cgroup_current_bytes": 19968000,
+      "cgroup_peak_bytes": 21508096,
+      "process_status": [
+        "VmPeak:\t 2312492 kB",
+        "VmSize:\t 2312492 kB",
+        "VmHWM:\t   19416 kB",
+        "VmRSS:\t   19416 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "startup",
+      "cgroup_current_bytes": 15327232,
+      "cgroup_peak_bytes": 16605184,
+      "process_status": [
+        "VmPeak:\t 2311852 kB",
+        "VmSize:\t 2311848 kB",
+        "VmHWM:\t   14524 kB",
+        "VmRSS:\t   14524 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "restart-session-read",
+      "cgroup_current_bytes": 18337792,
+      "cgroup_peak_bytes": 18919424,
+      "process_status": [
+        "VmPeak:\t 2312236 kB",
+        "VmSize:\t 2312232 kB",
+        "VmHWM:\t   17040 kB",
+        "VmRSS:\t   17040 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "restart-on-command",
+      "cgroup_current_bytes": 17690624,
+      "cgroup_peak_bytes": 18919424,
+      "process_status": [
+        "VmPeak:\t 2312236 kB",
+        "VmSize:\t 2312232 kB",
+        "VmHWM:\t   17108 kB",
+        "VmRSS:\t   17108 kB",
+        "Threads:\t2"
+      ]
+    },
+    {
+      "label": "restart-on-readback",
+      "cgroup_current_bytes": 17985536,
+      "cgroup_peak_bytes": 18919424,
+      "process_status": [
+        "VmPeak:\t 2312236 kB",
+        "VmSize:\t 2312232 kB",
+        "VmHWM:\t   17120 kB",
+        "VmRSS:\t   17120 kB",
+        "Threads:\t2"
+      ]
+    }
+  ],
+  "persistent_files_bytes": {
+    "chip_factory.ini": 44,
+    "chip_config.ini": 122,
+    "chip_counters.ini": 79,
+    "wemo.kvs": 1693
+  },
+  "fresh_tmp_after_restart_verified": true,
+  "network_removed": true
+}

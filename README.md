@@ -97,3 +97,7 @@ These component tests are separate from the full MIPS server and commissioning m
 ## Initial offline development prototype (historical)
 
 The [build feasibility milestone](research/build-feasibility.md) records the pinned Matter SDK review, runtime/toolchain gaps, and testable C++ relay component. This is **not yet Matter firmware**. The mock component was cross-compiled for MIPS and tested in QEMU without network access. It passes on 24Kf but fails on the Wemo-like 24KEc model because the selected runtime is unsuitable; target compatibility remains blocked. It has no physical device backend. See [recorded test output](research/offline-tests.txt).
+
+## Firmware fit and integration milestone
+
+The [firmware readiness report](research/firmware-readiness.md) assesses the older vendor's 64 MiB RAM / 16 MiB flash source profile while preserving uncertainty about this physical device. The stripped app passes commissioning/control in a 64 MiB no-swap emulator container and with time64 calls unavailable. A persistent-storage firmware profile, disabled OpenWrt service, tested XZ rootfs payload and bounded unsigned-image assembler now support further offline integration. The payload alone is 640 KiB; complete firmware fit and an installation path remain unverified. See [hardware/payload evidence](research/hardware-fit.json).

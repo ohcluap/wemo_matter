@@ -1,0 +1,150 @@
+{
+  "evidence_scope": "Vendor SNSV2 11420 source; installed 11565 and physical layout unconfirmed",
+  "layouts": {
+    "MT7628snsv2.dts": {
+      "source": "sources/snsv2-11420/target/linux/ramips/dts/MT7628snsv2.dts",
+      "source_sha256": "7fb63c22a816eb0da35ea765be314882d73f81a73e93464b864f25704a79b445",
+      "ram_bytes": 67108864,
+      "partitions": {
+        "Uboot": {
+          "offset": 0,
+          "bytes": 327680
+        },
+        "kernel_1": {
+          "offset": 327680,
+          "bytes": 1572864
+        },
+        "rootfs_1": {
+          "offset": 1900544,
+          "bytes": 6160384
+        },
+        "kernel_2": {
+          "offset": 8126464,
+          "bytes": 1572864
+        },
+        "rootfs_2": {
+          "offset": 9699328,
+          "bytes": 6029312
+        },
+        "rootfs_data": {
+          "offset": 15728640,
+          "bytes": 327680
+        },
+        "nvram": {
+          "offset": 16646144,
+          "bytes": 65536
+        },
+        "User_Factory": {
+          "offset": 16711680,
+          "bytes": 65536
+        },
+        "Factory": {
+          "offset": 262144,
+          "bytes": 65536
+        },
+        "homekit": {
+          "offset": 8060928,
+          "bytes": 65536
+        },
+        "Belkin_settings": {
+          "offset": 16056320,
+          "bytes": 589824
+        },
+        "Uboot_env": {
+          "offset": 196608,
+          "bytes": 65536
+        },
+        "Firmware_1": {
+          "offset": 327680,
+          "bytes": 7733248
+        },
+        "Firmware_2": {
+          "offset": 8126464,
+          "bytes": 7733248
+        }
+      }
+    },
+    "MT7628snsv2-8M.dts": {
+      "source": "sources/snsv2-11420/target/linux/ramips/dts/MT7628snsv2-8M.dts",
+      "source_sha256": "1e775d668e61b0f6b63b7d08e4f363bada07a3a8a4072391134005240d8ebbf9",
+      "ram_bytes": 67108864,
+      "partitions": {
+        "Uboot": {
+          "offset": 0,
+          "bytes": 327680
+        },
+        "kernel_1": {
+          "offset": 327680,
+          "bytes": 1572864
+        },
+        "rootfs_1": {
+          "offset": 1900544,
+          "bytes": 5439488
+        },
+        "rootfs_data": {
+          "offset": 7340032,
+          "bytes": 327680
+        },
+        "nvram": {
+          "offset": 7667712,
+          "bytes": 65536
+        },
+        "User_Factory": {
+          "offset": 7733248,
+          "bytes": 65536
+        },
+        "Belkin_settings": {
+          "offset": 7798784,
+          "bytes": 589824
+        },
+        "Factory": {
+          "offset": 262144,
+          "bytes": 65536
+        },
+        "Uboot_env": {
+          "offset": 196608,
+          "bytes": 65536
+        },
+        "Firmware_1": {
+          "offset": 327680,
+          "bytes": 7012352
+        }
+      }
+    }
+  },
+  "conservative_rootfs_slot_bytes": 6029312,
+  "vendor_generated_image_bytes": 7602176,
+  "vendor_kernel_region_bytes": 1572864,
+  "payload": {
+    "path": "artifacts/firmware/rootfs-payload.squashfs",
+    "bytes": 655360,
+    "sha256": "d1116f2b29896baf9532a8e3f04edf6d05d82796fcb451a9fb520dfd87a25d85"
+  },
+  "stripped_app": {
+    "bytes": 2088300,
+    "sha256": "0b92c2b8a549838add560dc0365b77668b0bb7243a2688d7779136634e4bcc27"
+  },
+  "payload_alone_fits_rootfs_slot": true,
+  "stripped_app_fits_writable_overlay": false,
+  "complete_firmware_fit": "unknown: no matching kernel or complete rootfs",
+  "installable": false,
+  "firmware_profile": {
+    "sdk_commit": "3bcdd56ba54fb88b2afb4bfef575014671df7aa7",
+    "gn_args": "target_os = \"linux\"\ntarget_cpu = \"mipsel\"\ncustom_toolchain = \"custom\"\ntarget_cc = \"/opt/staging/toolchain-mipsel_24kc_gcc-13.3.0_musl/bin/mipsel-openwrt-linux-gcc\"\ntarget_cxx = \"/opt/staging/toolchain-mipsel_24kc_gcc-13.3.0_musl/bin/mipsel-openwrt-linux-g++\"\ntarget_ar = \"/opt/staging/toolchain-mipsel_24kc_gcc-13.3.0_musl/bin/mipsel-openwrt-linux-ar\"\ntarget_cflags = [\n  \"-march=24kec\",\n  \"-msoft-float\",\n  \"-mabi=32\",\n]\nenable_pie = false\ntarget_ldflags = [\n  \"-static\",\n  \"-specs=/work/toolchains/mips-static.specs\",\n  \"-march=24kec\",\n  \"-msoft-float\",\n  \"-mabi=32\",\n]\nchip_crypto = \"mbedtls\"\nis_debug = false\nchip_support_thread_meshcop = false\nsymbol_level = 0\nmatter_enable_tracing_support = false\nis_clang = false\nchip_inet_config_enable_ipv4 = true\nchip_config_network_layer_ble = false\nchip_enable_wifi = false\nchip_enable_thread = false\nchip_mdns = \"minimal\"\n\ntarget_defines = [\"FATCONFDIR=\\\"/etc/wemo-matter/state\\\"\", \"SYSCONFDIR=\\\"/etc/wemo-matter/state\\\"\", \"LOCALSTATEDIR=\\\"/etc/wemo-matter/state\\\"\"]\n",
+    "state_directory": "/etc/wemo-matter/state",
+    "relay_backend": "simulated",
+    "service_enabled_by_default": false,
+    "squashfs_roundtrip_verified_by_build_script": true,
+    "unstripped_app_sha256": "9f44a3d2c5ef4bef1127f14807a0d3f3a0795d7d2dd3617a0297de9e89804246"
+  },
+  "remaining_requirements": [
+    "Confirm exact board/RAM/partition map",
+    "Acquire matching firmware/recovery evidence",
+    "Validate kernel 3.18 and Wi-Fi behavior",
+    "Implement and verify relay/button GPIO backend",
+    "Integrate complete rootfs and kernel within slot limits",
+    "Production device identity and network provisioning",
+    "Establish authorized update/recovery path"
+  ],
+  "vendor_dts_aggregate_overlap_bytes": 131072
+}
