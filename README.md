@@ -83,3 +83,7 @@ Extraction requires a new destination, rejects traversal/absolute paths and link
 No device commands, firmware updates, resets, exploitation, or uploads were performed during this offline task. No vendor code was executed. Source/archive downloads remain local and ignored by Git; the repository records research, hashes, and inspection tools. Device addresses, serials, MAC addresses, pairing codes, and credentials are omitted.
 
 Validation: synthetic archive test checks traversal, absolute paths, symbolic links, skipped dependencies, non-executable output, and refusal to reuse an existing extraction directory. Static analysis successfully processed the downloaded product binaries. The unrelated parent project's Bun/Jest suite does not apply to this standalone Python research repository.
+
+## Offline development prototype
+
+The [build feasibility milestone](research/build-feasibility.md) records the pinned Matter SDK review, runtime/toolchain gaps, and testable C++ relay component. This is **not yet Matter firmware**. The mock component was cross-compiled for MIPS and tested in QEMU without network access. It passes on 24Kf but fails on the Wemo-like 24KEc model because the selected runtime is unsuitable; target compatibility remains blocked. It has no physical device backend. See [recorded test output](research/offline-tests.txt).
