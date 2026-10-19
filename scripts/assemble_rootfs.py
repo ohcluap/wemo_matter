@@ -30,8 +30,10 @@ def stage(name, guest=False):
     for applet in applets:
         (destination/'bin'/applet).symlink_to('/bin/busybox')
     install(ROOT/'artifacts/full-app/firmware/wemo-matter-outlet', destination/'usr/bin/wemo-matter-outlet')
-    for binary in ('wpa_supplicant','wpa_cli','wpa_passphrase','iw','netns-exec'):
+    for binary in ('wpa_supplicant','wpa_cli','wpa_passphrase','iw','netns-exec','wemo-wifi-provision'):
         install(ROOT/'artifacts/wifi'/binary, destination/'usr/bin'/binary)
+    install(ROOT/'sources/wpa_supplicant-2.11/README',
+            destination/'usr/share/licenses/wpa_supplicant/README', 0o644)
     if guest:
         for binary in ('hostapd','hostapd_cli'):
             install(ROOT/'artifacts/wifi'/binary,destination/'usr/bin'/binary)

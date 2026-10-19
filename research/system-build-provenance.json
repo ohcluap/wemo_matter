@@ -73,14 +73,68 @@
     },
     {
       "path": "artifacts/system-image/board-rootfs.squashfs",
-      "bytes": 1822720,
-      "sha256": "50f1b748146df1b25fbab3aacd0e6ad223b64acf0777f61b4e5853b4e3d1d566"
+      "bytes": 1851392,
+      "sha256": "c0a151dd5902d9482cec05c1fd928c886db2a55003cb2ba3b889c90c058c247a"
     },
     {
       "path": "artifacts/system-image/guest-initramfs.cpio.gz",
-      "bytes": 4565322,
-      "sha256": "f21b7c09073ec10c14637544b828cf37bdebd4fdd70e44e47f3fa22f7b5d4d8a"
+      "bytes": 4595915,
+      "sha256": "4de4dfde5285df5f476ae32efa178b101d6042c7c9e6228975a74dabebe12c81"
+    },
+    {
+      "path": "artifacts/wifi/wpa_passphrase",
+      "bytes": 124984,
+      "sha256": "c35986a8a2d05ca33d1d281089699a4863e53359e2ac44710042741b59a9c86a"
+    },
+    {
+      "path": "artifacts/wifi/wemo-wifi-provision",
+      "bytes": 54524,
+      "sha256": "79ceef7547568480164d52a71bd63d8233d8ff15b15116779b2dc8358af8262d"
+    },
+    {
+      "path": "artifacts/kernel-board/wemo-kernel.uImage",
+      "bytes": 1245074,
+      "sha256": "d8f6d8e1cdce126354b01edf4e6a3b54e9a45c6f04e6f737276527bbee3ffc2c"
+    },
+    {
+      "path": "artifacts/system-image/wemo-unsigned-development-d01ca63a194f.bin",
+      "bytes": 7602176,
+      "sha256": "d01ca63a194ffa63bdacd7b09a46229cdf65dc843064f00edce3466226a9e953"
     }
   ],
-  "successful_guest_run": "f42ca25c"
+  "successful_guest_run": "2995eb84",
+  "provisioning_inputs": [
+    {
+      "path": "port/wifi_provision.c",
+      "sha256": "8b519eb6fa2f47fdb6542ad0940165c3763f7416329486e0ec27a12d48c14296"
+    },
+    {
+      "path": "scripts/build_wifi_provision.sh",
+      "sha256": "3415b35c3323c62dce868d3ab570182551bbe56f15c1a3936af34049f2391837"
+    },
+    {
+      "path": "scripts/assemble_rootfs.py",
+      "sha256": "fd99e09904c7fbbdb34f1c8d51d3eb29e01b52756b58f227f8a2892dcd2d52fc"
+    },
+    {
+      "path": "firmware/rootfs/usr/lib/wemo/guest-tests.sh",
+      "sha256": "ff1f2ff79e5b8f895bb929a7c58795d2314afdc26fd229dc4e7c0c81ca42374c"
+    },
+    {
+      "path": "sources/wpa_supplicant-2.11/src/crypto/sha1-pbkdf2.c",
+      "sha256": "f826d1c54d71354b85153f87dac8e312b20b04fe172e2f23d3121e570a1c1693"
+    },
+    {
+      "path": "sources/wpa_supplicant-2.11/src/crypto/sha1.c",
+      "sha256": "31624aef199f166128332ed92b9ec22afb21f78d996b0d3821ae3fc0531a86fc"
+    },
+    {
+      "path": "sources/wpa_supplicant-2.11/src/crypto/sha1-internal.c",
+      "sha256": "5907d5f9ca7a5d26804d106f14e2bea84fc8e6c10a7b1aa09bab33dd4627a237"
+    },
+    {
+      "path": "sources/wpa_supplicant-2.11/src/utils/common.c",
+      "sha256": "309edb4af12f5ddbb7b17e5f1f80d25304cdde4a985f314dc371a65b3a076ae3"
+    }
+  ]
 }

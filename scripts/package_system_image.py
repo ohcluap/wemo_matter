@@ -21,6 +21,6 @@ report={'scope':'Real rebuilt Wemo-profile kernel and minimal complete developme
         'rootfs_sha256':hashlib.sha256(rootfs.read_bytes()).hexdigest(),
         'format_size_validation_passed':True,'vendor_signed':False,'installable_update':False,
         'radio_autoload':False,'physical_relay_enabled':False,'board_boot_tested':False,
-        'provisioning':'No home-network credentials; production identity and persistent flash overlay setup unimplemented'}
+        'provisioning':'Transactional OS-level WPA2 tool included; no home-network credentials. Matter Wi-Fi onboarding, production identity and persistent flash overlay setup unimplemented'}
 (ROOT/'research/system-image-build.json').write_text(json.dumps(report,indent=2)+'\n')
 print('PASS: real kernel and complete development rootfs fit conservative image budgets')

@@ -47,6 +47,57 @@ while ! ns wpa_cli -p /tmp/wpa -i wlan1 status | grep -q 'wpa_state=COMPLETED'; 
   sleep 1; i=$((i+1)); [ "$i" -lt 40 ] || fail wpa2-wext-association
 done
 pass wpa2-wext-association
+mkdir -p /etc/wemo-matter/state/wifi
+chmod 700 /etc/wemo-matter/state/wifi
+wifi_state=/etc/wemo-matter/state/wifi
+cp /etc/offline-station.conf "$wifi_state/wifi.conf"
+chmod 600 "$wifi_state/wifi.conf"
+cp "$wifi_state/wifi.conf" /tmp/wifi-before.conf
+# Public laboratory credentials only; no shell expansion of user input.
+printf 'WemoOfflineLab\nwrong-password-for-lab\n' > /tmp/lab-credentials
+if ns wemo-wifi-provision /tmp/wpa/wlan1 "$wifi_state" 6 < /tmp/lab-credentials > /tmp/provision.log 2>&1; then
+  fail wrong-wifi-password-accepted
+else
+  [ "$?" = 1 ] || fail wrong-password-trial-not-exercised
+fi
+grep -q WIFI_PROVISION_TESTING /tmp/provision.log || fail wrong-password-network-not-selected
+grep -q WIFI_PROVISION_NOT_COMMITTED /tmp/provision.log || fail wrong-password-result
+[ "$(cat "$wifi_state/wifi.conf")" = "$(cat /tmp/wifi-before.conf)" ] || fail wifi-rollback-config
+[ ! -e "$wifi_state/wifi.pending" ] || fail wifi-stale-pending
+i=0
+while ! ns wpa_cli -p /tmp/wpa -i wlan1 status | grep -q 'wpa_state=COMPLETED'; do
+  sleep 1; i=$((i+1)); [ "$i" -lt 40 ] || fail wifi-rollback-association
+done
+pass wifi-wrong-password-rollback
+printf '%s\n' 'WemoOfflineLab' 'offline-"lab\#-2026' > /tmp/lab-credentials
+ns wemo-wifi-provision /tmp/wpa/wlan1 "$wifi_state" 30 < /tmp/lab-credentials > /tmp/provision.log 2>&1 || fail wifi-provision
+grep -q WIFI_PROVISION_COMMITTED /tmp/provision.log || fail wifi-commit-result
+ls -l "$wifi_state/wifi.conf" | grep -q '^-rw-------' || fail wifi-config-permissions
+if grep -q 'offline-' /tmp/provision.log; then fail wifi-secret-output; fi
+grep -q 'psk=543958a34468c0f920ae0709a649ff25c7c602381813bfb01d743be643973b4b' "$wifi_state/wifi.conf" || fail wifi-derived-key
+pass wifi-credentials-atomic-commit
+cp "$wifi_state/wifi.conf" /tmp/wifi-committed.conf
+printf 'WemoOfflineLab\nshort\n' > /tmp/lab-credentials
+if ns wemo-wifi-provision /tmp/wpa/wlan1 "$wifi_state" 2 < /tmp/lab-credentials >/tmp/provision.log 2>&1; then fail invalid-wifi-accepted; fi
+[ "$(cat "$wifi_state/wifi.conf")" = "$(cat /tmp/wifi-committed.conf)" ] || fail invalid-wifi-changed-config
+mv "$wifi_state/wifi.conf" "$wifi_state/wifi.saved"
+ln -s /tmp/wifi-committed.conf "$wifi_state/wifi.conf"
+printf '%s\n' 'WemoOfflineLab' 'offline-"lab\#-2026' > /tmp/lab-credentials
+if ns wemo-wifi-provision /tmp/wpa/wlan1 "$wifi_state" 2 < /tmp/lab-credentials >/tmp/provision.log 2>&1; then fail wifi-symlink-accepted; fi
+rm "$wifi_state/wifi.conf"
+mv "$wifi_state/wifi.saved" "$wifi_state/wifi.conf"
+pass wifi-input-and-symlink-rejection
+ns wpa_cli -p /tmp/wpa -i wlan1 terminate >/tmp/wpa-terminate.log
+sleep 2
+# A stale transaction must not be selected on process restart.
+echo 'invalid unfinished credentials' > "$wifi_state/wifi.pending"
+ns wpa_supplicant -B -D wext -i wlan1 -c "$wifi_state/wifi.conf" -f /tmp/wpa-wext.log || fail provisioned-station-restart
+i=0
+while ! ns wpa_cli -p /tmp/wpa -i wlan1 status | grep -q 'wpa_state=COMPLETED'; do
+  sleep 1; i=$((i+1)); [ "$i" -lt 40 ] || fail provisioned-restart-association
+done
+rm "$wifi_state/wifi.pending" /tmp/lab-credentials
+pass wifi-restart-from-committed-config
 ip -6 addr add fd7e:ca71:10::1/64 dev wlan0
 ns ip -6 addr add fd7e:ca71:10::2/64 dev wlan1
 sleep 3

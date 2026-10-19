@@ -1,0 +1,132 @@
+{
+  "scope": "Offline analysis of SNSV2 11420 sources; installed firmware 11565 differs",
+  "physical_device_touched": false,
+  "installation_allowed": false,
+  "image_sha256": "d01ca63a194ffa63bdacd7b09a46229cdf65dc843064f00edce3466226a9e953",
+  "source_evidence": [
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/firmware_update.sh",
+      "sha256": "f16c45caf7d16cef0c94bf7f1ad35a599f1e031c09a4e7e9e5e6d2671e5ea114",
+      "lines": {
+        "gpg --verify": [
+          53
+        ],
+        "Signature test failed.": [
+          90
+        ],
+        "verify product name": [
+          150
+        ],
+        "Invalid Boot partition": [
+          178
+        ],
+        "mtd write $FIRMWARE_NAME $mtd_other": [
+          187
+        ],
+        "fw_setenv bootstate $newstate": [
+          200
+        ],
+        "fw_setenv bootpart $newpart": [
+          203
+        ]
+      }
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/update_test.sh",
+      "sha256": "1ffa158bedd705a1272f5fb9a941fab71700954ff80793e6be947350ca3a758f",
+      "lines": {
+        "sleep 60": [
+          17
+        ],
+        "/tmp/*.starting": [
+          18
+        ],
+        "alternate partition by uboot": [
+          27
+        ],
+        "fw_setenv bootstate 0": [
+          34
+        ],
+        "fw_setenv bootstate 2": [
+          37
+        ]
+      }
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/go_dummy.sh",
+      "sha256": "fd19e7330b8c33dedc1597795671452f95e4f7678556204640cc18296f5b572d",
+      "lines": {
+        "fw_setenv bootstate 2": [
+          13
+        ],
+        "fw_setenv bootstate 0": [
+          17
+        ]
+      }
+    },
+    {
+      "path": "target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+      "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+      "lines": {
+        "grep -i Uboot_env /proc/mtd": [
+          109
+        ],
+        "0x0 0x1000 00010000": [
+          110
+        ],
+        "checkboot=": [
+          272
+        ],
+        "/sbin/update_test.sh 0 &": [
+          278
+        ]
+      }
+    },
+    {
+      "path": "target/linux/ramips/dts/MT7628snsv2.dts",
+      "sha256": "7fb63c22a816eb0da35ea765be314882d73f81a73e93464b864f25704a79b445",
+      "lines": {
+        "label = \"Firmware_2\"": [
+          89
+        ],
+        "label = \"rootfs_data\"": [
+          57
+        ]
+      }
+    }
+  ],
+  "source_layout_only": true,
+  "conservative_slot_checks": {
+    "A": {
+      "start": 327680,
+      "erase_end": 7929856,
+      "limit": 8060928,
+      "bytes": 7602176
+    },
+    "B": {
+      "start": 8126464,
+      "erase_end": 15728640,
+      "limit": 15728640,
+      "bytes": 7602176
+    }
+  },
+  "aggregate_B_overlap_shared_overlay_bytes": 131072,
+  "stock_update_states": {
+    "0_or_1": "write B, then bootstate=3",
+    "2_or_3": "write A, then bootstate=1",
+    "unknown": "stock script defaults to A; unsafe to emulate"
+  },
+  "stock_health_commit": {
+    "1": 0,
+    "3": 2
+  },
+  "bootloader_rollback_emulated": false,
+  "blockers": [
+    "Exact physical model, flash geometry, partition map and bootloader not confirmed",
+    "Candidate has no Belkin signature; stock updater is not an installation route",
+    "No verified exact-device RAM boot or independent recovery transport",
+    "No verified complete original flash backup or restore rehearsal",
+    "MT7688 board boot, vendor radio ABI/calibration and physical relay remain untested",
+    "Persistent flash overlay, production identity and Matter-managed Wi-Fi provisioning incomplete"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "run_id": "f42ca25c",
+  "run_id": "2995eb84",
   "machine": "QEMU Malta; not an emulated MT7688 board",
   "cpu": "24KEc",
   "guest_memory_bytes": 67108864,
@@ -12,6 +12,10 @@
     "hwsim-radios",
     "wpa2-nl80211-association",
     "wpa2-wext-association",
+    "wifi-wrong-password-rollback",
+    "wifi-credentials-atomic-commit",
+    "wifi-input-and-symlink-rejection",
+    "wifi-restart-from-committed-config",
     "wifi-ipv6-between-network-namespaces",
     "commissioning",
     "outlet-device-type",
@@ -26,19 +30,19 @@
     "full-mips-kernel-rootfs-wifi-matter-relay"
   ],
   "passed": true,
-  "wall_seconds": 31.11,
+  "wall_seconds": 43.37,
   "guest_meminfo_observations": [
     "MemTotal:          59648 kB",
-    "MemFree:           39856 kB",
-    "MemAvailable:      38800 kB",
+    "MemFree:           39792 kB",
+    "MemAvailable:      38736 kB",
     "Buffers:               0 kB",
     "MemTotal:          59648 kB",
-    "MemFree:           38528 kB",
-    "MemAvailable:      37488 kB",
+    "MemFree:           38464 kB",
+    "MemAvailable:      37408 kB",
     "Buffers:               0 kB"
   ],
   "artifacts": {
     "artifacts/kernel-malta/vmlinux": "df02e2f4d90cf5a745301566a00319342999bedca6d3ec0a396b66e224cfda5d",
-    "artifacts/system-image/guest-initramfs.cpio.gz": "f21b7c09073ec10c14637544b828cf37bdebd4fdd70e44e47f3fa22f7b5d4d8a"
+    "artifacts/system-image/guest-initramfs.cpio.gz": "4de4dfde5285df5f476ae32efa178b101d6042c7c9e6228975a74dabebe12c81"
   }
 }

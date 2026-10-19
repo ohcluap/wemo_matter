@@ -3,6 +3,7 @@ set -eu
 cd "$(dirname "$0")/.."
 # Refresh the stripped firmware app, including its value-file backend.
 scripts/build_firmware_payload.sh > artifacts/firmware-payload-build.log 2>&1
+sh scripts/build_wifi_provision.sh > artifacts/wifi-provision-build.log 2>&1
 python3 scripts/assemble_rootfs.py
 docker run --rm --network none \
  -v "$PWD/sources/openwrt-sdk/staging_dir:/opt/staging:ro" \

@@ -1,0 +1,23 @@
+test_untrusted_archive_entries_are_not_followed (test_archive.ExtractionTests.test_untrusted_archive_entries_are_not_followed) ... ok
+test_offsets_and_erased_padding (test_candidate.CandidateImageTests.test_offsets_and_erased_padding) ... ok
+test_reject_corrupt_or_wrong_kernel (test_candidate.CandidateImageTests.test_reject_corrupt_or_wrong_kernel) ... ok
+test_reject_rootfs_overflow_and_incompatible_format (test_candidate.CandidateImageTests.test_reject_rootfs_overflow_and_incompatible_format) ... ok
+test_candidate_preserves_both_slot_boundaries (test_install_recovery.InstallBoundaryTests.test_candidate_preserves_both_slot_boundaries) ... ok
+test_never_overwrite_fallback_during_trial_or_unknown_state (test_install_recovery.InstallBoundaryTests.test_never_overwrite_fallback_during_trial_or_unknown_state) ... ok
+test_old_aggregate_b_size_overlaps_shared_overlay (test_install_recovery.InstallBoundaryTests.test_old_aggregate_b_size_overlaps_shared_overlay) ... ok
+test_partial_erase_block_crossing_rejected (test_install_recovery.InstallBoundaryTests.test_partial_erase_block_crossing_rejected) ... ok
+test_cancel_preserves_config_and_restores_previous_selection (test_wifi_provision.ProvisionTests.test_cancel_preserves_config_and_restores_previous_selection) ... ok
+test_hex_key_and_ssid_cannot_inject_config_or_commands (test_wifi_provision.ProvisionTests.test_hex_key_and_ssid_cannot_inject_config_or_commands) ... ok
+test_lock_contention_and_abrupt_stop_leave_known_good_on_disk (test_wifi_provision.ProvisionTests.test_lock_contention_and_abrupt_stop_leave_known_good_on_disk) ... ok
+test_malformed_input_never_contacts_supplicant (test_wifi_provision.ProvisionTests.test_malformed_input_never_contacts_supplicant) ... ok
+test_missing_socket_keeps_committed_config (test_wifi_provision.ProvisionTests.test_missing_socket_keeps_committed_config) ... ok
+test_permissive_state_directory_rejected (test_wifi_provision.ProvisionTests.test_permissive_state_directory_rejected) ... ok
+test_special_passphrase_and_max_length_match_independent_pbkdf2 (test_wifi_provision.ProvisionTests.test_special_passphrase_and_max_length_match_independent_pbkdf2) ... ok
+test_stale_pending_file_cannot_become_committed (test_wifi_provision.ProvisionTests.test_stale_pending_file_cannot_become_committed) ... ok
+test_symlink_config_rejected_before_radio_change (test_wifi_provision.ProvisionTests.test_symlink_config_rejected_before_radio_change) ... ok
+test_timeout_preserves_config_and_restores_previous_selection (test_wifi_provision.ProvisionTests.test_timeout_preserves_config_and_restores_previous_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.974s
+
+OK

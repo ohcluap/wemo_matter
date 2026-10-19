@@ -105,3 +105,9 @@ The [firmware readiness report](research/firmware-readiness.md) assesses the old
 ## Complete offline system milestone
 
 A real vendor-profile Linux 3.18.27 kernel and complete minimal development rootfs now assemble into a size-checked unsigned candidate. A separate 64 MiB MIPS guest boots the full system and passes WPA2 through nl80211/WEXT, IPv6 over virtual Wi-Fi between network namespaces, Matter commissioning/control and relay-file/error handling. See the [full-system report](research/full-system.md), [successful boot results](research/system-boot-results.json) and [candidate image evidence](research/system-image-build.json). The physical Wemo board/radio/relay and an installable signed update remain unverified.
+
+## Wi-Fi provisioning and recovery milestone
+
+The MIPS rootfs now includes transactional OS-level WPA2 provisioning: private credential input, derived hex keys, association before commit, rollback to the previous connection and restart from the committed configuration. Offline fault tests cover cancellation, abrupt process termination and malformed/path inputs. See [provisioning and recovery findings](research/provisioning-and-recovery.md). Matter/BLE-managed Wi-Fi onboarding remains incomplete.
+
+The source-based install audit identifies an aggregate B-partition overlap with shared data and checks conservative erase boundaries. **No safe installation/recovery method is verified for this exact plug.** The unsigned image remains blocked from installation; no device settings, firmware or flash were changed.
