@@ -1,0 +1,25 @@
+{
+  "scope": "Offline component binaries, not firmware or a complete Matter application",
+  "files": [
+    {
+      "file": "test-matter-crypto",
+      "bytes": 560332,
+      "sha256": "e0e750622670efcd906e75563340a7b4a3147c71c17e8f05667976ddf3ef07b6"
+    },
+    {
+      "file": "test-matter-tlv",
+      "bytes": 241120,
+      "sha256": "618e1439b98adb5439b8d73871c7016a8af8745352c6ee911ea2ba69f0c69f35"
+    },
+    {
+      "file": "test-relay",
+      "bytes": 289420,
+      "sha256": "d932d292d16c1022ea363f7166a40039f19cc3127085884a0940cfea9b2354c1"
+    },
+    {
+      "file": "test-runtime",
+      "bytes": 400204,
+      "sha256": "4813a6f6fa02456e82c9f6b7db3d5b049c67373bcee7efbde70240c316bee64b"
+    }
+  ]
+}

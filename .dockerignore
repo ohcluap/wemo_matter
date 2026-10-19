@@ -1,3 +1,4 @@
 **
 !toolchains/
 !toolchains/Dockerfile.offline-tests
+!toolchains/Dockerfile.musl-tests

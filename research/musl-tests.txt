@@ -1,0 +1,30 @@
+mipsel-openwrt-linux-g++ (OpenWrt GCC 13.3.0 r28959-29397011cc) 13.3.0
+Attribute Section: gnu
+File Attributes
+  Tag_GNU_MIPS_ABI_FP: Soft float
+
+MIPS ABI Flags Version: 0
+
+ISA: MIPS32r2
+GPR size: 32
+CPR1 size: 0
+CPR2 size: 0
+FP ABI: Soft float
+ISA Extension: None
+ASEs:
+	DSP ASE
+FLAGS 1: 00000001
+FLAGS 2: 00000000
+
+Static GOT:
+PASS: routing, input validation, on/off, idempotence, failure/retry, restart state
+PASS: software floating point, pthreads, mutex, atomics, monotonic clock, entropy, IPv6 socket creation
+PASS: real Matter SDK TLV golden bytes, roundtrip, truncated input, output bounds
+make: Entering directory '/out/mbedtls/library'
+make: Leaving directory '/out/mbedtls/library'
+PASS: 53 upstream AES-CCM known-answer/error vectors
+PASS: real Matter crypto PAL SHA-256 known answer, AES-CCM roundtrip, tampered tag rejection, P256 sign/verify and tamper rejection
+PASS: static soft-float ELF: test-relay
+PASS: static soft-float ELF: test-runtime
+PASS: static soft-float ELF: test-matter-tlv
+PASS: static soft-float ELF: test-matter-crypto

@@ -1,5 +1,7 @@
 # Offline build milestone — 2026-10-18
 
+The later [runtime port milestone](runtime-port.md) resolves the initial hard-float blocker for tested components in emulation. This document preserves the initial investigation.
+
 ## Outcome and boundaries
 
 This repository now contains a small C++ relay-control prototype and a MIPS cross-compilation/emulation harness. **It is not a Matter stack, bootable firmware, or a flashable image.** It is an independently testable application component for a possible future port. No GPIO backend is implemented and no device is contacted.

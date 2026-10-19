@@ -84,6 +84,12 @@ No device commands, firmware updates, resets, exploitation, or uploads were perf
 
 Validation: synthetic archive test checks traversal, absolute paths, symbolic links, skipped dependencies, non-executable output, and refusal to reuse an existing extraction directory. Static analysis successfully processed the downloaded product binaries. The unrelated parent project's Bun/Jest suite does not apply to this standalone Python research repository.
 
-## Offline development prototype
+## Current offline port milestone
+
+The [soft-float runtime and Matter component report](research/runtime-port.md) supersedes the initial runtime blocker below. An OpenWrt GCC 13.3.0/musl toolchain now produces static soft-float binaries that pass on QEMU's 24KEc model. Actual Matter SDK TLV and crypto implementations run, including 53 upstream AES-CCM vectors and P-256 signing/verification. See [test output](research/musl-tests.txt).
+
+This is not yet a full Matter server, commissioning test, or firmware image. Compatibility with the physical Wemo is unverified. All testing stays offline with no flashing or device changes.
+
+## Initial offline development prototype (historical)
 
 The [build feasibility milestone](research/build-feasibility.md) records the pinned Matter SDK review, runtime/toolchain gaps, and testable C++ relay component. This is **not yet Matter firmware**. The mock component was cross-compiled for MIPS and tested in QEMU without network access. It passes on 24Kf but fails on the Wemo-like 24KEc model because the selected runtime is unsuitable; target compatibility remains blocked. It has no physical device backend. See [recorded test output](research/offline-tests.txt).
