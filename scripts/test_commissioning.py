@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Commission and control only a simulated outlet on an internal Docker network."""
+import argparse
+import hashlib
 import datetime
 import json
 from pathlib import Path
@@ -11,6 +13,12 @@ import uuid
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE = 'wemo-matter-app-builder:bookworm'
 BUILD = ROOT / 'artifacts/full-app'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--target', choices=['native', 'mips'], default='native')
+args = parser.parse_args()
+app_image = IMAGE if args.target == 'native' else 'wemo-matter-offline-tests:bookworm'
+runner = [] if args.target == 'native' else ['qemu-mipsel', '-cpu', '24KEc']
+app_binary = BUILD / args.target / 'chip-lighting-app'
 run_id = uuid.uuid4().hex[:8]
 network = 'wemo-matter-test-' + run_id
 app_name = network + '-app'
@@ -21,7 +29,9 @@ run_dir = BUILD / 'tests' / run_id
 (run_dir / 'device').mkdir(parents=True)
 (run_dir / 'controller').mkdir()
 report = {'run_id': run_id, 'utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-          'target': 'Linux arm64 simulated outlet; not Wemo/MIPS', 'tests': [], 'passed': False}
+          'target': ('Linux arm64 simulated outlet' if args.target == 'native' else
+                     'MIPS32r2 soft-float full outlet under QEMU 24KEc user emulation'),
+          'physical_device_tested': False, 'tests': [], 'passed': False}
 
 
 def docker(*args, timeout=90, check=True):
@@ -50,7 +60,7 @@ def tool(label, *args, expected=None):
 def start_app():
     docker('run', '-d', '--name', app_name, '--network', network, '--ip6', address,
            '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--read-only',
-           '-v', f'{BUILD}/native:/bin-output:ro', '-v', f'{run_dir}/device:/tmp', IMAGE,
+           '-v', f'{BUILD}/{args.target}:/bin-output:ro', '-v', f'{run_dir}/device:/tmp', app_image, *runner,
            '/bin-output/chip-lighting-app', '--KVS', '/tmp/wemo-simulator.kvs',
            '--discriminator', '3840', '--passcode', '20202021', '--interface-id', 'eth0')
     deadline = time.monotonic() + 30
@@ -63,7 +73,8 @@ def start_app():
 
 
 try:
-    assert (BUILD / 'native/chip-lighting-app').is_file(), 'Build outlet first'
+    assert app_binary.is_file(), 'Build outlet first'
+    report['app_sha256'] = hashlib.sha256(app_binary.read_bytes()).hexdigest()
     assert (BUILD / 'controller/chip-tool').is_file(), 'Build controller first'
     docker('network', 'create', '--internal', '--ipv6', '--subnet', subnet, network)
     info = json.loads(docker('network', 'inspect', network).stdout)[0]
@@ -99,5 +110,6 @@ finally:
     report['network_removed'] = cleanup.returncode == 0
     (run_dir / 'summary.json').write_text(json.dumps(report, indent=2) + '\n')
     if report['passed']:
-        (ROOT / 'research/commissioning-results.json').write_text(json.dumps(report, indent=2) + '\n')
+        (ROOT / ('research/commissioning-results.json' if args.target == 'native' else
+                 'research/mips-commissioning-results.json')).write_text(json.dumps(report, indent=2) + '\n')
     print('Local logs:', run_dir, flush=True)

@@ -26,6 +26,9 @@ if [ ! -d sources/connectedhomeip ]; then
 fi
 sdk_commit=$(git -C sources/connectedhomeip rev-parse HEAD)
 [ "$sdk_commit" = 3bcdd56ba54fb88b2afb4bfef575014671df7aa7 ] || { echo 'Unexpected Matter SDK revision' >&2; exit 1; }
-git -C sources/connectedhomeip sparse-checkout add src/lib src/system src/ble src/inet src/crypto third_party/nlio third_party/mbedtls
+# Preserve an existing full SDK checkout used by the complete application.
+if [ "$(git -C sources/connectedhomeip config --bool core.sparseCheckout || true)" = true ]; then
+  git -C sources/connectedhomeip sparse-checkout add src/lib src/system src/ble src/inet src/crypto third_party/nlio third_party/mbedtls
+fi
 git -C sources/connectedhomeip submodule update --init --depth 1 third_party/nlio/repo third_party/mbedtls/repo
 docker build --platform linux/amd64 -f toolchains/Dockerfile.musl-tests -t wemo-matter-musl-tests:bookworm .

@@ -86,13 +86,13 @@ Validation: synthetic archive test checks traversal, absolute paths, symbolic li
 
 ## Complete offline simulator
 
-A full Linux ARM64 Matter outlet app now passes discovery, commissioning, on/off/toggle readbacks, simulated relay callbacks, and control after restart without re-pairing. See the [full-app report](research/full-app.md) and [test results](research/commissioning-results.json). Testing uses an isolated internal Docker network, with no Wemo changes. This is a native protocol simulator; the complete MIPS application remains to be ported.
+A full Linux ARM64 Matter outlet app now passes discovery, commissioning, on/off/toggle readbacks, simulated relay callbacks, and control after restart without re-pairing. See the [full-app report](research/full-app.md) and [test results](research/commissioning-results.json). Testing uses an isolated internal Docker network, with no Wemo changes. The complete MIPS32r2 soft-float app now also passes the same 12 checks under QEMU 24KEc. See the [full MIPS report](research/full-mips-app.md) and [MIPS test results](research/mips-commissioning-results.json). Neither build is an installable Wemo firmware image.
 
 ## MIPS component port milestone
 
 The [soft-float runtime and Matter component report](research/runtime-port.md) supersedes the initial runtime blocker below. An OpenWrt GCC 13.3.0/musl toolchain now produces static soft-float binaries that pass on QEMU's 24KEc model. Actual Matter SDK TLV and crypto implementations run, including 53 upstream AES-CCM vectors and P-256 signing/verification. See [test output](research/musl-tests.txt).
 
-This is not yet a full Matter server, commissioning test, or firmware image. Compatibility with the physical Wemo is unverified. All testing stays offline with no flashing or device changes.
+These component tests are separate from the full MIPS server and commissioning milestone above. They are not a firmware image. Compatibility with the physical Wemo is unverified. All testing stays offline with no flashing or device changes.
 
 ## Initial offline development prototype (historical)
 

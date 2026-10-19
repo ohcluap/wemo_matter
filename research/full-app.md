@@ -56,4 +56,4 @@ The scripts target Linux ARM64 Docker on this Mac and use an ARM64 ZAP executabl
 
 ## Remaining Wemo work
 
-The full application has **not** been cross-compiled and tested on the MIPS 24KEc emulator. The earlier soft-float runtime/component results do not establish that the complete app's platform dependencies, storage, network behavior, memory footprint or CPU cost are suitable for the plug. A full MIPS port and resource assessment remain next; exact hardware/firmware and recovery validation are still required before considering any physical deployment.
+A subsequent [full MIPS build](full-mips-app.md) now passes commissioning, on/off/toggle and retained-commissioning restart checks under QEMU 24KEc. Those results do not establish compatibility with the actual Wemo kernel/board, physical relay, memory limits or CPU timing. Hardware resource assessment, exact hardware/firmware and recovery validation remain required before considering any physical deployment.

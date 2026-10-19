@@ -12,4 +12,4 @@ The model's `.matter` file and generated C++ are regenerated with the SDK's pinn
 
 The source adaptation intentionally operates in the ignored SDK checkout. The checked-in Python script is the authoritative patch, and refuses to run against a different SDK commit. Downloads, generated binaries, detailed protocol logs, and generated test credentials stay under ignored `sources/` and `artifacts/`.
 
-The native simulator is a Linux arm64 application for offline protocol testing, not a MIPS executable or Wemo firmware. The earlier MIPS component tests remain separate.
+The same adapted application builds for native Linux ARM64 and static MIPS32r2 soft-float. Both pass offline commissioning/control checks; the MIPS version runs under QEMU 24KEc. See [full MIPS results](../research/full-mips-app.md). These executables are not installable Wemo firmware and have no physical relay backend.

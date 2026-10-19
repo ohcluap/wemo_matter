@@ -1,0 +1,2 @@
+*libgcc:
+%{static|static-libgcc:-lgcc -lgcc_eh}%{!static:%{!static-libgcc:-lgcc_s}}

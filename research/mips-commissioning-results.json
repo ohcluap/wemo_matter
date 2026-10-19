@@ -1,0 +1,24 @@
+{
+  "run_id": "faa2aff6",
+  "utc": "2026-10-19T02:29:08.699111+00:00",
+  "target": "MIPS32r2 soft-float full outlet under QEMU 24KEc user emulation",
+  "physical_device_tested": false,
+  "tests": [
+    "commissioning",
+    "outlet-device-type",
+    "off-command",
+    "off-readback",
+    "on-command",
+    "on-readback",
+    "toggle-command",
+    "toggle-readback",
+    "simulated-relay-callbacks",
+    "restart-session-read",
+    "restart-on-command",
+    "restart-on-readback"
+  ],
+  "passed": true,
+  "app_sha256": "9c0fb31fc2ebe988a3aa7aba15e08338f96c84ca260f9c021eb05edba38d39f3",
+  "internal_network_verified": true,
+  "network_removed": true
+}
