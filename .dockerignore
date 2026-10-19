@@ -5,3 +5,5 @@
 
 !toolchains/Dockerfile.matter-app
 !toolchains/requirements-matter.txt
+
+!toolchains/Dockerfile.board-build

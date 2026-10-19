@@ -118,11 +118,11 @@
   "payload": {
     "path": "artifacts/firmware/rootfs-payload.squashfs",
     "bytes": 655360,
-    "sha256": "d1116f2b29896baf9532a8e3f04edf6d05d82796fcb451a9fb520dfd87a25d85"
+    "sha256": "bcd259f1e88b158a72b01592dc80d6266d4ab6cafd034708ad39bddee4ed35ab"
   },
   "stripped_app": {
-    "bytes": 2088300,
-    "sha256": "0b92c2b8a549838add560dc0365b77668b0bb7243a2688d7779136634e4bcc27"
+    "bytes": 2090920,
+    "sha256": "8a7af039a0905f132ece2a15b086a51dbb3e60856c632e37b5a6dcbb35bb6f25"
   },
   "payload_alone_fits_rootfs_slot": true,
   "stripped_app_fits_writable_overlay": false,
@@ -135,7 +135,7 @@
     "relay_backend": "simulated",
     "service_enabled_by_default": false,
     "squashfs_roundtrip_verified_by_build_script": true,
-    "unstripped_app_sha256": "9f44a3d2c5ef4bef1127f14807a0d3f3a0795d7d2dd3617a0297de9e89804246"
+    "unstripped_app_sha256": "eb028e5fdc83093b8267115ba811bbc60384b973e164653211751aa868554445"
   },
   "remaining_requirements": [
     "Confirm exact board/RAM/partition map",

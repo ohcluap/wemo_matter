@@ -1,0 +1,19 @@
+{
+  "scope": "Real rebuilt Wemo-profile kernel and minimal complete development rootfs; board boot unverified",
+  "kernel_bytes": 1245074,
+  "kernel_budget_bytes": 1572864,
+  "rootfs_bytes": 1822720,
+  "rootfs_budget_bytes": 6029312,
+  "image_bytes": 7602176,
+  "image_sha256": "6547b305e744ce224d1c9ad3236c3e2d5f48812d5e8747cb6962371631748c4f",
+  "path": "artifacts/system-image/wemo-unsigned-development-6547b305e744.bin",
+  "kernel_sha256": "d8f6d8e1cdce126354b01edf4e6a3b54e9a45c6f04e6f737276527bbee3ffc2c",
+  "rootfs_sha256": "50f1b748146df1b25fbab3aacd0e6ad223b64acf0777f61b4e5853b4e3d1d566",
+  "format_size_validation_passed": true,
+  "vendor_signed": false,
+  "installable_update": false,
+  "radio_autoload": false,
+  "physical_relay_enabled": false,
+  "board_boot_tested": false,
+  "provisioning": "No home-network credentials; production identity and persistent flash overlay setup unimplemented"
+}

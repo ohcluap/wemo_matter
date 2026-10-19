@@ -101,3 +101,7 @@ The [build feasibility milestone](research/build-feasibility.md) records the pin
 ## Firmware fit and integration milestone
 
 The [firmware readiness report](research/firmware-readiness.md) assesses the older vendor's 64 MiB RAM / 16 MiB flash source profile while preserving uncertainty about this physical device. The stripped app passes commissioning/control in a 64 MiB no-swap emulator container and with time64 calls unavailable. A persistent-storage firmware profile, disabled OpenWrt service, tested XZ rootfs payload and bounded unsigned-image assembler now support further offline integration. The payload alone is 640 KiB; complete firmware fit and an installation path remain unverified. See [hardware/payload evidence](research/hardware-fit.json).
+
+## Complete offline system milestone
+
+A real vendor-profile Linux 3.18.27 kernel and complete minimal development rootfs now assemble into a size-checked unsigned candidate. A separate 64 MiB MIPS guest boots the full system and passes WPA2 through nl80211/WEXT, IPv6 over virtual Wi-Fi between network namespaces, Matter commissioning/control and relay-file/error handling. See the [full-system report](research/full-system.md), [successful boot results](research/system-boot-results.json) and [candidate image evidence](research/system-image-build.json). The physical Wemo board/radio/relay and an installable signed update remain unverified.

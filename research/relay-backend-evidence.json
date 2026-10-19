@@ -1,0 +1,11 @@
+{
+  "scope": "SNSV2 11420 library only; installed 11565 and physical pin mapping unverified",
+  "library_sha256": "3d7981d2df7e1038425ee64abca88888edd651daed624106b40cc0d7d352239a",
+  "function": "setPower at 0x3760",
+  "fopen_path": "/sys/class/gpio/gpio19/value",
+  "fopen_mode": "w",
+  "on_branch_instruction": "0x3820: li a0,49 (ASCII 1)",
+  "off_branch_instruction": "0x3908: li a0,48 (ASCII 0)",
+  "hardware_path_enabled_by_default": false,
+  "physical_gpio_touched": false
+}

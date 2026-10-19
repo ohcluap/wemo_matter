@@ -1,0 +1,44 @@
+{
+  "run_id": "f42ca25c",
+  "machine": "QEMU Malta; not an emulated MT7688 board",
+  "cpu": "24KEc",
+  "guest_memory_bytes": 67108864,
+  "docker_network": "none",
+  "wifi": "mac80211_hwsim virtual radios in separate guest network namespaces",
+  "relay": "temporary value file; physical GPIO disabled",
+  "physical_wemo_touched": false,
+  "tests": [
+    "linux-3.18.27",
+    "hwsim-radios",
+    "wpa2-nl80211-association",
+    "wpa2-wext-association",
+    "wifi-ipv6-between-network-namespaces",
+    "commissioning",
+    "outlet-device-type",
+    "off-command",
+    "on-command",
+    "on-readback",
+    "toggle-command",
+    "toggle-readback",
+    "relay-write-failure-rejected",
+    "failure-readback",
+    "retained-commissioning",
+    "full-mips-kernel-rootfs-wifi-matter-relay"
+  ],
+  "passed": true,
+  "wall_seconds": 31.11,
+  "guest_meminfo_observations": [
+    "MemTotal:          59648 kB",
+    "MemFree:           39856 kB",
+    "MemAvailable:      38800 kB",
+    "Buffers:               0 kB",
+    "MemTotal:          59648 kB",
+    "MemFree:           38528 kB",
+    "MemAvailable:      37488 kB",
+    "Buffers:               0 kB"
+  ],
+  "artifacts": {
+    "artifacts/kernel-malta/vmlinux": "df02e2f4d90cf5a745301566a00319342999bedca6d3ec0a396b66e224cfda5d",
+    "artifacts/system-image/guest-initramfs.cpio.gz": "f21b7c09073ec10c14637544b828cf37bdebd4fdd70e44e47f3fa22f7b5d4d8a"
+  }
+}

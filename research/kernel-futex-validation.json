@@ -1,0 +1,26 @@
+{
+  "board": [
+    {
+      "address": "0x80059650",
+      "instruction": "0xc0a30000",
+      "fixup": "0x802a3f94"
+    },
+    {
+      "address": "0x80059660",
+      "instruction": "0xe0a10000",
+      "fixup": "0x802a3f94"
+    }
+  ],
+  "malta": [
+    {
+      "address": "0x8017460c",
+      "instruction": "0xc0a30000",
+      "fixup": "0x80522848"
+    },
+    {
+      "address": "0x8017461c",
+      "instruction": "0xe0a10000",
+      "fixup": "0x80522848"
+    }
+  ]
+}

@@ -72,3 +72,7 @@ The final commissioning test mounts persistent state separately and gives the re
 6. Establish an authorized, recoverable installation path. The inspected vendor updater verifies signatures; this repository does not have Belkin's signing key or a verified signed-update path.
 
 Work can continue on offline component integration. A claim that this build will run on this exact Wemo, or that there is currently an installable update, would go beyond the evidence.
+
+## Subsequent complete development image
+
+The [full-system milestone](full-system.md) now supplies a real rebuilt board kernel and complete development rootfs with size-checked unsigned assembly. A separate Linux 3.18.27 MIPS guest passes Wi-Fi, Matter and relay-file tests. This advances the earlier component-only result; it does not resolve the physical board, production provisioning or installation/recovery requirements.

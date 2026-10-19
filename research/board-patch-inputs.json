@@ -1,0 +1,1384 @@
+{
+  "archives": {
+    "linux-3.18.27.tar.xz": "ac9d2cd940e01cb2a659831fde4976e60d0241b0374026ed2ed7036d07039f06",
+    "busybox-1.23.2.tar.bz2": "05a6f9e21aad8c098e388ae77de7b2361941afa7157ef74216703395b14e319a"
+  },
+  "patches": [
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/000-keep_initrafs_the_default.patch",
+      "sha256": "9b2d1a24fbbbedd7afcd131ea5851d14482d29a9c5ff458848745d7702192782"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/020-ssb_update.patch",
+      "sha256": "5b3bd62eb58bd15fa557f2ab0338f5f7e5a81ed07362876faf11802ec11329bc"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/021-ssb_sprom.patch",
+      "sha256": "3f4073d674fc1fac4926e83d690851a9179f7258da36aaf7e90091901671f605"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/025-bcma_backport.patch",
+      "sha256": "43865cc4cbfe8015304cfc7d8a4aa4d6d38ade4a84f865911f3e29b53d833dda"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/026-bcma-from-3.20.patch",
+      "sha256": "3db9ce091b4dd477ac1a385d810eb22c9a0c262f05d62c4a2b2805add4f232c8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/027-bcma-from-4.1.patch",
+      "sha256": "7d05407ebdab54911f3e2bc35abf97430578fa20a9ce03ec5d2f9268d2c303c6"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/028-bcma-from-4.2.patch",
+      "sha256": "7f0d55e6b0ffbd3e00957f22118f2b1bebce5e0dbfd2948e57f0059bb3880608"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/029-bcma-from-4.4.patch",
+      "sha256": "9e4931b43d19bab764973b12c58ca56b3b3d5fb5c01e5f2d61ad6bc22f5fa4bb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/030-nl80211-Allow-set-network-namespace-by-fd.patch",
+      "sha256": "a618ff4baae2b61497ba24f0167f11fe57e9c198476a53345cd205fc31eb1037"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/031-bcma-from-4.5.patch",
+      "sha256": "b8f675591422950f67f87c4dcf329ed59988a8b6e8d10704deb009d07ff8729b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/032-bcma-from-4.6.patch",
+      "sha256": "538d1bb9467edfb379be6bfee2fc6cbd562299ff2a489f200327c5fca0a930ce"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/040-mtd-bcm47xxpart-backports-from-3.19.patch",
+      "sha256": "1dc0461fa56df2caae9f1076bfdf77492cc5d68478b48a4730686b9e73063363"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/041-mtd-bcm47xxpart-backports-from-3.20.patch",
+      "sha256": "5ca2795e8b961f647f4209fd466d7b38eb6f0e67c6a6616fe54d1e0d82e8fb1d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/050-backport_netfilter_rtcache.patch",
+      "sha256": "8b3d6f5c0ba03144aa237965ada88592bdf72746c03c217660b0dd440074ad22"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/051-02-bridge-allow-setting-hash_max-multicast_router-if-in.patch",
+      "sha256": "be3552bcfb6b1df166d36b084d5465a003e8cc9d0303b4a0a4adad05d93adaff"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/060-mips_decompressor_memmove.patch",
+      "sha256": "75cab27b5e7d9c61c9037918bcf4c1d5692a9508454e06e36c9cb74aadf9e2eb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/070-bgmac-register-napi-before-the-device.patch",
+      "sha256": "c4931392aaab856e460d7c905d5980294f34105ec913caa4aad4f4131cf2265a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/071-bgmac-activate-irqs-only-if-there-is-nothing-to-poll.patch",
+      "sha256": "fbff85c09d2d6a79c20ae97d3a9700acd37386f39fa15be97a7ddefdea83075f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/072-bgmac-fix-device-initialization-on-Northstar-SoCs-co.patch",
+      "sha256": "d893e37eb6cff041f014cd51b6bd55a5c41826dd96c44f491f58cb40833f6c41"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/073-bgmac-Clean-warning-messages.patch",
+      "sha256": "9fcbfe5f8b03fcc9c02144ca8fed8e1579c26fc0dedb762f218058bbac6b7c90"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/074-bgmac-register-fixed-PHY-for-ARM-BCM470X-BCM5301X-ch.patch",
+      "sha256": "6e473cadb05b72971dd421204eb786d32445e9951a7b4430e536989492936035"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/075-bgmac-allow-enabling-on-ARCH_BCM_5301X.patch",
+      "sha256": "e3a79ec1787e4d7c59b85fc7bcb612867bc3d3ed4518ea6e2b57f384999ef587"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/076-net-phy-export-fixed_phy_register.patch",
+      "sha256": "fe5a4349b6b49cdb4bfc3aba2451e475874cf479ca93d8da35d86bbd36062df6"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-01-bgmac-fix-descriptor-frame-start-end-definitions.patch",
+      "sha256": "ecad2a4b10c37f17f46bcd5793ee2c93a0da0e67b14ec405532a732185552d54"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-02-bgmac-implement-GRO-and-use-build_skb.patch",
+      "sha256": "eaa99c96fb909b17577c9d9c8ca26d3a1d58192360371373b81d790ab7aa95be"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-03-bgmac-implement-scatter-gather-support.patch",
+      "sha256": "249ea9f53b7a6ae005029e7f9f259c03d985abb90321953af43c44837413a57f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-04-bgmac-simplify-tx-ring-index-handling.patch",
+      "sha256": "4819192689259af0b0ebeb1488911728e002808b52b1688a70efb01f0d4dfade"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-05-bgmac-leave-interrupts-disabled-as-long-as-there-is-.patch",
+      "sha256": "cdcc33bd1c15f5b8c99e6e30698d7e3dfec33d0e6b5a7836d8a37059bef0d9ca"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-06-bgmac-set-received-skb-headroom-to-NET_SKB_PAD.patch",
+      "sha256": "b43c21ab595e60870384b231a1b7d5051463e3a6ff19fd59d21f4f6aff5f0d67"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-07-bgmac-simplify-rx-DMA-error-handling.patch",
+      "sha256": "0ac564db45ce10de8537faf6bc7bdfe91101e5c065ae343ce5f39308a4d4481d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-08-bgmac-add-check-for-oversized-packets.patch",
+      "sha256": "d81eb78bd489e62c34c3f8f9fbbc21195ec39edb5f403592aa7587e4a2dba2f7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-09-bgmac-increase-rx-ring-size-from-511-to-512.patch",
+      "sha256": "cea1e8f1db7689850c395d93d00549b6af6f5bc8f32d7607ce4d03fe323b9eff"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-10-bgmac-simplify-dma-init-cleanup.patch",
+      "sha256": "57ee755b5dab7071b5459f7f3498f508d79bca1224b4a1e45d31495b99b62fae"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-11-bgmac-fix-DMA-rx-corruption.patch",
+      "sha256": "7386b42bc7e786274bec3d26edab7e53abeff979e3faaa245349d9e905a61081"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-12-bgmac-drop-ring-num_slots.patch",
+      "sha256": "37b9a54b90d03aa0f97168b170a15d3ead2aff0d5814e221f52b6ccdae8cdc5a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-13-bgmac-fix-MAC-soft-reset-bit-for-corerev-4.patch",
+      "sha256": "0593ec77749f8a246ebc2231d13659b2b478b0672c3a3f861f134ed0190cec8e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/077-14-bgmac-reset-all-4-GMAC-cores-on-init.patch",
+      "sha256": "448fcae0bebb14be093a83acc31378301711b1804645eb6fdc7ae823e9e4d461"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/078-bgmac-add-helper-checking-for-BCM4707-BCM53018-chip-.patch",
+      "sha256": "03cd1324199c470a8ebbb76805459fcb823a298d9886023bfb64ff0b35e82f3b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/079-bgmac-support-Ethernet-device-on-BCM47094-SoC.patch",
+      "sha256": "8d49292676d0bbac1cfc92f6233c11bde09be386e66dc1d52f0379dc4d73ea57"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-00-fib_trie-Fix-proc-net-fib_trie-when-CONFIG_IP_MULTIP.patch",
+      "sha256": "b080e5860d79ccfedfbf0ba09a95f4d119af08525a180c78dbdebc7e1233e967"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-01-fib_trie-Fix-trie-balancing-issue-if-new-node-pushes.patch",
+      "sha256": "13b6a1aba33925ecccde87eebd35bc86ce16e092196da3925b2ca8028d2fe321"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-02-fib_trie-Update-usage-stats-to-be-percpu-instead-of-.patch",
+      "sha256": "84fc9f0eac786b0495c84e5110ae479b3d6b7ce965e5a9949f969187467385d4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-03-fib_trie-Make-leaf-and-tnode-more-uniform.patch",
+      "sha256": "17f3e787d8c32a6ce6292ed1a3073a0b5676bbeca5f54ca362141cc33f8f0a67"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-04-fib_trie-Merge-tnode_free-and-leaf_free-into-node_fr.patch",
+      "sha256": "12c20188bd9ef970ae9e1aa61c06afe69c5f10c49b15a24525623db5f267af72"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-05-fib_trie-Merge-leaf-into-tnode.patch",
+      "sha256": "f560116b3fc0d7719f538f784d452a8df73a4e1d002e5f33566a44812c2dcac2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-06-fib_trie-Optimize-fib_table_lookup-to-avoid-wasting-.patch",
+      "sha256": "b4d58b1384bc74238036b4b2100d639ab4ab653703943db2e8606aac262282c8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-07-fib_trie-Optimize-fib_find_node.patch",
+      "sha256": "feedcab09debeeb562ddc4cc1b06745694694c1c5e29932c079a4289ee09125e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-08-fib_trie-Optimize-fib_table_insert.patch",
+      "sha256": "f524cb6a38ee9d7c283aec5f317b0c431a57e9e09b287071bc257a37756c0d0f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-09-fib_trie-Update-meaning-of-pos-to-represent-unchecke.patch",
+      "sha256": "ad79072ed7f6f7b0daf8f6826d756b5d7982da15f18a5aa73862e8f92cfc19eb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-10-fib_trie-Use-unsigned-long-for-anything-dealing-with.patch",
+      "sha256": "406f6561f40122f0b37719ede1857f8446b0f41b25c3aa0150065c4e125e8119"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-11-fib_trie-Push-rcu_read_lock-unlock-to-callers.patch",
+      "sha256": "36cd4c4a54967dde4157a472e87b7a0c30c82254dc3a12ffb0eb1359eb7fbf3c"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-12-fib_trie-Move-resize-to-after-inflate-halve.patch",
+      "sha256": "91e5edb180cecea714accbde60da14e2f74c5cda46c120035360319df9c15426"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-13-fib_trie-Add-functions-should_inflate-and-should_hal.patch",
+      "sha256": "37d775b7f32e65020fcf6ca9f78c4c45305a6715347512a17fbba8b177846c2d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-14-fib_trie-Push-assignment-of-child-to-parent-down-int.patch",
+      "sha256": "389973b91de2822b051ec9f5249e33aef3fd29a4d057a2d2af2aa6afc3d350b8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-15-fib_trie-Push-tnode-flushing-down-to-inflate-halve.patch",
+      "sha256": "41d16f01316f86c32bcbd3dfc8e45b115b195782d6aac582ffabb90383a77cd1"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-16-fib_trie-inflate-halve-nodes-in-a-more-RCU-friendly-.patch",
+      "sha256": "d926ddab2f94827b1e858eb537451191ba5ec31c8f575dbb4635b3677dd77e7d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-17-fib_trie-Remove-checks-for-index-tnode_child_length-.patch",
+      "sha256": "bae9cacc68b567e02f8e1733a903a9b8e92b87e8fe4332a85d259f63a520179e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-18-fib_trie-Add-tracking-value-for-suffix-length.patch",
+      "sha256": "7a190d484e11d5245854fc739974c9493c4009aaea36c99ccb510c530a0ef462"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-19-fib_trie-Use-index-0ul-n-bits-instead-of-index-n-bit.patch",
+      "sha256": "d8351b3f82d2debdbb442e821e16cdb33fb2c6128662e04188b93dda4ee0b79d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-20-fib_trie-Fix-RCU-bug-and-merge-similar-bits-of-infla.patch",
+      "sha256": "bca2b4de7cd2d4c652d019f14803a237df29c7f96560a4be2fcb3647b789c3af"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-21-fib_trie-Fall-back-to-slen-update-on-inflate-halve-f.patch",
+      "sha256": "0d057816bead501ac0c40ba7e6126bf722fc510044ebed34a2378af30d4db6bb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-22-fib_trie-Add-collapse-and-should_collapse-to-resize.patch",
+      "sha256": "453b906f3f3b572f189af05e19eae0417c2546f80900fa1597f9cf0900b590b7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-23-fib_trie-Use-empty_children-instead-of-counting-empt.patch",
+      "sha256": "631e429e55a60dbbf173c740ea1e8f5ff35cecba3b1cfd6dcee554254605e0b1"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-24-fib_trie-Move-fib_find_alias-to-file-where-it-is-use.patch",
+      "sha256": "489d0ce5e44e1bb5a197147980585b41eed56105da5f804c76e9298daa56f1a4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/080-25-fib_trie-Various-clean-ups-for-handling-slen.patch",
+      "sha256": "a93658d9da19e2fad4f6296971d448d935d5227bc15e4fb609fc64929c25f12e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/081-01-pppoe-Use-workqueue-to-die-properly-when-a-PADT-is-r.patch",
+      "sha256": "3bbc19c56bfa030c4c2fac52f65050aa53d9d0783e26acc7f6e65afd29beef57"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/081-02-pppoe-Lacks-DST-MAC-address-check.patch",
+      "sha256": "86407835ecdf9af104cdb8b3f3304aff05c6f6a320689d8cba39efd1f27cc731"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/081-03-pppoe-drop-pppoe-device-in-pppoe_unbind_sock_work.patch",
+      "sha256": "bc7c99849a1621dfb9626aa72d983baecf5137854b18163e31922197e0b8e99f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/081-06-ppp-don-t-set-sk_state-to-PPPOX_ZOMBIE-in-pppoe_disc.patch",
+      "sha256": "4cd93a48a1918c639c12aba74021b43ede0f9db378e2e278c7367147c2ee8c9a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/081-07-ppp-remove-PPPOX_ZOMBIE-socket-state.patch",
+      "sha256": "46b7a32fab8d69ea20e93c6185cb40cb7fa504bb685a0d6628644676f2333fdb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/081-08-pppoe-fix-memory-corruption-in-padt-work-structure.patch",
+      "sha256": "a4e128815819518b1de0ff548262daac1fad540bfacc8da6f4f58eb0b88c5908"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/082-ipv6-ip6_fragment-fix-headroom-tests-and-skb-leak.patch",
+      "sha256": "e6be37f7c5eb5f3b8634cfed36ff215488d79f240645988f789a4931da99f6cc"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/083-solos-pci-Increase-headroom-on-received-packets.patch",
+      "sha256": "2aca67675884c84c45abb5b0475ce2214551b879005a8aef1de5406ef1bcdf9d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/090-overlayfs-fallback-to-readonly-when-full.patch",
+      "sha256": "8584941dc6ac2add67a433a589aff4424f99f1350990c3416f5353f996487101"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/092-01-spi-Check-to-see-if-the-device-is-processing-a-messa.patch",
+      "sha256": "b00b24848bdead22e03729aae4ce5e28e91f5788031c5f0fef00527a8481d967"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/092-02-spi-Pump-transfers-inside-calling-context-for-spi_sy.patch",
+      "sha256": "4eb710ae2e028b58e77cc08c8771e64e5bc0ec097361f0c09d7f2101ebe0a5bf"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/092-03-spi-Only-idle-the-message-pump-in-the-worker-kthread.patch",
+      "sha256": "37e12545ff27f6e57673bf8f83bf7d84464f58778327580d72827ad8dc13bae0"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/099-module_arch_freeing_init-new-hook-for-archs-before-m.patch",
+      "sha256": "480c80aaa71024a842e34f446d95d0f1f59026302b1a8e89422aecd1bb93c0c2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/102-ehci_hcd_ignore_oc.patch",
+      "sha256": "03dc39423f8e5e067e92481df64e6b199f0dbdad1e14877274c6fc57e308962b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/110-jffs2-use-.rename2-and-add-RENAME_WHITEOUT-support.patch",
+      "sha256": "66eaf67e2aac2d577398598efd30eb87cd9ff2c40fde6ea891e979b8bfd99435"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/111-jffs2-add-RENAME_EXCHANGE-support.patch",
+      "sha256": "51e3bd237428ce20733471074fbbb7f42c40b692d3b1eab7008696d6aeee8088"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/120-bridge_allow_receiption_on_disabled_port.patch",
+      "sha256": "1225ea9fffb9f0d0194f6e98f4e22a6d5957844ce2bc4c7abeedd7b4cbbd4f41"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/132-mips_inline_dma_ops.patch",
+      "sha256": "ade0e5b1bd596b48786cd4c996ca284f41231e203383271f4d32a40c7ecb3278"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/141-mtd-bcm47xxpart-limit-scanned-flash-area-on-BCM47XX-.patch",
+      "sha256": "8b3a428ed39fa51a5e1edb6ddb0a3546f5c74236daf1f925ff26a4128a2842f2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/142-mtd-bcm47xxpart-don-t-fail-because-of-bit-flips.patch",
+      "sha256": "dc27a79b3bdb4bce986c91823b263b0e65416eda32fa230c1266433b27c40b7d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/180-usb-xhci-make-USB_XHCI_PLATFORM-selectable.patch",
+      "sha256": "1f3153125fa853a61f30b772894fd9a86f36d9e65b7470de690203cd5cd90bc9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/191-usb-ehci-orion-fix-probe-for-GENERIC_PHY.patch",
+      "sha256": "7d0ee7e5f17233459826164616ed48b912844d06ef717810dcf0be0dd91eb466"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/200-fix_localversion.patch",
+      "sha256": "e569054e9145641192174b3b20c57039040dbd8b184aa261c15a59f767ac7029"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/201-extra_optimization.patch",
+      "sha256": "253459c95d053f122c6a05743461719731ab5383bd1c3d274d966b044f775b44"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/202-reduce_module_size.patch",
+      "sha256": "0b64060e4aa110675dd095b509eab643e72d626d1b68b42c2782c286be5b90a4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/203-kallsyms_uncompressed.patch",
+      "sha256": "3b27552e331e9098c4d969f26db5225678b29048ee00852e11baf21bbcd791fe"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/204-module_strip.patch",
+      "sha256": "6c598c09d0c31681a565192bf02a0e4ecf80a957e6bdeaa370fb8f61c8742211"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/205-backtrace_module_info.patch",
+      "sha256": "563fb07ce7b5428cce12faa577095d4af90aabf73c215e2e94d7d3aa4bd08b6f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/210-darwin_scripts_include.patch",
+      "sha256": "3d79290d60e9d6b108e020e6d390951f071c977b56f9add8c8ba35468e9c15b5"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/212-byteshift_portability.patch",
+      "sha256": "e4bc58f027d37bedda23be9581c1903b1920d982e6d7a40fb3b89ba840b559bc"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/213-x86_vdso_portability.patch",
+      "sha256": "572bb5c8cf8948e1c9c4e813e4de49561e956de3805046802f24d7684cef63e2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/214-spidev_h_portability.patch",
+      "sha256": "9c6bc6b1dd27c9f51e5f69f75c09987310c72896f9aa528fec5ca182d1185210"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/220-gc_sections.patch",
+      "sha256": "b4eac53d5870d54ef6f5a0676641395feaef9121591c4301f72c28c0e8034580"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/221-module_exports.patch",
+      "sha256": "18162e7f41a327e0e2049a548f6699e08941faa3e38a871700a5132a4083dd35"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/230-openwrt_lzma_options.patch",
+      "sha256": "d5061f06cbbe083296fd6b77f1cf5e7431e35b4017fcb8b79281c320a68bb7b4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/250-netfilter_depends.patch",
+      "sha256": "2bb56affd2afa3a8b6f39457e5967a301654776f1916757be74d080b7baed468"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/251-sound_kconfig.patch",
+      "sha256": "529dc0cfb21028305f7b5755c5d3db4322ebe3405877c330d64ae1473c147862"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/252-mv_cesa_depends.patch",
+      "sha256": "5278deb7ff5dfb89a372a9cc19af0bd74a0f9f0ea23a8db5a7609baaeaf080dc"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/253-ssb_b43_default_on.patch",
+      "sha256": "2c4318324486b496c49845b94ce66b27e2b6cbdc1f1777ca5e1ce49f35334deb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/254-textsearch_kconfig_hacks.patch",
+      "sha256": "b4b21819a290439387342cd8924a40efe0a000b540778b0a5ff4e3e91f4f8cf7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/255-lib80211_kconfig_hacks.patch",
+      "sha256": "981a824097a0148b1d3ff25b65504f41d033f07d1289824e8914ec63fb682725"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/256-crypto_add_kconfig_prompts.patch",
+      "sha256": "6cc328ca25a683e52b76f2dea93451ce9aa59b351e4a602dac754e693ac51abf"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/257-wireless_ext_kconfig_hack.patch",
+      "sha256": "ed8a3610686b5d0ce3b2cc245e203d0bd204a6be8f025f3bccd11c0220c62490"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/258-netfilter_netlink_kconfig_hack.patch",
+      "sha256": "fcf1edbc24ba3fe99c5c71e352543df70f2c9b4dca6913ef5b50bbee8df0552f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/259-regmap_dynamic.patch",
+      "sha256": "4634fc0706e988fd297e50e6c08c6bd8c3cbbe28870a00f24d5606ab48971bba"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/260-crypto_test_dependencies.patch",
+      "sha256": "f1949c1bd08640319c1a587e5d03dab213deb8cafb6029f31fc589e9f8fc7272"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/262-compressor_kconfig_hack.patch",
+      "sha256": "937057db6097b22234875201b05370dafe852ab625a6a69e535c1d8d06b98948"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/270-bridge_header_fix.patch",
+      "sha256": "cf9809b5c3d5e70b8df445928c7200ae3a91e51efd0d7499992e2614b8879231"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/300-mips_expose_boot_raw.patch",
+      "sha256": "6d504ea4037c780c015f0f8458cec527be76db6ae6e7ee285089928b44c73fed"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/301-mips_image_cmdline_hack.patch",
+      "sha256": "98ea10749e41b6b819b4cd1867674a7b8893516d4dc1661a8d6e31dcc328f48a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/302-mips_no_branch_likely.patch",
+      "sha256": "1a7fd8a641cc1038e85321af2916e6b6a2f50d87193b14a8bf8ba84b80585637"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/304-mips_disable_fpu.patch",
+      "sha256": "874c23e22b14bca5e5ee9c41159c59369740c047bd9e3bfbd029a3dbd56f992a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/305-mips_module_reloc.patch",
+      "sha256": "0ad8dbef48acd5b2594210105cee240c157eb0fb684c825e47170dd0f23294ae"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/306-mips_mem_functions_performance.patch",
+      "sha256": "abb01466ee2c5f1c25770a66dbbb94221adbbd15a0de45538891da052d1569a7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/307-mips_highmem_offset.patch",
+      "sha256": "b18237a8d470b03c12a83610d855bc08493d384f77a4b3ec0757eb0cd32c65fe"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/309-mips_fuse_workaround.patch",
+      "sha256": "62ccadb3218694d0f8eae98ab2d3d381edb618ee068f65751283ae22b5d41b37"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/310-arm_module_unresolved_weak_sym.patch",
+      "sha256": "2ff64a83f71fc677a38abe3f3adceb5e91908b424f22c10df1f09fba5c003eaa"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/320-ppc4xx_optimization.patch",
+      "sha256": "afba2ab6d3f26f6d6745370f4f49eb0768ed56a6c6fac2793b2e9998728e823b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/321-powerpc_crtsavres_prereq.patch",
+      "sha256": "60aaa7c5c3b5df4d43be7124caa5f4ea4b17066aa42d741fb8248eb1825ceaec"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/330-MIPS-kexec-Accept-command-line-parameters-from-users.patch",
+      "sha256": "f2553d6eeb11f2e486444c22e5da9540fff866b4075a5e9a8df7897aada95ae9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/400-mtd-add-rootfs-split-support.patch",
+      "sha256": "1a60757f5fb371886dd99b57a3aa18e7cc5aba030b6a3a9b4da9fc407f4842f6"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/401-mtd-add-support-for-different-partition-parser-types.patch",
+      "sha256": "f567a81abddd5bf2d90674e75d31f49f42f05881052104ac8b9d0002aa9f98b3"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/402-mtd-use-typed-mtd-parsers-for-rootfs-and-firmware-split.patch",
+      "sha256": "c85db6ae214a43843d3e531b0542570fbc336eacdc729ea77b16caf5ef147597"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/403-mtd-hook-mtdsplit-to-Kbuild.patch",
+      "sha256": "17f62aed2f3c15314a0d7d866a9d2943f0e8650784258c09f2e9523b881dac96"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/404-mtd-add-more-helper-functions.patch",
+      "sha256": "ab5b50c5f7a75c518d2f247ae124b2295f32f62fef586521aced56962d8d212a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/405-mtd-old-firmware-uimage-splitter.patch",
+      "sha256": "31682498f798ac87921fc4930fb7bf9cd440fd6beff7ad1086b656afedc9ba77"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/406-mtd-old-rootfs-squashfs-splitter.patch",
+      "sha256": "ab88837158bf7f50ad0b792c54e1480e1bdf713e6c1c5ecc12bb6c6529c4e4f8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/410-mtd-move-forward-declaration-of-struct-mtd_info.patch",
+      "sha256": "a6b4520e00518f380ddee49c760d0d5532cef72aac00682360c5e021fc9386e7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/411-mtd-partial_eraseblock_write.patch",
+      "sha256": "31bd4f821053ff7db29b45508da786a70a032537e479619893f1cba2d691a453"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/412-mtd-partial_eraseblock_unlock.patch",
+      "sha256": "c1ea02161e8b8486cda6d54ae1127e24e6f4f07d5338ca4e0b6e8e711f125b3a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/420-mtd-redboot_space.patch",
+      "sha256": "34af1f6ca2b9ffc08719e275de59fa84d31bfb978b19efe90801ca445850d2d4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/430-mtd-add-myloader-partition-parser.patch",
+      "sha256": "3c8bdad8bb16d8a71e2b2dacc7817b0b7b7ff256f6f786cf1f2d0a09e6e624e6"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/431-mtd-bcm47xxpart-check-for-bad-blocks-when-calculatin.patch",
+      "sha256": "f54daa90b4602d4508b5004f306117f6ac3cff7f174080d489aba67baf38f0a9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/432-mtd-bcm47xxpart-detect-T_Meter-partition.patch",
+      "sha256": "370c64b00203f926ce370772f4305727653a0b4246509ed32b9f2e622e890342"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/440-block2mtd_init.patch",
+      "sha256": "44cab7b9ac0d8a4dac7d6d575c7525686a0c8fe2252616bc1a2c303001ec6e43"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/441-block2mtd_probe.patch",
+      "sha256": "94dcaaf9b0bbca6fec993ddf6b01d59c0f8403190ea79e196c524ca0500066c6"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/450-mtd-nand-allow-to-use-platform-specific-chip-fixup.patch",
+      "sha256": "5e244667c5701cd509f7757b6c909c023134d2492cdbfe9affbb5928b42c838b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/451-mtd-nand-fix-return-code-of-nand_correct_data-function.patch",
+      "sha256": "2f81c8dd156495a51892cc6b44041e940502923187cf8cb9871cef10c1ae29d9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/460-mtd-cfi_cmdset_0002-no-erase_suspend.patch",
+      "sha256": "b6c39527d500fa117b7119c071f9624fbe5a0ff57a6b6eb0010d5082d039cdb0"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/461-mtd-cfi_cmdset_0002-add-buffer-write-cmd-timeout.patch",
+      "sha256": "e1d89f1308f4f0dab198fdd2792f956a6ce153f06bedcf75764394357e517a1c"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/462-m25p80-mx-disable-software-protection.patch",
+      "sha256": "39aaee81a43d53a1dd5a3e8a27c1a55fa49b16c46d5ab708e5a155fdd23cc6b2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/472-mtd-m25p80-add-support-for-Winbond-W25X05-flash.patch",
+      "sha256": "143b4ca226281ae1636b91fb251a2092975edae7941cc931532b7875a62eda2b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/473-mtd-spi-nor-add-support-for-the-Macronix-MX25L512E-S.patch",
+      "sha256": "bc286f19dcc708397e4f93860fafd34d297c5420917fcbad5860396a32e05905"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/474-mtd-spi-nor-add-support-for-the-ISSI-SI25CD512-SPI-f.patch",
+      "sha256": "1a2ff1bcc659364f0941569544094a61c3dc731f68b13344f7428e6d3a9e39cf"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/480-mtd-set-rootfs-to-be-root-dev.patch",
+      "sha256": "cd74bfcc56b30e946bb5094269c7475917561ab963029e064e5073e65888719c"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/490-ubi-auto-attach-mtd-device-named-ubi-or-data-on-boot.patch",
+      "sha256": "c743b0ec5eff1b7d5ec362805c6af46383c7f3080e2084b6c9ca21f59c2f52ae"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/491-ubi-auto-create-ubiblock-device-for-rootfs.patch",
+      "sha256": "87ed6b0a54d6e925b200d3aae959ce9381f09197c0a217d00da8ac81948eb9dc"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/492-try-auto-mounting-ubi0-rootfs-in-init-do_mounts.c.patch",
+      "sha256": "26aa0cd521b3005ca1ff372c7f1baf2b8c5a8650dfd0f91eb9af7533e4597444"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/493-ubi-set-ROOT_DEV-to-ubiblock-rootfs-if-unset.patch",
+      "sha256": "edaee3cbb073d62e784b7db8fa9571725f7228f4ebd00783facc8da62565b1f2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/494-mtd-ubi-add-EOF-marker-support.patch",
+      "sha256": "d13451b10a726d06e9b6de0fca84cfc9f68f3c89656de330b92efc13485191d2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/500-yaffs-Kbuild-integration.patch",
+      "sha256": "ce1c301e5ecd89fcee8fc00afe99532207cbba3969f08d9858fb09447b55bb33"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/501-yaffs-add-missing-flush-arguments.patch",
+      "sha256": "e24d136b313ca7c712c2aa20e951528151eb9535b599778413e62b2c6295364e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/502-yaffs-fix-compat-tags-handling.patch",
+      "sha256": "2acabed99e97b72eb9822855cc6ffbf0e2d6726e51ec2ff8903b716a6b7ba958"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/503-yaffs-add-tags-9bytes-mount-option.patch",
+      "sha256": "84d290a1ea4f2b13ee0019bfb37377759cd06864a70d5d6398a0ef4d16e133a8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/504-yaffs-3.16-new-fops.patch",
+      "sha256": "929ad3108d47d38ffa1d1323d114897215de3e3b12cc855f1d25c6fa747631d2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/520-squashfs_update_xz_comp_opts.patch",
+      "sha256": "452c891fb868a6dc6712b2e36aa9857cfc1285b64a02f4650f0473c683f5a97a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/530-jffs2_make_lzma_available.patch",
+      "sha256": "777db87bdc800c70ef7ff2c35eb0ce3c35af67784b582828f9347a71d41ff9d2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/531-debloat_lzma.patch",
+      "sha256": "17fa2a735666c0e3c7ed1672e3d3c7d45dfb4884b6cc47fbabc8e794a4e4b516"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/532-jffs2_eofdetect.patch",
+      "sha256": "700848d4ba8c527200c0ba71dae89024f080e3868ac277ca49fd4120f85e3d09"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/540-crypto-xz-decompression-support.patch",
+      "sha256": "ee6a42fb5eb682816e4f306a9c305a9bec7a34e63b879720be737eb822d2af93"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/541-ubifs-xz-decompression-support.patch",
+      "sha256": "dc91cd01d20264c9e6e913976276ad53b41d8fdcedb41eb19ffa533d02da913b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/550-ubifs-symlink-xattr-support.patch",
+      "sha256": "e2bd63282819a41676a2b105522289897f9bdcc793552b54e069be5e5246ac02"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/551-ubifs-fix-default-compression-selection.patch",
+      "sha256": "d8b67ee6d19d200fd904e25735f7d14ca7e186b01737d25679d0747427996845"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/600-netfilter_conntrack_flush.patch",
+      "sha256": "c18c81a8de7c37755f6dc748c0d293a1de6e74add572dbf6deb03bf7d237b1d6"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/610-netfilter_match_bypass_default_checks.patch",
+      "sha256": "7466585d9a07bf21848f32e45d3de7cf9aabdb21ffae38713c2e2fa229628344"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/611-netfilter_match_bypass_default_table.patch",
+      "sha256": "43df86a2d6d504452befb03103845ae646b348a912233e571f8c5642a61bdfea"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/612-netfilter_match_reduce_memory_access.patch",
+      "sha256": "52ef75b7204fb040e7012e15eb53e4ff05d7d737d12dcbe7b4b728bdc0ee63cb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/613-netfilter_optional_tcp_window_check.patch",
+      "sha256": "e6b58f6a0bcf60aa2a3bed13cc43a3d90a17bc9d7b870f50247b9a0f7e33143b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/615-netfilter_add_xt_id_match.patch",
+      "sha256": "0c54c08eb7b8b3b857863625b1e5e09e75a6d2734a821ba92da9896c36edb2a1"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/616-net_optimize_xfrm_calls.patch",
+      "sha256": "2c8cd16af792a795097f06ccbdea32e0610ea5dcd9bb581e74205e976855c828"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/620-sched_esfq.patch",
+      "sha256": "7f981c59ab42fc92f9a24b742ccb353689b3a0d7489aa92417e9eed4c9034e88"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/621-sched_act_connmark.patch",
+      "sha256": "1adda233e968aef59c70c47ba6afcaf32877099addc9eff26a4cc95d9edb82e4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/630-packet_socket_type.patch",
+      "sha256": "e943f3d07fdf45daa1c057cb79e0a9be5a01b9c26ab785903fdc52d84851f12f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/640-bridge_no_eap_forward.patch",
+      "sha256": "99874e28944e1f384fca9b822b4d47b035aca76495770a98f2db579213ccaaeb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/641-bridge_always_accept_eap.patch",
+      "sha256": "ab4f6602cdecd06c03398477e625a88b4819ec3caeb2475550ee7b90e1683c7d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/642-bridge_port_isolate.patch",
+      "sha256": "17fffc0278db1905860689428d93b31be59b3d68c7006c077f2040f9a08a4be2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/643-bridge_remove_ipv6_dependency.patch",
+      "sha256": "86bc5917d81437aa6456ca70f51938e5c4e1f5b47316424003029d6d1b2c6589"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/645-bridge_multicast_to_unicast.patch",
+      "sha256": "24f53749b4d268b550d8180db1efde05f69f7a6f6eeb27834d42440cee6f0c7f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/650-pppoe_header_pad.patch",
+      "sha256": "1a6f95f6bf52e9f9d891cff4401a38a2e0d639eb3381e4dfb43d778ebb36f9ba"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/651-wireless_mesh_header.patch",
+      "sha256": "f6cfd66f93646004f7d91886fb65dcad3ad13f88a1a0b20eca87a591309e5af4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/652-atm_header_changes.patch",
+      "sha256": "c6e0f896a29417fe6f96b8beb2fc2319ee1a73061fee4519c878c4298708ac69"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/653-disable_netlink_trim.patch",
+      "sha256": "8e350041f14e06009bff5ed352fc2a11ccfd599f14f177dbb50d44b3ceeb67e6"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/655-increase_skb_pad.patch",
+      "sha256": "9fc3e0e68417298bf9d97336fd2b573c6752daeeae31b925c683576015eb9db4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/656-skb_reduce_truesize-helper.patch",
+      "sha256": "adf686526d3dbf1c23251a40db01b52c170af82bec96bcad967d9b3771558e0f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/657-qdisc_reduce_truesize.patch",
+      "sha256": "2c4ceebdbe264e98fbe279531b4488758e4a684ed53160ec0aab2fd47965d52b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/660-fq_codel_defaults.patch",
+      "sha256": "4c3717c8fe5222f5e87611d6f55976d285553db001faa7b50bdd50b7f333b70f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/661-fq_codel_keep_dropped_stats.patch",
+      "sha256": "66b34aee5b854b01d5fcb9766d261cb7516d1fe37fd5f87f2f55b225bad2e8b4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/662-use_fq_codel_by_default.patch",
+      "sha256": "ec3a4ba261fee1b930f17b5cd119ee02a6b4a6e26cef88e2932244c6c9d2cf28"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/663-remove_pfifo_fast.patch",
+      "sha256": "211e2e0ea19d8abb707624c1ae5b76f6d43a7e8f7e0644fbf3f92dcedb64fdb8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/666-Add-support-for-MAP-E-FMRs-mesh-mode.patch",
+      "sha256": "008058738a2bbd3061a123c7c105ec4f4acbbfe2ea614a5fcae10c5b560f27f1"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/667-ipv6-Fixed-source-specific-default-route-handling.patch",
+      "sha256": "b8ccaf124895f15468cf6a5ebdb18258172a9227864e17de9019c5809f6ec92e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/670-ipv6-allow-rejecting-with-source-address-failed-policy.patch",
+      "sha256": "158555300a0c0d913486c4ee3302400b4869cf198d3f805f071ff3faeba59b21"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/671-net-provide-defines-for-_POLICY_FAILED-until-all-cod.patch",
+      "sha256": "5cb8a10f215d893f75a32352a21f4484bef755fc0a209043c606c51e9523049a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/680-NET-skip-GRO-for-foreign-MAC-addresses.patch",
+      "sha256": "0f096c0fa1acbcb7a7ed64895bc822cf3502dbc0113bae6d660866621e52b41f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/681-NET-add-of_get_mac_address_mtd.patch",
+      "sha256": "f5f3065a25571d7eefb5989a52e82467a0c64b98a05af050189c1052f1ca20f8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/700-swconfig.patch",
+      "sha256": "e527e554f96cc09a2be5b97a9208b0e00bff4577ff55468d2967d918efdf14ac"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/701-phy_extension.patch",
+      "sha256": "d00d9e19b854d7ab96c278ae18c3be4ad384a8f0697e357e8ae184425137ac78"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/702-phy_add_aneg_done_function.patch",
+      "sha256": "2ae0ed340e2b02d7a94938bd7597b88cb2986e63c9a9838ca398835480c0c625"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/703-phy-add-detach-callback-to-struct-phy_driver.patch",
+      "sha256": "f506b337310fa5e5e61adfcd91e480635bfaa9f5b0f684f177c422e974bfe8ad"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/704-phy-no-genphy-soft-reset.patch",
+      "sha256": "accbfdc44004b8a2c5077d9cb329be5611a1583250c6d4e7065531e32a768bf8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/710-phy-add-mdio_register_board_info.patch",
+      "sha256": "badaa1ea42cac3ee3dff4f56fab9f6ee0d27b5fa51257dabd5e1329e52dc9be4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/720-phy_adm6996.patch",
+      "sha256": "5dfe16e3a13b31fb85e7f2beead9aec09a49f509bb95b73cb5789bea8fdd7259"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/721-phy_packets.patch",
+      "sha256": "858e21a7753da436c1fce78d03eb528970ae05b8eaba065c8f6e9f0570983002"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/722-phy_mvswitch.patch",
+      "sha256": "80d259bc5d80b8567b88a7a1888b6ac8788d9d4e9c972c32e8c49e7f4c7d4b9e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/723-phy_ip175c.patch",
+      "sha256": "5ab77b555e359cda6bece330da5f224072a4acb7349fc0a9550d68763c9ef19f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/724-phy_ar8216.patch",
+      "sha256": "401ec455dad1eea81e5fcc1ca5034cf388b424ac589900aa739fccf8aeb0d63c"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/725-phy_rtl8306.patch",
+      "sha256": "ab585d0e1c285f1427a1d60c99656c44aead52b73a0c52665db644921d357f9a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/726-phy_rtl8366.patch",
+      "sha256": "ae2f7293241d617e9eff432bf7f97ba1b73eaa3647ebdbd64552380e57f36535"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/727-phy-rtl8367.patch",
+      "sha256": "ae78fb9db1374827e2d6a238bbb51ea1c5b192a351ab78a603c6e17dc3e4b066"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/728-phy-rtl8367b.patch",
+      "sha256": "71682e411bc40734b3d0b8a66a19d21ca28b6a3b48b2b1df1cd8b299d2c694ba"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/729-phy-tantos.patch",
+      "sha256": "43a56a56c5ca9ce3cc0d31ef296e6ba32eb624cb51dd0b955c66160318882266"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/730-phy_b53.patch",
+      "sha256": "f1bd7844d901562fbe7c0aaa8e0b9c4c27d875050dd572c0a85541abe1c8d655"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/731-phy_mvswitch_3.10_compilation.patch",
+      "sha256": "c0a0fba883c3842b84b1e66af4105dd494ce26508cb4a4eaacd2e4956d15c989"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/732-phy-ar8216-led-support.patch",
+      "sha256": "d63bc8e652509c2b0fbde8cb943fbf851005d1e8c7f7c840cf8ad5938a90a6bd"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/733-phy_mvsw61xx.patch",
+      "sha256": "a67a394fa63caf10b2c9c8765818b267cd208cbb0c9207e99b98f28962161848"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/750-hostap_txpower.patch",
+      "sha256": "40008546a065d9ddececdafcbb39c39a83d1555c48e0657616385759f0a9434f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/760-8139cp-fixes-from-4.3.patch",
+      "sha256": "bd3c497f219e40e700855732bbcf03dcbb8423457d1315558ffd1aa44f3dcde8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/773-bgmac-add-srab-switch.patch",
+      "sha256": "cd6606b5188df959f3abe7db390627607de1c308670fded5f3b3745c1cc7c791"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/780-igb-Fix-Null-pointer-dereference-in-igb_reset_q_vect.patch",
+      "sha256": "975b288bb31ff31823d49b38bb7186787ef8466483048726776080533c6d2d5d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/785-hso-support-0af0-9300.patch",
+      "sha256": "0899cfcb486523a1cd6ac1920d52a7f73d57dbf14b851f47454bdd74195f7ee6"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/810-pci_disable_common_quirks.patch",
+      "sha256": "18bcef3958fd759b94f2635669b4800e0a2bf13a3e720170d5449d4e25a9e769"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/811-pci_disable_usb_common_quirks.patch",
+      "sha256": "102a4802c135730b81eebafe8a4516cc3c04b6b3d68b7b0787542a952995f6f8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/820-usb_add_usb_find_device_by_name.patch",
+      "sha256": "58ccaf26d7ff2edc8cc351ecccec459bf1714ad6cf5473de9bbb92570aba72fd"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/821-usb-dwc2-dualrole.patch",
+      "sha256": "61676125a6f1811e5005ee9338b689774f60de5e176a57c7369baefad60dee24"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/830-ledtrig_morse.patch",
+      "sha256": "6b6603a6dfb4daca18f8cd946f6f5ddf27ac15bdf4c240dfe851d0f19e78ae95"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/831-ledtrig_netdev.patch",
+      "sha256": "7ccb027e93a06ceea3d1f6ca6fc60931b8440c84e6d2ec6df0bd3d2fd4fc6d6d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/832-ledtrig_usbdev.patch",
+      "sha256": "c802c9476a07e18bfe1de2007adad6e2aa2228e30cae4fc71a4da03008aeca63"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/834-ledtrig-libata.patch",
+      "sha256": "2f8f81d8ef510c4fa7c7285e7ba0afa0c84a41c5e3e7b22d1f33ec6eb242374a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/840-rtc7301.patch",
+      "sha256": "2902af200c9313e0e7a35c7f8428593222ea418746130f4c2513f4908ac7513b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/841-rtc_pt7c4338.patch",
+      "sha256": "fe9d56c63b9c89703111c56392529c6baf8a7f0f6f34b25d34cdff1c7d8d9a27"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/861-04_spi_gpio_implement_spi_delay.patch",
+      "sha256": "72ea6ed8ccd0c2b556b04d5c0b2a0992d5ddccf8fea5dd4b90cd117736e1443c"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/862-gpio_spi_driver.patch",
+      "sha256": "3d6b8f3ea0567136032a4c0c20cc16464e4b3ebdbe3fd9dda5ee38f3d442305f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/863-gpiommc.patch",
+      "sha256": "8abcd5daf73c5a2e23a805c97dd44e14418d0f1750b5abba29cb69656987bf79"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/864-gpiommc_configfs_locking.patch",
+      "sha256": "91d57add7d04ba6cc6613dc51505b27df1bd7f7a192132abb1aee0ca04ab5b7d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/870-hifn795x_byteswap.patch",
+      "sha256": "e19f3bb60c1a689b9a469fdb6ee211c23e2df4d631b1509ac42deab9cc39bb08"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/880-gateworks_system_controller.patch",
+      "sha256": "3f9bebac492840559cdf2d63ad2043ffae4d5c94441e4f46be970a48bb9bacc1"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/890-8250_optional_sysrq.patch",
+      "sha256": "753218a1d8350415c3c7657db4588d37b0e96bea22f5c80e00a2eb18b6063904"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/900-slab_maxsize.patch",
+      "sha256": "13a20a07bc53b03e9ccb8b8a1c553139246644a9d0c3764262948860cb056408"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/901-debloat_sock_diag.patch",
+      "sha256": "2a3c6fb14e6f011d30976c0210a159017a8d01824ed16968540b860420cbd7bb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/902-debloat_proc.patch",
+      "sha256": "663523c552e79ef49ba35db102fb5f403ff0e01202087b1a20932a9cb62f1c27"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/903-debloat_direct_io.patch",
+      "sha256": "5a1cf7b8409d09584ea51177698c66eda2c4c5b3e4cfafad44221c2286f0c281"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/904-debloat_dma_buf.patch",
+      "sha256": "dd7b4404d9687401e2426ae3ab6c8aa1fb4bbb48725b03eef3252ee74b02fa9a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/910-kobject_uevent.patch",
+      "sha256": "d3658de6bb51ab38457f81a16f5f259f5b2316c6c913ce4f481c848b9a11a961"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/911-kobject_add_broadcast_uevent.patch",
+      "sha256": "eed37cd0f5ad15ad388766d8ecda044aef2c618120d7bc9e9230e566f4dfb27b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/921-use_preinit_as_init.patch",
+      "sha256": "72760697ad513670ee9047d7e24367c5be7e85e297d6c056baa9e3c5ea58b8b9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/922-always-create-console-node-in-initramfs.patch",
+      "sha256": "8c3fd019ea9110998adf01d4af86bf4c0e9ab8489508f3599fe0bfa1b52cb3d7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/930-crashlog.patch",
+      "sha256": "102152f3841faad75a78e08dc83737f242ce51985473bc9b4f54bd11f52657d3"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/940-ocf_kbuild_integration.patch",
+      "sha256": "1e57e8ebdef647a9640be1930c9afe9c904c0b7655da4939356ec5871b3c4330"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/941-ocf_20120127.patch",
+      "sha256": "939f1a295fea8e5f9f35fffecd50765beac807daceccd4d213880267d1825e4c"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/960-decompress_unlzo_fix.patch",
+      "sha256": "0442641c5becfd397fdc5fa65427c2332c3050649dea3d7f4a344a02ee5b6891"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/970-remove-unsane-filenames-from-deps_initramfs-list.patch",
+      "sha256": "b4c4326e1ad30ecdb77e0b7ae429cb18537a5c74fe84a48be7ac5378619bb478"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/980-arm_openwrt_machtypes.patch",
+      "sha256": "cc0fc25a366849c795c5cfb6fa523b9f9e9e9b8e12b27da9872178a3b95b8eab"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/990-gpio_wdt.patch",
+      "sha256": "1ecd61f5f93df02dd3db9d5b2031d26c434c5693aea360f309522a6a161ce6b2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/995-mangle_bootargs.patch",
+      "sha256": "b2d28df49c536ed211e5d5e8a2133f7753a74f066a82566ecf4fcf8928fff95a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/997-device_tree_cmdline.patch",
+      "sha256": "462c7e47fcb9b813b7421a442a9b66f903f5bd68ea018497772b7b4a97204a82"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/998-enable_wilink_platform_without_drivers.patch",
+      "sha256": "343cc43c320ca1d9f9a126e78b1ec8a4bbdecba2b2ffe6ceb135f55394f8c582"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/generic/patches-3.18/999-seccomp_log.patch",
+      "sha256": "76c36f30feb070f592b296f5beb863294fe69ef0250a5053a4b243cb1c7ff120"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0001-MIPS-ralink-add-verbose-pmu-info.patch",
+      "sha256": "f6b1fbb31a30365342df0f0889a09da63cf26be01feb22ad5d658a388d916563"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0002-MIPS-ralink-add-a-helper-for-reading-the-ECO-version.patch",
+      "sha256": "2552044069f31a5fa592a245ae0dfb302d517e17a1a6e68598d5be27de52ba8d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0003-MIPS-ralink-add-rt_sysc_m32-helper.patch",
+      "sha256": "407baa83ee794813d1e7dc29e6617e71f2a6a30e731f8fecc029b6ed8bd168f9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0004-MIPS-ralink-adds-a-bootrom-dumper-module.patch",
+      "sha256": "e80796b5f4762d1833e5afae8d767b2afcc131524b019c573473788a16d83053"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0005-MIPS-ralink-add-illegal-access-driver.patch",
+      "sha256": "3b8ae76a0be12c924ea05fc4a738817a38130beac39208682725e2345e8494d9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0006-MIPS-ralink-add-missing-clk_set_rate-to-clk.c.patch",
+      "sha256": "6cf05270dcf5874e4bd9d2aee4e80b7b952cbd4a167a197f9fe8e979d374f919"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0007-MIPS-ralink-add-support-for-MT7620n.patch",
+      "sha256": "44dcf3742f50df9aabde5eec31abbb56ab47053e0919fdc672d118e0b7f3aced"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0008-MIPS-ralink-allow-manual-memory-override.patch",
+      "sha256": "1c3d831e49dec49141cfa18718b1366291db1d4aa5dfed91ddca09d897e5ad1e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0009-MIPS-ralink-define-the-wmac-clock-on-mt7620.patch",
+      "sha256": "a0ba199fb4e1fe5e93d77be7a4bdd9ed5bb8d2a28bf5b02b52a65cf6c0906073"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0010-MIPS-ralink-define-the-wmac-clock-on-rt3883.patch",
+      "sha256": "d81f7eec55160ffcdab570886a5ed0f1230e29cfad668b9b61d3421225c07b99"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0011-MIPS-ralink-add-rt2880-wmac-clock.patch",
+      "sha256": "e4e9d3263e622f832aef5a140920c769e79c0ef174f2fc4ea6066b00967a4c49"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0012-MIPS-ralink-add-MT7621-support.patch",
+      "sha256": "8081d352648799b26131c45abecf7ee5470703a374acfe8b7abe07b9a35a5d70"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0013-MIPS-ralink-add-MT7621-defconfig.patch",
+      "sha256": "a82375bd5ceee190c4e04de4746c1080d922b9645fef46c2c590d0d94a5c11b7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0015-MIPS-ralink-cleanup-early_printk.patch",
+      "sha256": "92e953beb97900926afca038d1171dce08c73f2949899f3a031d9bea785e94ab"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0016-MIPS-ralink-add-MT7621-pcie-driver.patch",
+      "sha256": "a25a592fbf6f50e1c2953298d489226ebace1a049ebf1ae6ddde713dca263fa1"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0017-MIPS-use-set_mode-to-enable-disable-the-cevt-r4k-irq.patch",
+      "sha256": "65fd54dcc39bd74779d14961a31f37e6585647a6950225a3b9801be7b716d753"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0019-MIPS-ralink-add-pseudo-pwm-led-trigger-based-on-time.patch",
+      "sha256": "f367ef4e9ece5b362b875e411ee309ba01e1a315131b3cee87f12b64aa9a5df5"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0021-MIPS-ralink-add-cpu-frequency-scaling.patch",
+      "sha256": "a73277b431aa60c247d3868068cc13a39d8e1b907c4060101ab0e5fd03cc722e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0022-MIPS-ralink-copy-the-commandline-from-the-devicetree.patch",
+      "sha256": "c9522bb31b95bc4ab02b68884e72f61e8ae8f6960d1fd3b2cd5eb842bfc99441"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0023-MIPS-ralink-mt7620-fix-usb-issue-during-frequency-sc.patch",
+      "sha256": "996c34f98772afdaffd99016b16aafda0b9bcf08c3e3a1fab4847b51bd7ade50"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0025-MIPS-ralink-allow-loading-irq-registers-from-the-dev.patch",
+      "sha256": "6273030556819e604a6fd6ce1611b148e74f23f9f6e784428f51c558f2a5531a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0026-MIPS-ralink-add-mt7628an-support.patch",
+      "sha256": "246ce6cbc7833dfecab593c28a8a9e74a68712a7f2828dbddb77e453cd9aa1eb"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0027-serial-ralink-adds-mt7620-serial.patch",
+      "sha256": "bfe135d066f80f129ff86141b8d7f221332c66da44cca6ab756d1d967f19010b"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0028-serial-ralink-the-core-has-a-size-of-0x100-and-not-0.patch",
+      "sha256": "b542844f6754c7fbc80e4b13fb853f824ca53234b76c092f8436b821f6d715c7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0029-serial-of-allow-au1x00-and-rt288x-to-load-from-OF.patch",
+      "sha256": "5a87fb0e68f7b4dc8e07962787daf09f584e278f3a4b5ac3f96a36cef1821f78"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0030-GPIO-add-named-gpio-exports.patch",
+      "sha256": "1e7de8da8efbfe70e64be44d767f2bb6550759c376ee31f84716619f443613d4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0030-pinctrl-ralink-add-pinctrl-driver.patch",
+      "sha256": "641e07f5dd5b95ec70641d684b7ea80843dab6016f77d6d9f23178bbb2d10b84"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0031-PCI-MIPS-adds-rt2880-pci-support.patch",
+      "sha256": "49b454dfcdb9bc79b6d2c0b780020887dacc7944e984c21007f47cb5d2005b07"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0032-PCI-MIPS-adds-mt7620a-pcie-driver.patch",
+      "sha256": "5dbcda0702186b9a96c27b5bff808f632cc7a8b004a9f30e815b53c069cbeea0"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0033-NET-multi-phy-support.patch",
+      "sha256": "9ee5cf06bf4ef5383781489a65e6fbf4268a085e386e323af8e0db068620d565"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0035-NET-MIPS-add-ralink-SoC-ethernet-driver.patch",
+      "sha256": "bdeb8c156d439efc54e43fad22169675483c0602ae7498284371ad6e613e1dc9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0037-USB-phy-add-ralink-SoC-driver.patch",
+      "sha256": "4de4a1f84cb314e6a478afb5c9ebf5072c357ad07e0ffb2bf503207d2781c557"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0038-USB-add-OHCI-EHCI-OF-binding.patch",
+      "sha256": "269be900a267673f082e7b8cd3a1a83ddfb5f2147c3655b32902e8a22fb21e60"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0041-mtd-fix-cfi-cmdset-0002-erase-status-check.patch",
+      "sha256": "80a6a28abc7a156b4bed160f90571dc29b112366fe0574a081304fe4931c10d5"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0042-mtd-cfi-cmdset-0002-force-word-write.patch",
+      "sha256": "d48e49b83117d1090706e99a2771ad79bf13363c963f565434e931f976b19e57"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0043-mtd-ralink-add-mt7620-nand-driver.patch",
+      "sha256": "7512bc66059358e4e24584ab75334670a9a7678b411dda11aa1b1ff7343d519d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0044-mtd-add-chunked-read-io-to-m25p80.patch",
+      "sha256": "4718277fec9d09eea5eb2bc68b24f241243f1aeebfbf12949b1a37b8ac0c8309"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0045-mtd-add-mt7621-nand-support.patch",
+      "sha256": "42519300638df684b972ba413394563baf241015a9911baa0c668e8e242768b5"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0046-DT-Add-documentation-for-gpio-ralink.patch",
+      "sha256": "dc1020a002661ebe31babdfb49546314b3a9fb0905218f3e667369565bfec4a4"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0047-GPIO-MIPS-ralink-add-gpio-driver-for-ralink-SoC.patch",
+      "sha256": "252505eeb03270d211d222cc04cc914b4310727cb64a376e433d5286a280bd94"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0048-GPIO-ralink-add-mt7621-gpio-controller.patch",
+      "sha256": "c08dfff8b14be6e1869236867760e8f31c0d375f127aa03985ae0586c5693239"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0049-DT-Add-documentation-for-spi-rt2880.patch",
+      "sha256": "7ef5d1312a02deddfaf6f6caaf2de667cc1f8f5891d4217c7df5ecdb1926ef65"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0050-SPI-ralink-add-Ralink-SoC-spi-driver.patch",
+      "sha256": "1086ae9dd450ee88e0e9f4a5c4c596df54de7d467b23e87718b0a962f8def5be"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0051-rt5350-spi-second-device.patch",
+      "sha256": "9c77b51ef3ce0c668e93e14d51f536b7f4a24240cbf316d3c16d1cd71ccf4984"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0052-i2c-MIPS-adds-ralink-I2C-driver.patch",
+      "sha256": "d0246d6d5ee28c6494e277d172bb9e0a82e68116dbafa5f5926783c7bad13903"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0053-mmc-MIPS-ralink-add-sdhci-for-mt7620a-SoC.patch",
+      "sha256": "33a108b1467bcadbd197fd63ef3af942622562188909e4dbe8ffdb15cd1a00db"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0054-DMA-ralink-add-rt2880-dma-engine.patch",
+      "sha256": "6e0e733ef26c45d18b29e52c61931c6385753e723c3510dd71acb5c77e1b7096"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0055-asoc-add-mt7620-support.patch",
+      "sha256": "f9109c5af10d57fd4f11a4494e362610382acd5dcef40bfa2db03a950319b320"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0056-watchdog-add-MT7621-support.patch",
+      "sha256": "c6b24301bc6fbc5e2a0116c7bc3e29ddfabadc6492d8117cf4b10a215d62bcd5"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0057-uvc-add-iPassion-iP2970-support.patch",
+      "sha256": "ebdb9795e12e304dbaa74f006bd8ddec0a7ce1b20b41946b5da0770665169c6e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0059-USB-fix-dwc2.patch",
+      "sha256": "6c98902127a4554388f89e41629267b28c0f4af5b990456c254d0eac8f042502"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0060-soc_type.patch",
+      "sha256": "eb0503b45769384c0b9acff26027c3b2e0fc4e13ca0fce0e009b4cfb6bc7f473"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0061-SPI-ralink-add-mt7621-SoC-spi-driver.patch",
+      "sha256": "257c563946431bf2bdffadce3479bef62ec4760fd4aebeba9fb3bbbaad229856"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0062-mt7621-add-ECHI-OCHI-XCHI-support.patch",
+      "sha256": "bbc1f3ee307c610b9749992a0f80ccd94dd59234a81a732d3a6d1fd97ce3f5d8"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0063-cevt-rt3352.patch",
+      "sha256": "f1ccee8a7ef4d54a512bba815b3094a0b8feabeeda713b95901d84968f424e6f"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0065-fix_dts_cache_issues.patch",
+      "sha256": "1b847285a7e4f685c62bf1228ad88d87437dc0c213102db79b17856be17c935d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0065-mt7628-pww.patch",
+      "sha256": "23c100ad010c90ccb7dc538308b5194103cd1bce43099d74f0516d99f9d822ec"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0100-mtd-split-remove-padding.patch",
+      "sha256": "65fc4ee5768304d985d13d93c3879c130118b6f30b294d8d74736c26b0db7740"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0101-mtd-add-rtn56u-support.patch",
+      "sha256": "1df7fc404632a071af8d0a12d07031c48fa29f110222b2c7c4adb3f3f7bf38a7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0103-MIPS-OWRTDTB.patch",
+      "sha256": "0c63652e0bb9dcd54f62d96edba65551b89ed2451dda46593f822ef10533edec"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0110-fix_bootargs_handling.patch",
+      "sha256": "5bbf3cfd7248542421bddbc5d49b88aea8f206f381fb468448a615cb7ff37626"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0111-i2c-MIPS-add-mt7621-I2C-driver.patch",
+      "sha256": "d2c921d3cb72d0cc558e3178f136932a4f5c956aca253af24ca64b84319f1901"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0200-linkit_bootstrap.patch",
+      "sha256": "37078dc672cbfa8f14ef46cf786babc1d3873d7a70aa82c94a5738ccc768d47c"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0300-mt7628_fixes.patch",
+      "sha256": "654452b73b449237e1fe351d1098fc9e9d54d1df5e316557acdd34575b64c2b2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0301-mt7688-detect.patch",
+      "sha256": "cd1989918ab2695edc4def0e0b0c890640d7b1f8bf22a82273b5e9f102b51ca2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/0302-mt762x-vendor-id.patch",
+      "sha256": "b1695b403ea5ea39a63141d531e3f3d82c5da358b71130d1c4c64cfc2d0147e7"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/064-MIPS-ralink-fix-clearing-the-illegal-access-interrup.patch",
+      "sha256": "683c3dce73b46eec3be9350fe37e6d5cd98c894f7c89e415395e5b63298d109e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/100-mt7621-add-cpu-feature-overrides.patch",
+      "sha256": "ab43a2c1ced12480e2dd24fda0ba60422f8c365b75c8a4f90137ed2db008d322"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/110-mt7621-add-highmem.patch",
+      "sha256": "028010baf60ecf2e081f008f2cb069597cf9db4b6d02c1fc6082c68087d71d11"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/500-alsa.patch",
+      "sha256": "f6427108743585029691e535449650a670390dc00f5896e3e0d9c0d3b2aba0b9"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/999-baud_250000.patch",
+      "sha256": "05e6f94e0483ee8fb91fe4ebc5d88c71b769d26fc7bc8cb2356261be32a51e77"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/999-cevt.patch",
+      "sha256": "42e02dfdd5fbf124717c43cc86825ee96b1397f33a89b5b77055f2c74e736e11"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/999-disable_illacc.patch",
+      "sha256": "afe85bddb5d5386640dac7fe149b8b80442a2cd5aecc666e8d37aea464210aa2"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/999-led-blink-to-700ms.patch",
+      "sha256": "f85205d12e0c2c057378064c0fc16c6d372b989424c25251abd4912f85acbfc0"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/999-no-pm_poweroff.patch",
+      "sha256": "0824ddc9fc8a859f071d0ce3ba6b5b4a2075cc609d7c5ec9e34ac23828f7434e"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/999-non-pci-mt7620.patch",
+      "sha256": "2c6d3e57d18bc773d2c864f6c52086b38700e8a2f332a91b3a0e7de936fb903d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/999-pci-reset.patch",
+      "sha256": "c7a82ada8b318022cdd0261338e10822292111ca18082ca6e991a63ca2e4ca3a"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/99990001-liteon-overwrite-ttyS.patch",
+      "sha256": "e923f5a58b0aff32bd0e50a41b308925835029dd8a61562d295b8d654ed52d1d"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/99990002-liteon-config-agpio-cfg.patch",
+      "sha256": "a3f15e41d6f3f1ca06e54a1d8f82f1960c9c99a36613461db0e46e7e7d8fc926"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/99990003-gemtek-pwm-led-API_20180426.patch",
+      "sha256": "ac7da53ca8521d623109163c37742de8d474d509310ace4c88553d28d25f2a42"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/99990005-gemtek-pwm-led-CASE14-API_20180504.patch",
+      "sha256": "a2ec3e375e1a19bc61e2e5b5fd797ce7ce53b796a97a2307388cfda616f32bce"
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/patches-3.18/99990006-gemtek-pwm-led-CASE1-API_20180509.patch",
+      "sha256": "012a7cd598f57f83b36f8f6f61020ef766b4595e8ed452b81608839aba482472"
+    }
+  ]
+}

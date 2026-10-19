@@ -1,0 +1,3 @@
+FROM wemo-matter-app-builder:bookworm
+RUN apt-get update && apt-get install -y --no-install-recommends gcc-mipsel-linux-gnu bc bison flex cpio xz-utils device-tree-compiler qemu-system-mips kmod && rm -rf /var/lib/apt/lists/*
+WORKDIR /work

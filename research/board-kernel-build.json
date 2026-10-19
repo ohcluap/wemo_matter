@@ -1,0 +1,14 @@
+{
+  "kernel_release": "3.18.27",
+  "compiler": "Debian MIPS cross GCC 12; freestanding kernel, no libc",
+  "vendor_profile": "SNSV2 11420 source, normal 16 MiB layout; physical board unconfirmed",
+  "kernel_bytes": 1245074,
+  "kernel_region_bytes": 1572864,
+  "fits_kernel_region": true,
+  "dtb_bytes": 8126,
+  "dtb_marker_offset": 2064,
+  "lzma_roundtrip_verified": true,
+  "board_boot_tested": false,
+  "uimage_sha256": "d8f6d8e1cdce126354b01edf4e6a3b54e9a45c6f04e6f737276527bbee3ffc2c",
+  "config_sha256": "d5372bca316d07bebd9a8fc88ede1366b84a2cc8bf3e08a0cc9bd4bb5fd01a45"
+}

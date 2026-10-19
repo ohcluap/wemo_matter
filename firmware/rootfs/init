@@ -1,0 +1,19 @@
+#!/bin/sh
+export PATH=/usr/bin:/usr/sbin:/bin:/sbin
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+mount -t tmpfs -o mode=1777 tmpfs /tmp
+mkdir -p /dev/pts /run /etc/wemo-matter/state
+mount -t devpts devpts /dev/pts
+umask 077
+if grep -q 'wemo.offline_test=1' /proc/cmdline; then
+  /usr/lib/wemo/guest-tests.sh
+  result=$?
+  echo "WEMO_GUEST_EXIT=$result"
+  sync
+  poweroff -f
+fi
+echo 'Wemo development rootfs: service disabled; physical board and radio unvalidated.'
+echo 'No Wi-Fi credentials or relay pin activation are configured.'
+exec /bin/sh
