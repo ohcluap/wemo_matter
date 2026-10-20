@@ -1,0 +1,254 @@
+{
+  "scope": "Storage-read-only forensic RAM candidate; not certified for physical deployment",
+  "board_boot_tested": false,
+  "device_requests": 0,
+  "installation_allowed": false,
+  "bootloader_side_effects_verified": false,
+  "zero_hardware_side_effects_claimed": false,
+  "guest_run_id": "f10c5a20",
+  "kernel_policy": {
+    "board": {
+      "required_enabled": [
+        "WEMO_FORENSIC_RO",
+        "MTD_M25P80",
+        "MTD_SPI_NOR",
+        "SPI",
+        "BLK_DEV_INITRD",
+        "PROC_FS",
+        "CMDLINE_OVERRIDE",
+        "CMDLINE_BOOL",
+        "BINFMT_ELF"
+      ],
+      "forbidden_disabled": [
+        "NET",
+        "BLOCK",
+        "MODULES",
+        "WATCHDOG",
+        "INPUT",
+        "VT",
+        "FB",
+        "HID_SUPPORT",
+        "HID",
+        "SERIO",
+        "USB_SUPPORT",
+        "RTC_CLASS",
+        "GPIO_RALINK",
+        "GPIO_MT7621",
+        "GPIO_SYSFS",
+        "MTD_CFI",
+        "MTD_NAND",
+        "MTD_NAND_MT7620",
+        "MTD_PHYSMAP",
+        "MTD_PHYSMAP_OF",
+        "MTD_BLOCK",
+        "MTD_BLOCK_RO",
+        "MTD_UBI",
+        "MTD_OOPS",
+        "MTD_TESTS",
+        "PSTORE",
+        "DEVMEM",
+        "DEVKMEM",
+        "SPI_SPIDEV",
+        "I2C",
+        "PWM",
+        "NEW_LEDS",
+        "KEXEC",
+        "SQUASHFS",
+        "JFFS2_FS",
+        "MTD_OF_PARTS",
+        "MTD_CMDLINE_PARTS",
+        "MTD_ROOTFS_ROOT_DEV",
+        "MTD_SPLIT",
+        "NVRAM",
+        "MAGIC_SYSRQ",
+        "CRASHLOG",
+        "CRASH_DUMP",
+        "ALLOW_DEV_COREDUMP",
+        "DEBUG_FS",
+        "SYSFS",
+        "DEVTMPFS",
+        "CONFIGFS_FS"
+      ],
+      "fake_controller": false,
+      "kernel_sha256": "aa5426cef09417f48a60c8babd9b4e2bb612f2c62ac0e12f307386f198f7f2f2",
+      "config_sha256": "960d5583c4c63b33be6a5c5a87a8c7db9a921c855cf5d817ac548617cf0e4a86",
+      "embedded_initramfs_verified": true,
+      "deny_routines_have_no_calls": true
+    },
+    "malta": {
+      "required_enabled": [
+        "WEMO_FORENSIC_RO",
+        "MTD_M25P80",
+        "MTD_SPI_NOR",
+        "SPI",
+        "BLK_DEV_INITRD",
+        "PROC_FS",
+        "CMDLINE_OVERRIDE",
+        "CMDLINE_BOOL",
+        "BINFMT_ELF"
+      ],
+      "forbidden_disabled": [
+        "NET",
+        "BLOCK",
+        "MODULES",
+        "WATCHDOG",
+        "INPUT",
+        "VT",
+        "FB",
+        "HID_SUPPORT",
+        "HID",
+        "SERIO",
+        "USB_SUPPORT",
+        "RTC_CLASS",
+        "GPIO_RALINK",
+        "GPIO_MT7621",
+        "GPIO_SYSFS",
+        "MTD_CFI",
+        "MTD_NAND",
+        "MTD_NAND_MT7620",
+        "MTD_PHYSMAP",
+        "MTD_PHYSMAP_OF",
+        "MTD_BLOCK",
+        "MTD_BLOCK_RO",
+        "MTD_UBI",
+        "MTD_OOPS",
+        "MTD_TESTS",
+        "PSTORE",
+        "DEVMEM",
+        "DEVKMEM",
+        "SPI_SPIDEV",
+        "I2C",
+        "PWM",
+        "NEW_LEDS",
+        "KEXEC",
+        "SQUASHFS",
+        "JFFS2_FS",
+        "MTD_OF_PARTS",
+        "MTD_CMDLINE_PARTS",
+        "MTD_ROOTFS_ROOT_DEV",
+        "MTD_SPLIT",
+        "NVRAM",
+        "MAGIC_SYSRQ",
+        "CRASHLOG",
+        "CRASH_DUMP",
+        "ALLOW_DEV_COREDUMP",
+        "DEBUG_FS",
+        "SYSFS",
+        "DEVTMPFS",
+        "CONFIGFS_FS"
+      ],
+      "fake_controller": true,
+      "kernel_sha256": "d34e84837c055dc1c637437faa2d3396456be6711a5c4df19eafb876d86dfc29",
+      "config_sha256": "e5584f5ef1751d3b4cbea9de6eb4391327c340a3eb417241bda3275553a1c951",
+      "embedded_initramfs_verified": true,
+      "deny_routines_have_no_calls": true
+    }
+  },
+  "initramfs_entries": {
+    ".": {
+      "mode": 16749,
+      "size": 0,
+      "rdev_major": 0,
+      "rdev_minor": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "dev": {
+      "mode": 16749,
+      "size": 0,
+      "rdev_major": 0,
+      "rdev_minor": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "proc": {
+      "mode": 16749,
+      "size": 0,
+      "rdev_major": 0,
+      "rdev_minor": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "dev/console": {
+      "mode": 8576,
+      "size": 0,
+      "rdev_major": 5,
+      "rdev_minor": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "init": {
+      "mode": 33088,
+      "size": 37976,
+      "rdev_major": 0,
+      "rdev_minor": 0,
+      "sha256": "ac22acdabd9c938d4df827e9d0395c791bb6e7be8d91c47828460e419f3ab6ee"
+    }
+  },
+  "physical_image_has_test_controller": false,
+  "flash_opcodes_allowed": [
+    "03 read",
+    "05 status",
+    "9f JEDEC ID"
+  ],
+  "source_fork": "sources/linux-3.18.27-forensic; normal app source/build unmodified",
+  "outputs": [
+    {
+      "path": "artifacts/forensic/wemo-f7c063-forensic-ram.uImage",
+      "bytes": 522951,
+      "sha256": "6fb929578887943b670ba1a8d0b9eb52bf5054f7f7d33cbb9eb05caec41eb805"
+    },
+    {
+      "path": "artifacts/forensic/forensic.dtb",
+      "bytes": 4043,
+      "sha256": "2e2a214566e597bc3023770e3ba4e5b440fca48e737428ce37d4f9e2d244f894"
+    },
+    {
+      "path": "artifacts/forensic/initramfs.cpio",
+      "bytes": 38684,
+      "sha256": "26c02712be67b67d95f6f3bc647dc16d2ce5e1301c574faa991a27d87e6b2c41"
+    },
+    {
+      "path": "artifacts/forensic/init",
+      "bytes": 37976,
+      "sha256": "ac22acdabd9c938d4df827e9d0395c791bb6e7be8d91c47828460e419f3ab6ee"
+    }
+  ],
+  "limitations": [
+    "Exact bootloader/load method and its pre-entry writes remain unknown",
+    "MT7688 SPI controller, electrical behavior, pinmux and inherited watchdog state are not emulated",
+    "CPU, RAM, UART, clocks and controller initialization change volatile hardware state",
+    "No on-device execution, recovery demonstration or blanket no-change guarantee has been established"
+  ],
+  "source_fork_hashes": {
+    "drivers/mtd/devices/m25p80.c": {
+      "normal_sha256": "fe71e6b0b0caf07e9cb6b0855d8ae8005c2dda511d7fecab512fc66f779c1574",
+      "forensic_sha256": "a905352556891386fde114bd1fcaed9ab66d0d6ec69f33a10bab4b5048efb465"
+    },
+    "drivers/mtd/spi-nor/spi-nor.c": {
+      "normal_sha256": "8264029e91868eb8d99c10e5640cc2296b63eee91faf80b53debffa54ae5f9b0",
+      "forensic_sha256": "74d1f85de0f3ff5c99221074d3aeadf4b7422ac1d338cca93497275b3fea8c4c"
+    },
+    "drivers/mtd/Kconfig": {
+      "normal_sha256": "6dc060566324b92a0f50e2207d776c001e6b05807d6ca5e399036d4148284597",
+      "forensic_sha256": "c567c69f625a659d4b669b14dcb62a30c97d1da0bf3686089b2704853f69b7a2"
+    },
+    "drivers/mtd/Makefile": {
+      "normal_sha256": "46c1d4d2c53a05ea6ec510f0ae062f6f221be51e81246c98aff99e1819375c2f",
+      "forensic_sha256": "48e883a1ba6eeb5afc66a75d366aff2f22919e9fed9b5786c9211e1c6fe96e3f"
+    },
+    "arch/mips/ralink/Makefile": {
+      "normal_sha256": "5320e77cc5e96d03e1c922496640145f4b43d42f12aabce1375ea2d1594df601",
+      "forensic_sha256": "6a7d10790914bc866e3eb5b382000175d78d0c9cccdcc2ff98007c4f79d1a3ff"
+    },
+    "drivers/gpio/gpiolib-of.c": {
+      "normal_sha256": "7c0f5ae83ba889a76ac1c4227faeda6f90a4693963dbd740d2fdfd41b7a974e6",
+      "forensic_sha256": "4c35ca3e417170f7f335d2b28ba58fe72275ffceb89e146c25ff3ed643490592"
+    }
+  },
+  "build_input_hashes": {
+    "port/forensic.dts": "fbd6f0e203cb5edb7ebd2a2a33a5f85c0d6b99f81cdaaf282649a1b2421cfdd9",
+    "port/forensic_init.c": "6e13ca21dba915e31836e2ee61618f06f83b4d5d3de0c555a576caafeff4b7af",
+    "port/forensic_spi_test.c": "d817137d188c35ba5dafffde2858ea0e857667abfb271dfd643a9501adf8f515",
+    "scripts/prepare_forensic_kernel.py": "6a6011aaa566feb221c31deacfd39ae27371d00966844f14e60a4cde4bdfe31a",
+    "scripts/configure_forensic_kernel.py": "024a52854b0d7a0fc1c59d0a1a0232d2b7691047438ee4d26a4c00eec303637b",
+    "scripts/prepare_forensic_initramfs.py": "66b7c38153505f9fffa1bb04f1d472ab2ea1c0d658065f0f05fc8a7a001515c3",
+    "scripts/build_forensic_ram.sh": "3718e9fb9eea55d9adfbb41988dd62de8618774af0df528b5763adcac62091f0"
+  }
+}

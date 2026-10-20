@@ -114,4 +114,10 @@ The MIPS rootfs now includes transactional OS-level WPA2 provisioning: private c
 
 The source-based install audit identifies an aggregate B-partition overlap with shared data and checks conservative erase boundaries. **No safe installation/recovery method is verified for this exact plug.** The unsigned image remains blocked from installation; no device settings, firmware or flash were changed.
 
-The [F7C063-specific follow-up](research/f7c063-bootloader-recovery.md) strengthens the 16 MiB model-family evidence and identifies two further hazards: the older SNSV2 8 MiB profile selects an oversized image recipe, and the current kernel can write a flash status register while probing. A RAM-loaded kernel is therefore not inherently read-only. This research pass made no requests to the Wemo; exact bootloader and recovery remain unverified.
+The [F7C063-specific follow-up](research/f7c063-bootloader-recovery.md) strengthens the 16 MiB model-family evidence and identifies two further hazards: the older SNSV2 8 MiB profile selects an oversized image recipe, and the normal Matter kernel can write a flash status register while probing. A RAM-loaded kernel is therefore not inherently read-only. That research pass made no requests to the Wemo; exact bootloader and recovery remain unverified.
+
+## Read-only forensic RAM candidate
+
+A separate [forensic RAM image](research/forensic-ram-image.md) now removes probe writes and denies flash program/erase/register writes at the driver boundary. It includes only an identification program, with networking, shell, writable storage and GPIO/relay controls excluded. The actual MIPS driver stack passes 23 emulator checks, including all 256 register-write opcodes being rejected and zero forbidden SPI transactions. The 522,951-byte board RAM image is packaged locally; [build evidence](research/forensic-ram-build.json) records hashes and configuration/binary audits.
+
+This verifies a constrained storage-read-only software path offline. Exact bootloader behavior and physical MT7688 controller/board effects remain unverified; it is **not certified for deployment or for zero hardware side effects**. No Wemo was contacted, rebooted, flashed or changed.

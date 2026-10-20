@@ -1,5 +1,10 @@
 # F7C063 bootloader, flash and recovery research — 2026-10-19
 
+**Subsequent software milestone:** a separate [forensic RAM candidate](forensic-ram-image.md)
+now removes the probe-write path and enforces read-only flash access in offline
+tests. The normal Matter kernel discussed below is unchanged. Physical bootloader,
+controller and recovery behavior remain unverified; no on-device boot was attempted.
+
 **Outcome:** better evidence for the 16 MiB model family and two additional
 recovery hazards, but no verified exact-device bootloader version or safe
 installation/recovery procedure. This pass made **zero requests to the Wemo**.
