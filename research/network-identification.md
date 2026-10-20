@@ -1,5 +1,11 @@
 # Read-only network identification — 2026-10-19
 
+**Subsequent label confirmation:** the user supplied an exterior-label photograph
+on 2026-10-19 showing model **F7C063**, FCC ID `K7SF7C063`. The network findings
+below remain a record of what the network interfaces returned. The exact retail
+model is now confirmed from the label; bootloader and flash/recovery details
+remain unknown. See [device record](device.json).
+
 The user authorized read-only checks against the Wemo. Belkin-scoped SSDP located
 one responding controllee. Its device description, ten advertised service
 descriptors, four metadata getters and HomeKit mDNS advertisement were inspected.

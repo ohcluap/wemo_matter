@@ -87,6 +87,8 @@ def main():
     assert image.stat().st_size == IMAGE_BYTES
     report = {
         'scope': 'Offline analysis of SNSV2 11420 sources; installed firmware 11565 differs',
+        'retail_model_label_confirmation': {'model': 'F7C063', 'date': '2026-10-19',
+            'source': 'User-supplied exterior-label photograph; see research/device.json'},
         'physical_device_touched': False,
         'installation_allowed': False,
         'image_sha256': build['image_sha256'],
@@ -100,7 +102,7 @@ def main():
         'stock_health_commit': {'1': 0, '3': 2},
         'bootloader_rollback_emulated': False,
         'blockers': [
-            'Exact physical model, flash geometry, partition map and bootloader not confirmed',
+            'Exact flash geometry, partition map and bootloader not confirmed; exterior label confirms model F7C063',
             'Candidate has no Belkin signature; stock updater is not an installation route',
             'No verified exact-device RAM boot or independent recovery transport',
             'No verified complete original flash backup or restore rehearsal',

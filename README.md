@@ -6,7 +6,7 @@ Offline investigation of running a Matter application on a stock Wemo, without o
 
 ## Device and acquisition
 
-Prior read-only device observations identify firmware `WeMo_WW_2.00.11565.PVT-OWRT-SNSV2` and hardware revision `v2`. F7C063 Mini is the inferred retail model; the label has not been confirmed. The API's model number `1.0` is generic. See [sanitized device record](research/device.json).
+Prior read-only device observations identify firmware `WeMo_WW_2.00.11565.PVT-OWRT-SNSV2` and hardware revision `v2`. The user-supplied exterior-label photo on 2026-10-19 confirms **Wemo Mini, model F7C063** (FCC ID `K7SF7C063`). The label does not identify its bootloader or flash layout. The API's model number `1.0` is generic. See [sanitized device record](research/device.json).
 
 Read-only network checks on 2026-10-19 confirmed the **Wemo Mini** product family through metadata and HomeKit advertising. The retail part number and bootloader version were not exposed by the checked identity interfaces. See [network identification evidence and limits](research/network-identification.md). No device settings or firmware were changed.
 

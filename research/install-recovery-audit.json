@@ -1,5 +1,10 @@
 {
   "scope": "Offline analysis of SNSV2 11420 sources; installed firmware 11565 differs",
+  "retail_model_label_confirmation": {
+    "model": "F7C063",
+    "date": "2026-10-19",
+    "source": "User-supplied exterior-label photograph; see research/device.json"
+  },
   "physical_device_touched": false,
   "installation_allowed": false,
   "image_sha256": "d01ca63a194ffa63bdacd7b09a46229cdf65dc843064f00edce3466226a9e953",
@@ -122,7 +127,7 @@
   },
   "bootloader_rollback_emulated": false,
   "blockers": [
-    "Exact physical model, flash geometry, partition map and bootloader not confirmed",
+    "Exact flash geometry, partition map and bootloader not confirmed; exterior label confirms model F7C063",
     "Candidate has no Belkin signature; stock updater is not an installation route",
     "No verified exact-device RAM boot or independent recovery transport",
     "No verified complete original flash backup or restore rehearsal",

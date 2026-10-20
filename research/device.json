@@ -6,7 +6,7 @@
   "model_description": "Belkin Plugin Socket 1.0",
   "api_model_number": "1.0",
   "inferred_retail_model": "F7C063",
-  "retail_model_confirmed_from_label": false,
+  "retail_model_confirmed_from_label": true,
   "targeted_tcp_ports": [
     22,
     23,
@@ -30,5 +30,15 @@
   "retail_model_confirmed_over_network": false,
   "bootloader_version": null,
   "bootloader_version_note": "Not returned by checked UPnP descriptors/metadata getters or HomeKit advertisement; no shell, diagnostic execution, reboot or firmware operation attempted",
-  "latest_network_report": "research/network-identification.json"
+  "latest_network_report": "research/network-identification.json",
+  "confirmed_retail_model": "F7C063",
+  "label_evidence": {
+    "date": "2026-10-19",
+    "source": "User-supplied photograph of exterior label",
+    "product_name": "Wemo Mini",
+    "printed_model": "F7C063",
+    "fcc_id": "K7SF7C063",
+    "privacy": "Photo, serial number, MAC and device-specific Wemo ID are not copied into the repository",
+    "limits": "Exterior model label does not establish bootloader version, flash geometry, partition map or recovery behavior"
+  }
 }
