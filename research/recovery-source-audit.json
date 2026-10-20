@@ -1,0 +1,480 @@
+{
+  "date": "2026-10-19",
+  "scope": "Older SNSV2 11420 source and existing rebuilt kernel; not a live flash measurement",
+  "device_requests_this_research_pass": 0,
+  "physical_access_attempted": false,
+  "installation_allowed": false,
+  "recovery_proven": false,
+  "bootloader_family": "U-Boot indicated by vendor environment tools and partition labels; exact installed build unknown",
+  "bootloader_version": null,
+  "source_layout_16MiB": {
+    "Uboot": {
+      "start": 0,
+      "size": 327680,
+      "end": 327680
+    },
+    "kernel_1": {
+      "start": 327680,
+      "size": 1572864,
+      "end": 1900544
+    },
+    "rootfs_1": {
+      "start": 1900544,
+      "size": 6160384,
+      "end": 8060928
+    },
+    "kernel_2": {
+      "start": 8126464,
+      "size": 1572864,
+      "end": 9699328
+    },
+    "rootfs_2": {
+      "start": 9699328,
+      "size": 6029312,
+      "end": 15728640
+    },
+    "rootfs_data": {
+      "start": 15728640,
+      "size": 327680,
+      "end": 16056320
+    },
+    "nvram": {
+      "start": 16646144,
+      "size": 65536,
+      "end": 16711680
+    },
+    "User_Factory": {
+      "start": 16711680,
+      "size": 65536,
+      "end": 16777216
+    },
+    "Factory": {
+      "start": 262144,
+      "size": 65536,
+      "end": 327680
+    },
+    "homekit": {
+      "start": 8060928,
+      "size": 65536,
+      "end": 8126464
+    },
+    "Belkin_settings": {
+      "start": 16056320,
+      "size": 589824,
+      "end": 16646144
+    },
+    "Uboot_env": {
+      "start": 196608,
+      "size": 65536,
+      "end": 262144
+    },
+    "Firmware_1": {
+      "start": 327680,
+      "size": 7733248,
+      "end": 8060928
+    },
+    "Firmware_2": {
+      "start": 8126464,
+      "size": 7733248,
+      "end": 15859712
+    }
+  },
+  "source_layout_8MiB": {
+    "Uboot": {
+      "start": 0,
+      "size": 327680,
+      "end": 327680
+    },
+    "kernel_1": {
+      "start": 327680,
+      "size": 1572864,
+      "end": 1900544
+    },
+    "rootfs_1": {
+      "start": 1900544,
+      "size": 5439488,
+      "end": 7340032
+    },
+    "rootfs_data": {
+      "start": 7340032,
+      "size": 327680,
+      "end": 7667712
+    },
+    "nvram": {
+      "start": 7667712,
+      "size": 65536,
+      "end": 7733248
+    },
+    "User_Factory": {
+      "start": 7733248,
+      "size": 65536,
+      "end": 7798784
+    },
+    "Belkin_settings": {
+      "start": 7798784,
+      "size": 589824,
+      "end": 8388608
+    },
+    "Factory": {
+      "start": 262144,
+      "size": 65536,
+      "end": 327680
+    },
+    "Uboot_env": {
+      "start": 196608,
+      "size": 65536,
+      "end": 262144
+    },
+    "Firmware_1": {
+      "start": 327680,
+      "size": 7012352,
+      "end": 7340032
+    }
+  },
+  "source_8MiB_recipe_issue": {
+    "profile_expansion": "$(call BuildFirmware/OF/WeMo,$(1),mt7628,MT7628snsv2-8M)",
+    "template_bytes": 7602176,
+    "single_slot_bytes_before_shared_data": 7012352,
+    "overflow_bytes": 589824,
+    "data_overlaps_if_template_written_at_kernel_start": {
+      "rootfs_data": 327680,
+      "nvram": 65536,
+      "User_Factory": 65536,
+      "Belkin_settings": 131072
+    },
+    "means_user_has_8MiB": false
+  },
+  "ram_boot_read_only_audit": {
+    "current_candidate_is_strictly_read_only": false,
+    "finding": "Enabled m25p80 probe calls spi_nor_scan, which issues write-enable and write-status-register(0) for Macronix; no hardware execution performed",
+    "other_unaudited_effects": "Board pinmux, LED/button drivers, watchdog, radio and init paths also need review before claiming a non-mutating temporary boot",
+    "dts_capacity_note": "JEDEC detection overrides a mismatched platform chip name; en25q64 in DTS alone does not prove an 8MiB physical chip"
+  },
+  "archive_bootloader_named_paths": [
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst/patches/0006-enable-silent-console.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst/patches/0005-add-nanonote-lcd-support.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst/patches/0002-qi_lb60-add-software-usbboot-support.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst/patches/0003-add-mmc-support.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst/patches/0004-add-more-boot-options-F1-F2-F3-F4-M-S.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-xburst/patches/0001-qi_lb60-add-nand-spl-support.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-pxa",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-pxa/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-pxa/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-pxa/patches/001-squashfs_rootfstype_cmdline.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-mxs",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-mxs/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-mxs/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-mxs/patches/001-add-i2se-duckbill.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-imx6",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-imx6/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-imx6/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-imx6/patches/110-wandboard-owrt-env.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-imx6/patches/100-wandboard-enable-fit.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers/spi",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers/spi/ar71xx_spi.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers/net",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers/net/phy",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers/net/phy/rtl8366_mii.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers/net/phy/rtl8366.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers/net/ag71xx.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/drivers/net/ag71xx.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/include",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/include/asm-mips",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/include/asm-mips/ar71xx.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/include/asm-mips/ar71xx_gpio.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/include/configs",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/include/configs/nbg460n.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/board",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/board/zyxel",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/board/zyxel/nbg460n",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/board/zyxel/nbg460n/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/board/zyxel/nbg460n/nbg460n.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/board/zyxel/nbg460n/u-boot.lds",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/board/zyxel/nbg460n/lowlevel_init.S",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/board/zyxel/nbg460n/config.mk",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/cpu",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/cpu/mips",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/files/cpu/mips/ar71xx_serial.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/patches/001-ar71xx.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/patches/011-switch-rtl8366sr.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/patches/022-getline_backport.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/patches/021-darwin_compat.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/patches/020-freebsd-compat.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/patches/010-enet-ag71xx.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-ar71xx/patches/002-ar71xx-spi.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-omap",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-omap/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-omap/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-omap/patches/003-fix_findfdt_C4.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-omap/patches/001-switch_omap4_ext4.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-omap/patches/002-fix_jffs2.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi/uEnv.txt",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi/patches/004-add-olimex-a13-som.diff",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi/patches/003-add-lemaker-bananapro.diff",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi/patches/005-add-gmac-tx-delay-variant.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi/patches/006-add-lamobo-r1.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-sunxi/patches/002-add-linksprite-pcduino.diff",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/200-openwrt-config.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0003-ARM-kirkwood-fix-cpu-info-for-6282-device-id.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/130-ib62x0.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0009-kirkwood-sheevaplug-add-CONFIG_SYS_GENERIC_BOARD-def.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/110-dockstar.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/120-iconnect.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0008-kirkwood-pogo_e02-add-CONFIG_SYS_GENERIC_BOARD-defin.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0006-kirkwood-goflexhome-add-CONFIG_SYS_GENERIC_BOARD-def.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0007-kirkwood-iconnect-add-CONFIG_SYS_GENERIC_BOARD-defin.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0002-kirkwood-define-empty-CONFIG_MVGBE_PORTS-by-default.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/140-pogoplug_e02.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0004-kirkwood-ib62x0-add-CONFIG_SYS_GENERIC_BOARD-define.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0005-kirkwood-dockstar-add-CONFIG_SYS_GENERIC_BOARD-defin.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-kirkwood/patches/0001-cosmetic-kirkwood-style-fixes-in-kwbimage.cfg-files.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/drivers",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/drivers/block",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/drivers/block/plxsata_ide.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/drivers/usb",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/drivers/usb/host",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/drivers/usb/host/ehci-oxnas.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/include",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/include/configs",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/include/configs/ox820.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/tools",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/tools/mkox820crc.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/ddr.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/u-boot-spl.lds",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/MAINTAINERS",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/spl_start.S",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/Kconfig",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/ox820.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/ddr.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/board/ox820/lowlevel_init.S",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/common",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/common/spl",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/common/spl/spl_block.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/common/env_ext4.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm/arch-nas782x",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm/arch-nas782x/pinmux.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm/arch-nas782x/sysctl.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm/arch-nas782x/hardware.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm/arch-nas782x/timer.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm/arch-nas782x/clock.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm/arch-nas782x/spl.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/include/asm/arch-nas782x/cpu.h",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/cpu",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/cpu/arm1136",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/cpu/arm1136/nas782x",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/cpu/arm1136/nas782x/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/cpu/arm1136/nas782x/reset.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/cpu/arm1136/nas782x/timer.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/cpu/arm1136/nas782x/clock.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/arch/arm/cpu/arm1136/nas782x/pinmux.c",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/configs",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/files/configs/ox820_defconfig",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/patches/800-fix-bootm-assertion.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/patches/200-icplus-phy.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/patches/300-oxnas-target.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/patches/010-capacity-is-unsigned.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-oxnas/patches/150-spl-block.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/ramips",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/mvebu",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/kirkwood",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/mxs",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/oxnas",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/ar71xx",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/uboot-envtools.sh",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/lantiq",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/cns3xxx",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/files/imx6",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/Config.in",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/patches/300-support-env-in-ubivol-chardev.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/patches/200-fw_env_no_aes.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/patches/100-fw_env_gnu_source.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-envtools/patches/001-compile.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/README",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/Makefile",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0004-sf-add-slim-probe-funtions-for-SPL.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0016-net-add-driver-for-Lantiq-XWAY-ARX100-switch.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0026-MIPS-add-board-support-for-Arcadyan-ARV4519.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0036-MIPS-add-board-support-for-Arcadyan-Easybox-904.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0014-MIPS-add-support-for-Lantiq-XWAY-SoCs.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0008-sf-fix-sector-layout-of-S25FL256S_256K-and-S25FL512S.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0041-lzma-fixup.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0024-MIPS-lantiq-easy50712-add-openwrt-lantiq-common.h.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0007-sf-add-support-for-EN25QH256.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0017-tools-add-some-helper-tools-for-Lantiq-SoCs.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0032-MIPS-add-board-support-for-ZTE-ZXV10-H201L.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0030-MIPS-add-board-support-for-Gigaset-SX76X.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0028-MIPS-add-board-support-for-AudioCodes-MP-252.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0015-MIPS-lantiq-add-support-for-Lantiq-XWAY-ARX100-SoC-f.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0020-MIPS-lantiq-add-NAND-SPL-support.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0027-MIPS-add-board-support-for-Arcadyan-ARV7518.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0005-sf-make-calculatiom-of-address-bytes-completely-conf.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0042-arx100-cgu-fixes.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0023-MIPS-lantiq-add-default-openwrt-config.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0043-MIPS-add-board-support-for-Arcadyan-VGV7510KW22.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0029-MIPS-add-board-support-for-AVM-FritzBox-3370.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0025-MIPS-lantiq-easy80920-add-openwrt-lantiq-common.h.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0003-sf-move-malloc-of-spi_flash-to-spi_flash_probe.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0012-net-switchlib-add-driver-for-Atheros-AR8216.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0039-MIPS-add-board-support-for-Arcadyan-ARV7510.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0002-sf-consistently-use-debug-for-warning-error-messages.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0022-MIPS-lantiq-easy80920-add-support-for-NAND-SPL.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0018-tools-lantiq-add-NAND-SPL-support.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0006-sf-add-support-for-4-byte-addressing.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0010-net-switchlib-add-driver-for-Lantiq-PSB697X-switch-f.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0021-MIPS-vrx200-add-NAND-SPL-support.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0037-MIPS-add-board-support-for-Arcadyan-ARV752DPW.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0031-MIPS-add-board-support-for-ZTE-ZXHN-H367N.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0001-sf-fix-out-of-order-calls-for-spi_claim_bus-and-spi_.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0038-MIPS-add-board-support-for-Arcadyan-ARV752DPW22.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0019-Makefile-add-Lantiq-NAND-SPL-images.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0013-net-switchlib-add-driver-for-REALTEK-RTL8306.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0034-MIPS-add-board-support-for-ZyXEL-P-2601HN-Fx.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0033-MIPS-add-board-support-for-ZyXEL-P-661HNU-Fx.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0035-MIPS-add-board-support-for-ZyXEL-P-2812HNU-Fx.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0009-net-switchlib-add-framework-for-ethernet-switch-driv.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0011-net-switchlib-add-driver-for-Lantiq-ADM6996I-switch-.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0041-Makefile-prepare-u-boot-lantiq-v2013.10-openwrt4.patch",
+    "wemo_gpl_snsv2_package-11420/package/boot/uboot-lantiq/patches/0041-MIPS-add-board-support-for-Arcadyan-ARV7510PW22.patch",
+    "wemo_gpl_snsv2_package-11420/target/linux/at91/image/u-boot",
+    "wemo_gpl_snsv2_package-11420/target/linux/at91/image/u-boot/Makefile",
+    "wemo_gpl_snsv2_package-11420/target/linux/at91/image/u-boot/ubclient",
+    "wemo_gpl_snsv2_package-11420/target/linux/at91/image/u-boot/ubclient/Makefile",
+    "wemo_gpl_snsv2_package-11420/target/linux/at91/image/u-boot/ubclient/ubpar.c",
+    "wemo_gpl_snsv2_package-11420/target/linux/at91/image/u-boot/patches",
+    "wemo_gpl_snsv2_package-11420/target/linux/at91/image/u-boot/patches/200-clock.patch",
+    "wemo_gpl_snsv2_package-11420/target/linux/at91/image/u-boot/patches/100-netusg20.patch",
+    "wemo_gpl_snsv2_package-11420/target/linux/mpc85xx/files/arch/powerpc/boot/cuboot-tl-wdr4900-v1.c",
+    "wemo_gpl_snsv2_package-11420/target/linux/adm8668/files-3.18/arch/mips/adm8668/u-boot.h",
+    "wemo_gpl_snsv2_package-11420/target/linux/adm8668/image/lzma-loader/src/include/asm/u-boot.h",
+    "wemo_gpl_snsv2_package-11420/dl/u-boot-2014.10.tar.bz2"
+  ],
+  "archive_limits": "Named entries are generic OpenWrt boot packages/other targets and an upstream u-boot-2014.10 download, not a verified SNSV2 bootloader image. Path inspection does not exclude embedded blobs under unrelated names.",
+  "source_evidence": [
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/dts/MT7628snsv2.dts",
+      "sha256": "7fb63c22a816eb0da35ea765be314882d73f81a73e93464b864f25704a79b445",
+      "lines": {
+        "compatible = \"en25q64\"": [
+          30
+        ],
+        "label = \"Uboot\"": [
+          37
+        ],
+        "label = \"Firmware_2\"": [
+          89
+        ]
+      }
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/dts/MT7628snsv2-8M.dts",
+      "sha256": "1e775d668e61b0f6b63b7d08e4f363bada07a3a8a4072391134005240d8ebbf9",
+      "lines": {
+        "label = \"Firmware_1\"": [
+          73
+        ],
+        "label = \"rootfs_data\"": [
+          49
+        ]
+      }
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/image/Makefile",
+      "sha256": "182d59340716c6b5a04c857f2e1cfd45718f5752d6a637718ca6f4b9f652a828",
+      "lines": {
+        "count=7424": [
+          161
+        ],
+        "count=6848": [
+          168
+        ],
+        "Image/Build/Profile/WemoSNSV2-8M=": [
+          1033
+        ]
+      }
+    },
+    {
+      "path": "sources/linux-3.18.27-wemo/drivers/mtd/spi-nor/spi-nor.c",
+      "sha256": "8264029e91868eb8d99c10e5640cc2296b63eee91faf80b53debffa54ae5f9b0",
+      "lines": {
+        "JEDEC knows better": [
+          948
+        ],
+        "CFI_MFR_MACRONIX ||": [
+          970
+        ],
+        "write_sr(nor, 0);": [
+          973
+        ]
+      }
+    },
+    {
+      "path": "sources/linux-3.18.27-wemo/drivers/mtd/devices/m25p80.c",
+      "sha256": "fe71e6b0b0caf07e9cb6b0855d8ae8005c2dda511d7fecab512fc66f779c1574",
+      "lines": {
+        "spi_nor_scan(nor, flash_name, mode)": [
+          301
+        ]
+      }
+    },
+    {
+      "path": "artifacts/kernel-board/.config",
+      "sha256": "d5372bca316d07bebd9a8fc88ede1366b84a2cc8bf3e08a0cc9bd4bb5fd01a45",
+      "lines": {
+        "CONFIG_MTD_M25P80=y": [
+          714
+        ],
+        "CONFIG_MTD_SPI_NOR=y": [
+          732
+        ]
+      }
+    },
+    {
+      "path": "sources/snsv2-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+      "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+      "lines": {
+        "fw_printenv bootdelay": [
+          240
+        ],
+        "/usr/sbin/fw_setenv bootdelay 1": [
+          242
+        ]
+      }
+    }
+  ],
+  "next_required_evidence": [
+    "Actual boot banner/help without rebooting or changing environment in this phase",
+    "Exact chip ID and measured partition map from a separately authorized read-only acquisition",
+    "Matching independent full original backups and an exact-board recovery demonstration before writes"
+  ]
+}

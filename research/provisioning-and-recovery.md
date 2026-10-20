@@ -105,6 +105,11 @@ no-opening installation or recovery method for our device.
 
 ## Proposed sequence before any future installation
 
+The [later F7C063 source audit](f7c063-bootloader-recovery.md) adds an important
+restriction to the RAM-boot proposals below: the current kernel's Macronix probe
+issues a flash status-register write. A separate non-mutating image and exact
+bootloader command audit are required before calling any temporary boot read-only.
+
 There is **no verified safe installation procedure yet**. The following are
 evidence requirements for a later hardware phase, not commands to execute now:
 
