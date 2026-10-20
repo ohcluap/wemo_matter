@@ -8,6 +8,8 @@ Offline investigation of running a Matter application on a stock Wemo, without o
 
 Prior read-only device observations identify firmware `WeMo_WW_2.00.11565.PVT-OWRT-SNSV2` and hardware revision `v2`. F7C063 Mini is the inferred retail model; the label has not been confirmed. The API's model number `1.0` is generic. See [sanitized device record](research/device.json).
 
+Read-only network checks on 2026-10-19 confirmed the **Wemo Mini** product family through metadata and HomeKit advertising. The retail part number and bootloader version were not exposed by the checked identity interfaces. See [network identification evidence and limits](research/network-identification.md). No device settings or firmware were changed.
+
 [Belkin's official GPL catalog](https://www.belkin.com/it/support-article/?articleNum=51238) provides an F7C063 **2.00.11420** source package. We downloaded and statically inspected that older same-family release. It is **not** a matching 11565 update image, and should not be installed on this device based on this research.
 
 | Artifact | Provenance / identity |

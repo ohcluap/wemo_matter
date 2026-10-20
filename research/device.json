@@ -7,7 +7,28 @@
   "api_model_number": "1.0",
   "inferred_retail_model": "F7C063",
   "retail_model_confirmed_from_label": false,
-  "targeted_tcp_ports": [22, 23, 80, 443, 8080, 49152, 49153, 49154],
-  "reachable_tcp_ports_in_targeted_check": [49153],
-  "note": "This is not a full port scan or proof that no other services exist. LAN addresses, serials, MACs and pairing codes are intentionally omitted."
+  "targeted_tcp_ports": [
+    22,
+    23,
+    80,
+    443,
+    8080,
+    49152,
+    49153,
+    49154
+  ],
+  "reachable_tcp_ports_in_targeted_check": [
+    49153
+  ],
+  "note": "This is not a full port scan or proof that no other services exist. LAN addresses, serials, MACs and pairing codes are intentionally omitted.",
+  "latest_read_only_network_check": "2026-10-19",
+  "network_product_family": "Wemo Mini",
+  "product_family_evidence": [
+    "GetMetaInfo reports Wemo.Mini SSID prefix",
+    "HomeKit mDNS TXT md=Wemo Mini"
+  ],
+  "retail_model_confirmed_over_network": false,
+  "bootloader_version": null,
+  "bootloader_version_note": "Not returned by checked UPnP descriptors/metadata getters or HomeKit advertisement; no shell, diagnostic execution, reboot or firmware operation attempted",
+  "latest_network_report": "research/network-identification.json"
 }

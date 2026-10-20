@@ -1,0 +1,71 @@
+{
+  "observed_date": "2026-10-19",
+  "scope": "Read-only discovery and identification of the Wemo on the user's LAN",
+  "identity": {
+    "product_family": "Wemo Mini",
+    "hardware_revision": "v2",
+    "firmware": "WeMo_WW_2.00.11565.PVT-OWRT-SNSV2",
+    "api_model_name": "Socket",
+    "api_model_number": "1.0",
+    "api_model_description": "Belkin Plugin Socket 1.0",
+    "reported_sku": "Plugin Device",
+    "homekit_model": "Wemo Mini",
+    "inferred_retail_model": "F7C063",
+    "retail_model_confirmed": false,
+    "bootloader_version": null
+  },
+  "read_only_requests": {
+    "ssdp": "Two M-SEARCH discovery requests scoped to Belkin controllee/basicevent services",
+    "http_get": [
+      "/setup.xml",
+      "/setupservice.xml",
+      "/timesyncservice.xml",
+      "/eventservice.xml",
+      "/firmwareupdate.xml",
+      "/rulesservice.xml",
+      "/metainfoservice.xml",
+      "/remoteaccess.xml",
+      "/deviceinfoservice.xml",
+      "/smartsetup.xml",
+      "/manufacture.xml"
+    ],
+    "soap_metadata_getters": [
+      {
+        "action": "GetFirmwareVersion",
+        "service": "urn:Belkin:service:firmwareupdate:1",
+        "http_status": 200
+      },
+      {
+        "action": "GetExtMetaInfo",
+        "service": "urn:Belkin:service:metainfo:1",
+        "http_status": 200
+      },
+      {
+        "action": "GetMetaInfo",
+        "service": "urn:Belkin:service:metainfo:1",
+        "http_status": 200
+      },
+      {
+        "action": "GetInformation",
+        "service": "urn:Belkin:service:deviceinfo:1",
+        "http_status": 200
+      }
+    ],
+    "soap_note": "UPnP uses HTTP POST even for read-only getters. Only the four explicitly listed metadata getters were invoked, with no input arguments; no control/set/update actions were invoked.",
+    "mdns": "Six-second browse/resolve of _hap._tcp.local via macOS dns-sd"
+  },
+  "observed_limits": {
+    "retail_part_number": "F7C063 not present in the inspected live identity/metadata responses; Mini family is confirmed, exact retail variant remains inferred",
+    "bootloader": "No bootloader version returned by the inspected responses, and no explicitly named bootloader-version action in the 10 advertised service descriptors",
+    "uninterpreted_metadata": "Opaque ExtMetaInfo fields were not assumed to identify a bootloader",
+    "not_proof_of_impossibility": "Other authenticated or physical access methods may exist; none is established or attempted here"
+  },
+  "intentionally_not_used": [
+    "GetManufactureData: older source binary includes a CreateManufactureData path that writes /tmp/Belkin_settings/ManufactureData.xml; getter side effects not ruled out",
+    "Log generation/export, debug/test actions, credential getters, pairing, SSH/Telnet login, command execution and exploitation",
+    "Relay controls, Wi-Fi/setup changes, reboots/resets, environment writes, firmware uploads/updates and flash operations"
+  ],
+  "physical_device_state_changes_requested": false,
+  "private_evidence": "Raw XML and discovery responses stay in ignored artifacts/local-network with private file permissions; addresses, serials, MACs, names and setup information are omitted from committed evidence",
+  "conclusion": "Network checks confirm Wemo Mini v2 / SNSV2 family but do not establish exact retail part number or bootloader. Installation and recovery remain unverified."
+}
