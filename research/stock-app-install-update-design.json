@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-24",
+  "status": "Design candidate; no verified installer or deployed app",
+  "scope": "Offline only; no physical device changes",
+  "architecture": {
+    "os": "Preserve stock kernel, radio and Wemo processes",
+    "relay": "Prefer controlling stock local basicevent API from the on-device Matter process instead of taking over GPIO. Loopback endpoint and coexistence still need verification. No external bridge required.",
+    "startup": "Candidate late-boot background launcher via rc.local overlay; demonstrated in 11420 source only, requires privileged filesystem access and verification on 11565. Never replace stock startup scripts.",
+    "first_execution": "Only after obtaining a safe authorized execution method and examining memory/free space; stage a nonpersistent RAM trial with bounded resources, no automatic restart. No execution access currently established."
+  },
+  "initial_install_access": {
+    "verified": "SSDP discovery, HTTP descriptions, basicevent relay control",
+    "unverified": "Shell, arbitrary safe file transfer, privileged startup configuration writes",
+    "rejected_shortcuts": [
+      "Firmware update endpoint replaces firmware, not an app installer",
+      "HTTP rules/icon POST whitelist does not permit arbitrary executable/startup paths",
+      "StoreRules and DecodeRuleDbData are rule database paths; no supported app deployment interface established",
+      "Do not use crash or command-injection probes on device to discover recovery"
+    ]
+  },
+  "remote_app_update_design": {
+    "feasible_in_principle": true,
+    "requires_initial_install": true,
+    "transport": "Authenticated LAN update session from a temporarily connected PC; no permanent external server required",
+    "validation": "Signed application manifest and payload; board/ABI/version checks; reject incomplete or oversized transfer before activation",
+    "staging": "Stage in RAM if measured RAM permits; keep previous persistent version intact until verified candidate is safely committed",
+    "activation": "Bounded trial and health check of stock Wi-Fi/control and Matter; atomic version selection on one filesystem; preserve commissioning data with version-aware migrations",
+    "rollback": "Stock-independent small supervisor can disable or revert a failed Matter process while Linux remains healthy; this is application rollback, not recovery from corrupted filesystem/kernel/radio",
+    "storage_requirement": "Need measured room for installed app, previous version or other verified revert strategy, supervisor, Matter state, and filesystem reserve. Current known partition budget does not establish this capacity."
+  },
+  "storage": {
+    "historical_stripped_app_bytes": 2088300,
+    "historical_packaged_app_bytes": 655360,
+    "old_rootfs_data_bytes": 327680,
+    "old_Belkin_settings_bytes": 589824,
+    "caveat": "These are prior build and 11420 layout measurements; live free space unknown. No spare firmware slot or identity partition is allocated to this design."
+  },
+  "acceptance_before_persistence": [
+    "Verified execution and file-copy method on installed version",
+    "Measured available RAM and persistent storage",
+    "Stock services remain functional when Matter crashes/hangs or payload is missing/corrupt",
+    "Recovery from interrupted application update demonstrated without replacing OS",
+    "Safe removal/disable procedure through surviving stock access",
+    "No bootloader, raw partition, kernel or vendor Wi-Fi changes"
+  ],
+  "evidence": [
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/etc/rc.local",
+      "sha256": "515018aa94eb4937dade12dc0d69890b352af35a5ab5fb8203f9ed10990ac06f",
+      "text": "# Put your custom commands here that should be executed once\n# the system init finished. By default this file does nothing.\n\nexit 0\n"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/etc/init.d/done",
+      "sha256": "967c80f7667784b6b61e7469e854bb69e6322eec28ee0fd4fdac027226a8ef89",
+      "text": "#!/bin/sh /etc/rc.common\n# Copyright (C) 2006 OpenWrt.org\n\nSTART=95\nboot() {\n\tmount_root done\n\trm -f /sysupgrade.tgz\n\n\t# process user commands\n\t[ -f /etc/rc.local ] && {\n\t\tsh /etc/rc.local\n\t}\n\n\t# set leds to normal state\n\t. /etc/diag.sh\n\tset_state done\n}\n"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/startWemo.sh",
+      "sha256": "d92ef415c902ddf0c2462ffceeccd19aa5ae8b6c89cc7a270cf6d57168ff0ffe",
+      "text": "#!/bin/sh\n\nwhile true; do\n    /sbin/natClient &>/dev/console &\n    /sbin/wemoApp -webdir /tmp/Belkin_settings/ &>/dev/console\n    if [ -e /tmp/rebooting ]; then\n\t    exit\n    fi\n    killall natClient\n    killall wemoApp\n    if [ \"$(nvram get SAVE_MULTIPLE_LOGS)\" = \"{ NULL String }\" -o \"$(nvram get SAVE_MULTIPLE_LOGS)\" = \"\" ]; then\n\t    rm -f /tmp/messages-*\n    fi\n    cp /var/log/messages /tmp/messages-$(date +%Y-%m-%d-%H:%M)\n    sleep 2\ndone\n"
+    }
+  ]
+}

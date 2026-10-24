@@ -1,0 +1,494 @@
+{
+  "scope": "Archived 11420 configuration sources; profile composition and installed 11565 config still require verification",
+  "hits": [
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/network/config/firewall/Makefile",
+      "lines": [
+        {
+          "line": 44,
+          "text": "CMAKE_OPTIONS += $(if $(CONFIG_IPV6),,-DDISABLE_IPV6=1)"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/network/services/hostapd/files/hostapd-mini.config",
+      "lines": [
+        {
+          "line": 125,
+          "text": "#CONFIG_IPV6=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/network/services/hostapd/files/hostapd-full.config",
+      "lines": [
+        {
+          "line": 126,
+          "text": "CONFIG_IPV6=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/patches-3.18/0013-MIPS-ralink-add-MT7621-defconfig.patch",
+      "lines": [
+        {
+          "line": 68,
+          "text": "+CONFIG_IPV6_PRIVACY=y"
+        },
+        {
+          "line": 72,
+          "text": "+# CONFIG_IPV6_SIT is not set"
+        },
+        {
+          "line": 73,
+          "text": "+CONFIG_IPV6_MULTIPLE_TABLES=y"
+        },
+        {
+          "line": 74,
+          "text": "+CONFIG_IPV6_SUBTREES=y"
+        },
+        {
+          "line": 75,
+          "text": "+CONFIG_IPV6_MROUTE=y"
+        },
+        {
+          "line": 181,
+          "text": "+CONFIG_TMPFS=y"
+        },
+        {
+          "line": 182,
+          "text": "+CONFIG_TMPFS_XATTR=y"
+        },
+        {
+          "line": 183,
+          "text": "+CONFIG_JFFS2_FS=y"
+        },
+        {
+          "line": 185,
+          "text": "+CONFIG_JFFS2_FS_XATTR=y"
+        },
+        {
+          "line": 186,
+          "text": "+# CONFIG_JFFS2_FS_POSIX_ACL is not set"
+        },
+        {
+          "line": 187,
+          "text": "+# CONFIG_JFFS2_FS_SECURITY is not set"
+        },
+        {
+          "line": 190,
+          "text": "+CONFIG_SQUASHFS=y"
+        },
+        {
+          "line": 191,
+          "text": "+# CONFIG_SQUASHFS_ZLIB is not set"
+        },
+        {
+          "line": 192,
+          "text": "+CONFIG_SQUASHFS_XZ=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/config-3.18",
+      "lines": [
+        {
+          "line": 103,
+          "text": "CONFIG_IPV6=y"
+        },
+        {
+          "line": 104,
+          "text": "# CONFIG_IPV6_GRE is not set"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/adm5120/rb1xx/config-default",
+      "lines": [
+        {
+          "line": 31,
+          "text": "# CONFIG_JFFS2_FS is not set"
+        },
+        {
+          "line": 41,
+          "text": "# CONFIG_SQUASHFS is not set"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/oxnas/files/arch/arm/configs/ox820_defconfig",
+      "lines": [
+        {
+          "line": 35,
+          "text": "CONFIG_IPV6=y"
+        },
+        {
+          "line": 88,
+          "text": "CONFIG_TMPFS=y"
+        },
+        {
+          "line": 89,
+          "text": "CONFIG_TMPFS_POSIX_ACL=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/oxnas/config-3.18",
+      "lines": [
+        {
+          "line": 193,
+          "text": "# CONFIG_JFFS2_FS is not set"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/netlogic/config-default",
+      "lines": [
+        {
+          "line": 17,
+          "text": "CONFIG_BLK_DEV_LOOP=y"
+        },
+        {
+          "line": 199,
+          "text": "CONFIG_TMPFS_POSIX_ACL=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/ar71xx/mikrotik/config-default",
+      "lines": [
+        {
+          "line": 126,
+          "text": "# CONFIG_JFFS2_FS is not set"
+        },
+        {
+          "line": 154,
+          "text": "# CONFIG_SQUASHFS is not set"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/malta/config-3.18",
+      "lines": [
+        {
+          "line": 132,
+          "text": "CONFIG_JFFS2_FS_POSIX_ACL=y"
+        },
+        {
+          "line": 133,
+          "text": "CONFIG_JFFS2_FS_SECURITY=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/brcm2708/patches-3.18/0023-config-add-missing-options-from-3.6.y-kernel.patch",
+      "lines": [
+        {
+          "line": 98,
+          "text": "-# CONFIG_IPV6 is not set"
+        },
+        {
+          "line": 110,
+          "text": "+CONFIG_IPV6_TUNNEL=m"
+        },
+        {
+          "line": 111,
+          "text": "+CONFIG_IPV6_MULTIPLE_TABLES=y"
+        },
+        {
+          "line": 112,
+          "text": "+CONFIG_IPV6_MROUTE=y"
+        },
+        {
+          "line": 113,
+          "text": "+CONFIG_IPV6_MROUTE_MULTIPLE_TABLES=y"
+        },
+        {
+          "line": 114,
+          "text": "+CONFIG_IPV6_PIMSM_V2=y"
+        },
+        {
+          "line": 373,
+          "text": " CONFIG_BLK_DEV_LOOP=y"
+        },
+        {
+          "line": 866,
+          "text": " CONFIG_TMPFS=y"
+        },
+        {
+          "line": 867,
+          "text": " CONFIG_TMPFS_POSIX_ACL=y"
+        },
+        {
+          "line": 872,
+          "text": " CONFIG_SQUASHFS=m"
+        },
+        {
+          "line": 873,
+          "text": " CONFIG_SQUASHFS_XATTR=y"
+        },
+        {
+          "line": 874,
+          "text": " CONFIG_SQUASHFS_LZO=y"
+        },
+        {
+          "line": 875,
+          "text": " CONFIG_SQUASHFS_XZ=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/brcm2708/patches-3.18/0003-Add-quick-config.patch",
+      "lines": [
+        {
+          "line": 66,
+          "text": "+# CONFIG_IPV6 is not set"
+        },
+        {
+          "line": 70,
+          "text": "+CONFIG_BLK_DEV_LOOP=y"
+        },
+        {
+          "line": 149,
+          "text": "+CONFIG_TMPFS=y"
+        },
+        {
+          "line": 150,
+          "text": "+CONFIG_TMPFS_POSIX_ACL=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/brcm2708/config-3.18",
+      "lines": [
+        {
+          "line": 37,
+          "text": "CONFIG_BLK_DEV_LOOP=y"
+        },
+        {
+          "line": 231,
+          "text": "# CONFIG_SQUASHFS is not set"
+        },
+        {
+          "line": 239,
+          "text": "CONFIG_TMPFS_POSIX_ACL=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/uml/config/x86_64",
+      "lines": [
+        {
+          "line": 113,
+          "text": "CONFIG_SQUASHFS_EMBEDDED=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/uml/config/i386",
+      "lines": [
+        {
+          "line": 124,
+          "text": "CONFIG_SQUASHFS_EMBEDDED=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/generic/config-3.18",
+      "lines": [
+        {
+          "line": 432,
+          "text": "# CONFIG_BLK_DEV_LOOP is not set"
+        },
+        {
+          "line": 433,
+          "text": "CONFIG_BLK_DEV_LOOP_MIN_COUNT=8"
+        },
+        {
+          "line": 1598,
+          "text": "# CONFIG_IPV6 is not set"
+        },
+        {
+          "line": 1599,
+          "text": "# CONFIG_IPV6_MIP6 is not set"
+        },
+        {
+          "line": 1600,
+          "text": "# CONFIG_IPV6_MROUTE is not set"
+        },
+        {
+          "line": 1601,
+          "text": "# CONFIG_IPV6_MROUTE_MULTIPLE_TABLES is not set"
+        },
+        {
+          "line": 1602,
+          "text": "# CONFIG_IPV6_MULTIPLE_TABLES is not set"
+        },
+        {
+          "line": 1603,
+          "text": "CONFIG_IPV6_NDISC_NODETYPE=y"
+        },
+        {
+          "line": 1604,
+          "text": "# CONFIG_IPV6_OPTIMISTIC_DAD is not set"
+        },
+        {
+          "line": 1605,
+          "text": "# CONFIG_IPV6_PRIVACY is not set"
+        },
+        {
+          "line": 1606,
+          "text": "# CONFIG_IPV6_ROUTER_PREF is not set"
+        },
+        {
+          "line": 1607,
+          "text": "# CONFIG_IPV6_ROUTE_INFO is not set"
+        },
+        {
+          "line": 1608,
+          "text": "# CONFIG_IPV6_SIT is not set"
+        },
+        {
+          "line": 1609,
+          "text": "# CONFIG_IPV6_SIT_6RD is not set"
+        },
+        {
+          "line": 1610,
+          "text": "# CONFIG_IPV6_TUNNEL is not set"
+        },
+        {
+          "line": 1611,
+          "text": "# CONFIG_IPV6_VTI is not set"
+        },
+        {
+          "line": 1719,
+          "text": "CONFIG_JFFS2_FS=y"
+        },
+        {
+          "line": 1720,
+          "text": "CONFIG_JFFS2_FS_DEBUG=0"
+        },
+        {
+          "line": 1721,
+          "text": "# CONFIG_JFFS2_FS_POSIX_ACL is not set"
+        },
+        {
+          "line": 1722,
+          "text": "# CONFIG_JFFS2_FS_SECURITY is not set"
+        },
+        {
+          "line": 1723,
+          "text": "# CONFIG_JFFS2_FS_WBUF_VERIFY is not set"
+        },
+        {
+          "line": 1724,
+          "text": "CONFIG_JFFS2_FS_WRITEBUFFER=y"
+        },
+        {
+          "line": 1725,
+          "text": "CONFIG_JFFS2_FS_XATTR=y"
+        },
+        {
+          "line": 3811,
+          "text": "CONFIG_SQUASHFS=y"
+        },
+        {
+          "line": 3812,
+          "text": "# CONFIG_SQUASHFS_4K_DEVBLK_SIZE is not set"
+        },
+        {
+          "line": 3813,
+          "text": "# CONFIG_SQUASHFS_DECOMP_MULTI is not set"
+        },
+        {
+          "line": 3814,
+          "text": "CONFIG_SQUASHFS_DECOMP_MULTI_PERCPU=y"
+        },
+        {
+          "line": 3815,
+          "text": "# CONFIG_SQUASHFS_DECOMP_SINGLE is not set"
+        },
+        {
+          "line": 3816,
+          "text": "# CONFIG_SQUASHFS_EMBEDDED is not set"
+        },
+        {
+          "line": 3817,
+          "text": "# CONFIG_SQUASHFS_FILE_CACHE is not set"
+        },
+        {
+          "line": 3818,
+          "text": "CONFIG_SQUASHFS_FILE_DIRECT=y"
+        },
+        {
+          "line": 3819,
+          "text": "CONFIG_SQUASHFS_FRAGMENT_CACHE_SIZE=3"
+        },
+        {
+          "line": 3820,
+          "text": "# CONFIG_SQUASHFS_LZO is not set"
+        },
+        {
+          "line": 3821,
+          "text": "# CONFIG_SQUASHFS_XATTR is not set"
+        },
+        {
+          "line": 3822,
+          "text": "CONFIG_SQUASHFS_XZ=y"
+        },
+        {
+          "line": 3823,
+          "text": "# CONFIG_SQUASHFS_ZLIB is not set"
+        },
+        {
+          "line": 3945,
+          "text": "CONFIG_TMPFS=y"
+        },
+        {
+          "line": 3946,
+          "text": "# CONFIG_TMPFS_POSIX_ACL is not set"
+        },
+        {
+          "line": 3947,
+          "text": "CONFIG_TMPFS_XATTR=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/brcm63xx/config-3.18",
+      "lines": [
+        {
+          "line": 202,
+          "text": "CONFIG_SQUASHFS_EMBEDDED=y"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/xburst/config-3.18",
+      "lines": [
+        {
+          "line": 302,
+          "text": "# CONFIG_SQUASHFS is not set"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/x86/ep80579/config-3.3",
+      "lines": [
+        {
+          "line": 11,
+          "text": "# CONFIG_SQUASHFS is not set"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/sunxi/config-3.18",
+      "lines": [
+        {
+          "line": 442,
+          "text": "CONFIG_TMPFS_POSIX_ACL=y"
+        }
+      ]
+    }
+  ]
+}

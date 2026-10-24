@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-24",
+  "repo_commit": "4bbc08a5ec86d472b4350fb72b25a514ccafd244",
+  "device_contacted": false,
+  "scope": "Static reads of official 11420 package; installed 11565 not acquired",
+  "package_sha256": "4f4648e8765a891bc995c868a6ebeb835a5d4c1e8d92f4fcd1e0162d9a1955e6",
+  "files": [
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/firmware_update.sh",
+      "sha256": "f16c45caf7d16cef0c94bf7f1ad35a599f1e031c09a4e7e9e5e6d2671e5ea114",
+      "excerpts": [
+        {
+          "start_line": 39,
+          "end_line": 92,
+          "text": {
+            "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+            "sha256_utf8": "7c00d9c6417333f5229b81ef87773f06506940fd09398d7fb3e93a1d5ecce562",
+            "bytes_utf8": 1765
+          }
+        },
+        {
+          "start_line": 161,
+          "end_line": 208,
+          "text": {
+            "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+            "sha256_utf8": "46f28211516c8976226ab1866f120c21563fd4e789f3476cff2c6800801af7aa",
+            "bytes_utf8": 1399
+          }
+        }
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/web/firmwareupdate.xml",
+      "sha256": "ea576db60c4ba96c42bfbc92f540f21761451e3e49b757b56a6371cf00d31554",
+      "excerpts": [
+        {
+          "start_line": 30,
+          "end_line": 42,
+          "text": "</argument>\n<argument>\n<name>DownloadStartTime</name>\n<relatedStateVariable>DownloadStartTime</relatedStateVariable>\n<direction>in</direction>\n</argument>\n<argument>\n<name>WithUnsignedImage</name>\n<relatedStateVariable>WithUnsignedImage</relatedStateVariable>\n<direction>in</direction>\n</argument>\n</argumentList>\n</action>"
+        },
+        {
+          "start_line": 63,
+          "end_line": 72,
+          "text": "<dataType>string</dataType>\n<defaultValue>0</defaultValue>\n</stateVariable>\n<stateVariable sendEvents=\"no\">\n<name>WithUnsignedImage</name>\n<dataType>string</dataType>\n<defaultValue>0</defaultValue>\n</stateVariable>\n</serviceStateTable>\n</scpd>"
+        }
+      ]
+    },
+    {
+      "path": "package/belkin/WeMo_SNSV2/files/sbin/update_test.sh",
+      "sha256": "1ffa158bedd705a1272f5fb9a941fab71700954ff80793e6be947350ca3a758f",
+      "excerpts": [
+        {
+          "start_line": 12,
+          "end_line": 40,
+          "text": {
+            "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+            "sha256_utf8": "7a67d13ba635430dcbe3ebf3a79d2290154ff436003d86e0a32cfa95bb342e91",
+            "bytes_utf8": 704
+          }
+        }
+      ]
+    },
+    {
+      "path": "target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+      "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+      "excerpts": [
+        {
+          "start_line": 266,
+          "end_line": 284,
+          "text": {
+            "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+            "sha256_utf8": "b53ceb5483ebf07f7dd54a9a1bb5d4b60af868c2754ac546f3fd96b3f7fe25dd",
+            "bytes_utf8": 581
+          }
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "test_install_recovery.py": {
+      "passed": 4
+    },
+    "test_recovery_sources.py": {
+      "passed": 3
+    },
+    "hardware_or_rollback_validation": false
+  }
+}

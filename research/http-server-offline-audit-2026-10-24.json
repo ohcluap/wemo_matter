@@ -1,0 +1,274 @@
+{
+  "date": "2026-10-24",
+  "scope": "Entire pass offline. No network requests, device commands, firmware loads, uploads, resets or GitHub activity.",
+  "source_version": "Official SNSV2 GPL 11420 package; installed 11565 implementation remains unavailable.",
+  "package_sha256": "4f4648e8765a891bc995c868a6ebeb835a5d4c1e8d92f4fcd1e0162d9a1955e6",
+  "libupnp_version": "1.6.19 as selected by package/belkin/libupnp/Makefile",
+  "reconstruction": {
+    "method": "Exact full-context unique hunk matches, no fuzz; webserver.c only",
+    "hunks": [
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -66,6 +66,8 @@",
+        "matched_line": 66
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1049,6 +1051,8 @@",
+        "matched_line": 1051
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1088,6 +1092,7 @@",
+        "matched_line": 1092
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1167,6 +1172,16 @@",
+        "matched_line": 1172
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1251,6 +1266,7 @@",
+        "matched_line": 1266
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1264,6 +1280,7 @@",
+        "matched_line": 1280
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1278,6 +1295,8 @@",
+        "matched_line": 1295
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1291,6 +1310,8 @@",
+        "matched_line": 1310
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1332,6 +1353,68 @@",
+        "matched_line": 1353
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1362,6 +1445,34 @@",
+        "matched_line": 1445
+      },
+      {
+        "patch": "patch-010-belkin-gemtek.patch",
+        "hunk": "@@ -1529,7 +1640,7 @@",
+        "matched_line": 1640
+      },
+      {
+        "patch": "patch-011-belkin-gemtek.patch",
+        "hunk": "@@ -1452,14 +1452,21 @@",
+        "matched_line": 1452
+      },
+      {
+        "patch": "patch-011-belkin-gemtek.patch",
+        "hunk": "@@ -1471,7 +1478,10 @@",
+        "matched_line": 1478
+      },
+      {
+        "patch": "patch-013-restart_rule_engine.patch",
+        "hunk": "@@ -67,6 +67,7 @@",
+        "matched_line": 67
+      },
+      {
+        "patch": "patch-013-restart_rule_engine.patch",
+        "hunk": "@@ -1447,9 +1448,6 @@",
+        "matched_line": 1448
+      },
+      {
+        "patch": "patch-013-restart_rule_engine.patch",
+        "hunk": "@@ -1459,7 +1457,12 @@",
+        "matched_line": 1457
+      },
+      {
+        "patch": "patch-021-fix-strtok.patch",
+        "hunk": "@@ -1364,6 +1364,7 @@ int UpdateXML()",
+        "matched_line": 1364
+      },
+      {
+        "patch": "patch-021-fix-strtok.patch",
+        "hunk": "@@ -1395,10 +1396,10 @@ int UpdateXML()",
+        "matched_line": 1396
+      },
+      {
+        "patch": "patch-023-check_null_avoid_sigsegv.patch",
+        "hunk": "@@ -1174,6 +1174,16 @@",
+        "matched_line": 1174
+      },
+      {
+        "patch": "patch-040-restrict-posts.patch",
+        "hunk": "@@ -134,6 +134,15 @@",
+        "matched_line": 135
+      },
+      {
+        "patch": "patch-040-restrict-posts.patch",
+        "hunk": "@@ -1458,6 +1467,25 @@",
+        "matched_line": 1467
+      },
+      {
+        "patch": "patch-040-restrict-posts.patch",
+        "hunk": "@@ -1523,6 +1551,12 @@",
+        "matched_line": 1551
+      }
+    ],
+    "sha256": "184b86f6091c57a21691a21d3cf33026ed1cee3d6c86266feaf257bc021f5a42"
+  },
+  "evidence": [
+    {
+      "topic": "Document root",
+      "finding": "startWemo.sh line 5 launches wemoApp -webdir /tmp/Belkin_settings/. ControlleeDeviceStart preserves argument 4 at 0x1df5c; if null substitutes string 0x50104 (/tmp/Belkin_settings) at 0x1e1a8..0x1e1b4; passes root to UpnpSetWebServerRootDir at 0x1e260..0x1e268."
+    },
+    {
+      "topic": "Normal GET path",
+      "finding": "Patched webserver.c decodes escapes then removes dot segments at lines 1094..1095; concatenates document root at 1176..1177; calls realpath at 1198 and checks strstr(abspath,gDocumentRootDir.buf) at 1200. This substring check is not a rigorous containment guarantee; no claim of complete traversal resistance."
+    },
+    {
+      "topic": "Raw flash nodes",
+      "finding": "get_file_info at patched lines 543..552 accepts directories or regular files and rejects other types. Character/block flash device nodes are not supported by this normal serving path. This still holds independently of a hypothetical path-containment weakness."
+    },
+    {
+      "topic": "Virtual callbacks",
+      "finding": "ControlleeDeviceStart 0x1df6c..0x1dfa0 sets get_info=GetFileInfo, open=OpenWebFile, write=PostFile; read/seek/close zero. Calls UpnpSetVirtualDirCallbacks at 0x1e354..0x1e35c, UpnpAddVirtualDir with ./ at 0x1e408..0x1e410. Bundled upnpapi.c 4198 onward requires each callback and its read setter rejects null. No patch altering those functions was found. This does not establish a working alternate reader. Previously disassembled GetFileInfo/OpenWebFile/PostFile are logging stubs."
+    },
+    {
+      "topic": "Uploads",
+      "finding": "040-restrict-posts.patch allows only /tmp/Belkin_settings/rules.db and icon.jpg and imposes a 256KiB entity-length check. These are state-changing uploads, not firmware backup or arbitrary application installation. Not tested live."
+    },
+    {
+      "topic": "Export/symlink search",
+      "finding": "Scoped scan of packaged SNSV2 text and SNSV2/base-files archive links found no flash-export file or document-root link to raw flash. Startup writes boot_A_args to /tmp/bootArgs, outside the documented web root. Other low-level MTD read symbols are kernel-driver code, not HTTP export handlers. Not exhaustive proof about generated files or 11565."
+    }
+  ],
+  "conclusion": "No safe firmware/bootloader export mechanism established through these HTTP paths. No exact 11565 image or matching bootloader obtained. No reliable Wi-Fi-only recovery established.",
+  "recovery_gap": "Even a successful read of flash would provide backup bytes, not a means to restore those bytes when kernel or Wi-Fi no longer works. Bootloader transport/rollback must be independently established before any replacement firmware.",
+  "next_evidence_needed": [
+    "Exact 11565 HTTP/application implementation or proven nonmutating acquisition mechanism",
+    "Matching bootloader implementation and boot environment",
+    "Verified recovery independent of replacement kernel and radio"
+  ],
+  "source_manifest": [
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/Makefile",
+      "file": "patch-Makefile",
+      "sha256": "2329e0fd3ccc3840ed467d5adf0ee513f820166feb2a6cca58a55e448f2657e2"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/016-restrict_fake_ST.patch",
+      "file": "patch-016-restrict_fake_ST.patch",
+      "sha256": "8e8a670875b80bec325f1b03cff4d3f864b95575d6ff01e234a6d6ae793f00d0"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/013-restart_rule_engine.patch",
+      "file": "patch-013-restart_rule_engine.patch",
+      "sha256": "2592075fbce42017b96abca8c89f6ab2596e993301753e54a58786b09ba55b6f"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/021-fix-strtok.patch",
+      "file": "patch-021-fix-strtok.patch",
+      "sha256": "3b5db7ba08ccde37b77a775f4e5666755809013e862f64074f5c57b0797558c4"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/031-netcam-undo-robust-mutex.patch",
+      "file": "patch-031-netcam-undo-robust-mutex.patch",
+      "sha256": "4ad6ca1049ce512bb8208de6ce2ccccac3dac6bfaef2e049d908ccebeef3a598"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/010-belkin-gemtek.patch",
+      "file": "patch-010-belkin-gemtek.patch",
+      "sha256": "cdecbbe846379b7bee1c074073178e93657bab635d76c4fd7bba4f171536b3ad"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/013-serialize-reference-count.patch",
+      "file": "patch-013-serialize-reference-count.patch",
+      "sha256": "1d24c47ae7aabc5c59a635710e3b15f2d9a9d9f35e02a323e437832dd7ca873c"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/017-data-bytes.patch",
+      "file": "patch-017-data-bytes.patch",
+      "sha256": "671fcd27bf83d82d7e6246fb218dc1efccb8c02eb638fcce89e3108739578419"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/030-fix-time-jumps.patch",
+      "file": "patch-030-fix-time-jumps.patch",
+      "sha256": "5b0951d4e167e2383ee45d476931f03b4f99d4d09caedee8df680030cb757f4b"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/024-upnp-message-restrictions",
+      "file": "patch-024-upnp-message-restrictions",
+      "sha256": "72837db99cc56522af19e15d8c186487123caaf321e932c0404db7d8aa27737e"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/025-miniserver-tid-print.patch",
+      "file": "patch-025-miniserver-tid-print.patch",
+      "sha256": "dbecc1af4bbb85509084bd7c013cf22bd0f73d2c80099e3b85a61cf496ff2503"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/032-error_response_update.patch",
+      "file": "patch-032-error_response_update.patch",
+      "sha256": "e17d9e7c92fdf4e6bec42683e80eddeb62c4852a7f6712008ae70d583b39baa0"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/023-check_null_avoid_sigsegv.patch",
+      "file": "patch-023-check_null_avoid_sigsegv.patch",
+      "sha256": "0dae9d27a446c350eff1cd35d82510780ac6ff2784940235d3f127533c4d7e56"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/014-gena-notify-heap-corruption.patch",
+      "file": "patch-014-gena-notify-heap-corruption.patch",
+      "sha256": "beb996ac5b851eb4ccb179065bc873eecd32f6a6fdbe1ecfeca38f262765f019"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/040-restrict-posts.patch",
+      "file": "patch-040-restrict-posts.patch",
+      "sha256": "24c25fd0711dafe1163e6ab6e2310d6d0414b2efb128fe550240e3adecf62f31"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/033-linux-header-if-h-update.patch",
+      "file": "patch-033-linux-header-if-h-update.patch",
+      "sha256": "14e9348c331567f1a20d68884af2e0aa5a80ac2fdc34109ac638fa8905920cd3"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/011-belkin-gemtek.patch",
+      "file": "patch-011-belkin-gemtek.patch",
+      "sha256": "f9ce653c837ad2d76f50c2534caa2bac2516faab8c69a9a2e080dfdee26e9539"
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/libupnp/patches/041-dns-rebinding-fix.patch",
+      "file": "patch-041-dns-rebinding-fix.patch",
+      "sha256": "40dc064592b424f90138bcae8eccf037bbb64fafba607a678bbbef8cdc4862a1"
+    },
+    {
+      "member": "libupnp-1.6.19/upnp/src/api/upnpapi.c",
+      "file": "upnpapi.c",
+      "sha256": "745c667ed3d759f7656844420ac2b966bc890623e13d23dcb391a97cecc222f0"
+    },
+    {
+      "member": "libupnp-1.6.19/upnp/src/genlib/net/http/httpreadwrite.c",
+      "file": "httpreadwrite.c",
+      "sha256": "f8e78dd5c35752e70ddb10c0cfa95275f203dd640c9db84a71551361e2b43226"
+    },
+    {
+      "member": "libupnp-1.6.19/upnp/src/genlib/net/http/webserver.c",
+      "file": "webserver.c",
+      "sha256": "b0eef2bf8a7476f376a2ddfb59e96256cf525fea21b4fbdc61c6a81bdcc1ce9c"
+    },
+    {
+      "member": "libupnp-1.6.19/upnp/src/genlib/net/uri/uri.c",
+      "file": "uri.c",
+      "sha256": "a272852a83105761492880550374270d922eb3e3fc58edbe12ee8a7fa6f42cec"
+    }
+  ],
+  "derived_files": {
+    "controllee-start.asm.txt": "89adc69112ed03ba72fd51e1905ef0b455981d2d8d7d0f647d2e1bbd3a18f9e4",
+    "flash-export-search.json": "79cf0f7a820a5cd085f216303afb113bd3376812765215ac7e88e1e37d6a385f",
+    "packaged-paths.json": "c3998d1f4914477f57747d6358bf499a7dbc733fd5c9c5f82bde45bf86db1577",
+    "webserver.patched.c": "f8bc2e2c5ceb92622d2914c111ee497b69653cdd5c46bc6dc152241cb9d6a187"
+  }
+}

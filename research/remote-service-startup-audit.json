@@ -1,0 +1,58 @@
+[
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/base-files/Makefile",
+    "matches": [
+      {
+        "line": 56,
+        "text": "/etc/dropbear/"
+      }
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/lib/preinit/99_10_failsafe_login",
+    "matches": [
+      {
+        "line": 6,
+        "text": "\ttelnetd -l /bin/login.sh <> /dev/null 2>&1"
+      }
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/lib/upgrade/common.sh",
+    "matches": [
+      {
+        "line": 128,
+        "text": "\t\t\t\t*procd*|*ash*|*init*|*watchdog*|*ssh*|*dropbear*|*telnet*|*login*|*hostapd*|*wpa_supplicant*|*nas*) : ;;"
+      }
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/profiles/01-wemo.mk",
+    "matches": [
+      {
+        "line": 10,
+        "text": "  PACKAGES := WeMo_SNSV2  -dropbear \\"
+      },
+      {
+        "line": 25,
+        "text": "  PACKAGES := WeMo_SNSV2 -dropbear kmod-usb-core kmod-usb2 kmod-usb-ohci \\"
+      },
+      {
+        "line": 45,
+        "text": "  PACKAGES := WeMo_SNSV3  -dropbear \\"
+      },
+      {
+        "line": 61,
+        "text": "  PACKAGES := WeMo_Dimmer -dropbear kmod-usb-core kmod-usb2 kmod-usb-ohci \\"
+      },
+      {
+        "line": 79,
+        "text": "  PACKAGES := WeMo_Dimmer -dropbear kmod-usb-core kmod-usb2 kmod-usb-ohci \\"
+      },
+      {
+        "line": 99,
+        "text": "  PACKAGES := WeMo_LightV2 -dropbear kmod-usb-core kmod-usb2 kmod-usb-ohci \\"
+      }
+    ]
+  }
+]

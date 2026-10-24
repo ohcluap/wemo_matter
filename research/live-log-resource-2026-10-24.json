@@ -1,0 +1,6 @@
+{
+  "observed_utc": "2026-10-24T17:29:28Z",
+  "operation": "HTTP GET /PluginLogs.txt only; no log generation or SOAP action",
+  "source": "Path found in 11420 GetLogFilePath implementation; availability on 11565 unverified before request",
+  "http_status": 404
+}

@@ -1,0 +1,58 @@
+{
+  "scope": "Offline 11420 vendor archive; Belkin package and SNSV2 base files under 2 MB",
+  "hits": [
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libRemoteAccess.so",
+      "sha256": "94001f7c7447939caca62540582da3ba51927c5ed80298d993657fd8f9f6bcb8",
+      "text": false,
+      "evidence": [
+        " #########Removing /tmp/*.starting files",
+        "rm -f /tmp/*.starting"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/wemo",
+      "sha256": "aeb4c35b98b32f0a87486d5a1768094df2b4b5e725feeca0a0da0b0277ae63dd",
+      "text": true,
+      "evidence": [
+        {
+          "line": 23,
+          "text": "   touch /tmp/wemoApp.starting"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/go_dummy.sh",
+      "sha256": "fd19e7330b8c33dedc1597795671452f95e4f7678556204640cc18296f5b572d",
+      "text": true,
+      "evidence": [
+        {
+          "line": 20,
+          "text": "rm -f /tmp/*.starting"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/update_test.sh",
+      "sha256": "1ffa158bedd705a1272f5fb9a941fab71700954ff80793e6be947350ca3a758f",
+      "text": true,
+      "evidence": [
+        {
+          "line": 18,
+          "text": "for file in /tmp/*.starting; do"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/startWemoHK.sh",
+      "sha256": "81222875340197b4c5da14d318a946e2e163308125e54a405f7762e6b0156bd0",
+      "text": true,
+      "evidence": [
+        {
+          "line": 10,
+          "text": "    if [ -n \"$wemoAppPID\" ] && [ ! -f /tmp/wemoApp.starting ]; then"
+        }
+      ]
+    }
+  ]
+}

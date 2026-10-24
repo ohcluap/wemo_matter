@@ -1,0 +1,25 @@
+[
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/pmortemd",
+    "text": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "0ad562d798850f863ec228aee5f1c43ae824d2cc7e496fc51d263fe99edf7351",
+      "bytes_utf8": 1722
+    },
+    "sha256": "0ad562d798850f863ec228aee5f1c43ae824d2cc7e496fc51d263fe99edf7351"
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/BCT.sh",
+    "text": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "2107d5f781b24e62b18d7cb80f0461fe91671399063751ced33dd248aadc9913",
+      "bytes_utf8": 1137
+    },
+    "sha256": "2107d5f781b24e62b18d7cb80f0461fe91671399063751ced33dd248aadc9913"
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/manual_load_monitor.sh",
+    "text": "#!/bin/sh\n\nset_led_state() {\n    power_on=$(cat /tmp/notify_change)\n    if [ \"${power_on}x\" == \"1x\" ]; then\n        echo 5 > /sys/class/pwm/pwmchip0/pwm1/period\n    else\n        echo 6 > /sys/class/pwm/pwmchip0/pwm1/period\n    fi\n}\n\nmonitor_change() {\n    while inotifywait -e modify /tmp/notify_change; do\n        set_led_state\n    done\n}\n\n# set initial LED state\nset_led_state\n\n# if any reason it fails from above loop\nwhile true; do\n    monitor_change\ndone\n",
+    "sha256": "a00ea040e5350c91a2e7dcbcc68a232ff13036438ea15e2b76b6c3891867c1a8"
+  }
+]

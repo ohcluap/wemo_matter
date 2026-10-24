@@ -1,0 +1,24 @@
+{
+  "experiment": "Link-only -Oz after -Os with LTO",
+  "result": "Byte-identical to compact baseline",
+  "sha256": "13f73561c016d31e84a201d7a76d5f2745ce7d225df64390ecb2db7e4283fe8e",
+  "bytes": 1669844,
+  "link_option_order": [
+    "-Os",
+    "-flto=4",
+    "-Oz"
+  ],
+  "new_commissioning_test": "Not repeated because exact binary SHA256 matches the tested compact build",
+  "compile_time_experiment": {
+    "result": "Byte-identical to compact baseline",
+    "effective_compile_optimization_order": [
+      "-Os",
+      "-flto",
+      "-Oz"
+    ],
+    "bytes": 1669844,
+    "sha256": "13f73561c016d31e84a201d7a76d5f2745ce7d225df64390ecb2db7e4283fe8e",
+    "validation": "Exact byte comparison against compact binary that passed 17 commissioning checks; no redundant runtime test",
+    "best_tested_squashfs_bytes": 565248
+  }
+}

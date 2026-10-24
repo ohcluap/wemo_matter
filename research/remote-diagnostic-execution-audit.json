@@ -1,0 +1,67 @@
+{
+  "scope": "Offline analysis only; vendor 11420 binaries, not exact installed 11565",
+  "physical_device_contacted": false,
+  "safe_shell_verified": false,
+  "recovery_verified": false,
+  "new_route": {
+    "library": "libRemoteAccess.so",
+    "sha256": "94001f7c7447939caca62540582da3ba51927c5ed80298d993657fd8f9f6bcb8",
+    "chain": [
+      "sendConfigChangeDevStatus -> webAppSendData -> DespatchSendNotificationResp",
+      "RemoteAccessDevConfig -> DespatchSendNotificationResp",
+      "DespatchSendNotificationResp -> enqueue -> rcvSendstatusRspThread -> process_command -> process_syscmd -> system"
+    ],
+    "system_call_site": "process_syscmd 0x7330 loads system, jalr at 0x7334",
+    "transport_evidence": [
+      "Notification sender calls createAuthSignature and webAppCreateSession",
+      "RemoteAccessDevConfig called by remoteAccessXmlHandler",
+      "remoteAccessXmlHandler candidates from UDS_ProcessRemoteData and remoteAccessServiceHandler",
+      "remoteAccessServiceHandlerI references remotePktDecrypt"
+    ],
+    "assessment": "Real archived execution-capable diagnostic handler; not a demonstrated LAN shell. Delivery authorization, credentials, service availability, exact-version presence and recovery remain unresolved. No command payload constructed or sent."
+  },
+  "other_route": {
+    "waspd_bind": "127.0.0.1",
+    "bind_string_virtual_address": "0x41b9e4",
+    "socket_family": "AF_INET",
+    "protocol": "UDP",
+    "flash_scope": "WASP attached controller based on CLI and init script; not established as main Linux flash access",
+    "result": "Not a demonstrated Wi-Fi recovery or firmware dump route"
+  },
+  "next_evidence": [
+    "Resolve initial diagnostic transport authentication and whether any stock LAN interface can legitimately reach it",
+    "Obtain exact installed library/kernel or matching verified firmware before assuming 11420 routes exist",
+    "Establish independent recovery before execution or persistent modifications"
+  ],
+  "artifacts": [
+    "artifacts/binary-analysis/process-syscmd-access.txt",
+    "artifacts/binary-analysis/remote-access-callers.json",
+    "artifacts/binary-analysis/notification-response-access.txt",
+    "artifacts/binary-analysis/remote-service-inner.txt",
+    "artifacts/binary-analysis/waspd-udp-init.txt"
+  ],
+  "authentication_followup": {
+    "date": "2026-10-24T20:47:15.066816+00:00",
+    "key_dependency": "remotePktDecrypt loads g_szPluginPrivatekey at 0x1ce44 and invokes pluginAESDecrypt at 0x1d14c",
+    "local_transport": "libAddlInfra StartIPCClient invokes socket with AF_UNIX=1 and SOCK_STREAM=2 at 0x105bc-0x105cc; sets sockaddr family 1 and connects a filesystem path at 0x10754",
+    "implication": "Cloud/NAT diagnostic execution and local IPC both need prerequisites not established through the verified LAN control API. No usable local shell demonstrated.",
+    "limits": [
+      "Offline 11420 binaries only",
+      "No device private key obtained or printed",
+      "No command payload sent",
+      "Cryptographic helper presence alone is not a complete authentication audit"
+    ],
+    "artifacts": [
+      "artifacts/binary-analysis/remote-packet-decrypt.txt",
+      "artifacts/binary-analysis/process-client-ipc.txt",
+      "artifacts/binary-analysis/start-ipc-client.txt"
+    ]
+  },
+  "decrypt_control_flow_followup": {
+    "scope": "Offline archived 11420 disassembly only",
+    "evidence": "remoteAccessServiceHandlerI: non-null input branches at 0xf50c to 0xf56c, invokes remotePktDecrypt at 0xf574, stores its result at 0xf57c, and branches to failure at 0xf580 if that result is null. Only the non-null result proceeds to allocation and copying at 0xf588-0xf5d4.",
+    "conclusion": "This traced handler does not pass a failed decryption result onward as plaintext. The earlier symbol reference is now supported by branch-level evidence. This does not establish cryptographic integrity or cover alternate handlers.",
+    "device_contacted": false,
+    "recovery_verified": false
+  }
+}

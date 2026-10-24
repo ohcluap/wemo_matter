@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-24",
+  "repository": "ohcluap/wemo_matter",
+  "github_scope": "User-owned repository only; no mutations",
+  "branches": [
+    {
+      "name": "main",
+      "sha": "4bbc08a5ec86d472b4350fb72b25a514ccafd244"
+    }
+  ],
+  "releases": [],
+  "workflow_runs_total": 0,
+  "repository_artifact_endpoint": "Connector rejected unsupported endpoint; workflow-run collection was then checked successfully and was empty.",
+  "local_filename_search": {
+    "roots_checked": [
+      "C:\\Users\\pauly\\Downloads",
+      "C:\\Users\\pauly\\.codex\\visualizations\\2026\\10\\24\\01a16e87-5390-78d3-b88f-a94a912f2539\\wemo_matter"
+    ],
+    "optional_onedrive_downloads_present": false,
+    "patterns": [
+      "*11565*",
+      "*SNSV2*",
+      "*snsv2*",
+      "*wemo*.bin*",
+      "*wemo*.gpg*",
+      "*uboot*.bin*"
+    ],
+    "result": "Only existing research files and 11420 GPL package; no matching firmware or bootloader image found.",
+    "limits": "Case-sensitive filename globs as passed to rg; not a full disk/content search; differently named or external phone-cache files not excluded."
+  },
+  "decision": "No new artifact source identified. Exact-version recovery and safe installation remain unverified. No device operations authorized by these results."
+}

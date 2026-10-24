@@ -1,0 +1,41 @@
+{
+  "updated_utc": "2026-10-24T20:54:02.897097+00:00",
+  "objective": "Load a native Matter app alongside stock Wemo software on the owned F7C063 firmware 11565, and demonstrate direct Matter on/off control without an external bridge or persistent server.",
+  "constraints": [
+    "Wi-Fi-only software access; preserve stock OS, radio, bootloader and vendor software",
+    "Do not install, flash, or change the device until independent recovery is verified, including failed boot and loss of Wi-Fi; emulator results and app-only rollback are insufficient.",
+    "No GitHub activity outside user-owned repositories; no third-party messages",
+    "Preserve project data, existing Docker volumes and League of Legends"
+  ],
+  "acceptance": [
+    "Verified safe access on exact 11565",
+    "Measured persistent storage and RAM fit with operating and rollback reserve",
+    "Verify independent recovery for failed boot, Wi-Fi loss, failed application and interrupted updates before device changes.",
+    "Install app, commission, switch actual relay on/off directly over Matter",
+    "Verify persistence across reboot and surviving stock control"
+  ],
+  "current_work": [
+    "Obtain exact-11565 firmware or equivalent trustworthy installed-version evidence",
+    "Verify safe Wi-Fi-only access and independent recovery before device mutation",
+    "Then install the native app and demonstrate actual direct relay control and reboot persistence"
+  ],
+  "app_goal_record": "Blocked after repeated exact-device access/recovery impasse; objective unchanged and not complete.",
+  "latest_verified_state": {
+    "best_tested_app_squashfs_bytes": 565248,
+    "commissioning_tests_passed": 17,
+    "physical_device_modified": false,
+    "verified_safe_shell": false,
+    "verified_recovery": false,
+    "diagnostic_followup": "Device-key dependency and AF_UNIX IPC confirmed in archived 11420 binary; exact 11565 reachability unverified",
+    "compiler_followup": "Both link-only and compile-plus-link -Oz produced the exact tested compact binary; best compressed image remains 552 KiB.",
+    "compressed_image_mount_verified": false,
+    "storage_followup": "Archived generic 3.18 kernel disables loop devices; 552 KiB SquashFS is not yet a verified stock-loadable deployment format.",
+    "ram_unpack_candidate": {
+      "app_and_decoder_bytes": 571300,
+      "decoder_bytes": 41776,
+      "isolated_decoder_tests": 10,
+      "actual_device_fit_verified": false
+    }
+  },
+  "completion_audit": "research/hardware-completion-audit.json"
+}

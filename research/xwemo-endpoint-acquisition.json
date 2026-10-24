@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://dns.google/resolve?name=api.xwemo.com&type=A",
+    "status": 200,
+    "sha256": "a507c8a27d34888eeca648f9eaec940dfa9fb767be374f83c650880ed11d11bf",
+    "body": "{\"Status\":3,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"api.xwemo.com.\",\"type\":1}],\"Authority\":[{\"name\":\"xwemo.com.\",\"type\":6,\"TTL\":900,\"data\":\"ns-1222.awsdns-24.org. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400\"}],\"Comment\":\"Response from 205.251.199.122.\"}"
+  },
+  {
+    "url": "https://dns.google/resolve?name=fw.xbcs.net&type=A",
+    "status": 200,
+    "sha256": "0794f0a17d1b184b8241e5b2d557240adf9c1f4fd31aa493a33de3d9858318a8",
+    "body": "{\"Status\":3,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"fw.xbcs.net.\",\"type\":1}],\"Authority\":[{\"name\":\"net.\",\"type\":6,\"TTL\":893,\"data\":\"a.gtld-servers.net. nstld.verisign-grs.com. 1792865866 1800 900 604800 900\"}],\"Comment\":\"Response from 192.31.80.30.\"}"
+  },
+  {
+    "url": "https://web.archive.org/cdx/search/cdx?url=api.xwemo.com%3A8443%2Fapis%2Fhttp%2Ffirmware%2F%2A&output=json&filter=statuscode%3A200&collapse=urlkey&limit=200",
+    "status": 200,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "body": "[]\n"
+  },
+  {
+    "url": "https://web.archive.org/cdx/search/cdx?url=api.xwemo.com%2F%2A&output=json&filter=statuscode%3A200&collapse=urlkey&limit=200",
+    "status": 200,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "body": "[]\n"
+  }
+]

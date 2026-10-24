@@ -1,0 +1,21 @@
+[
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libAddlInfra.so",
+    "strings": [
+      "http://s3.amazonaws.com"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libRemoteAccess.so",
+    "strings": [
+      "api.xbcs.net",
+      "devices.xbcs.net"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/fw_check",
+    "strings": [
+      "https://api.xwemo.com:8443/apis/http/firmware/upgrades/%s"
+    ]
+  }
+]

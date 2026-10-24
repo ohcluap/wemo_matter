@@ -1,0 +1,75 @@
+{
+  "comparison": "Live 11565 service action names versus official GPL 11420 packaged descriptors; identical schemas do not imply identical implementations",
+  "results": [
+    {
+      "descriptor": "metainfoservice.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/metainfoservice.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "remoteaccess.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/remoteaccess.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "rulesservice.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/rulesservice.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "deviceinfoservice.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/deviceinfoservice.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "smartsetup.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/smartsetup.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "manufacture.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/manufacture.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "timesyncservice.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/timesyncservice.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "firmwareupdate.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/firmwareupdate.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "setupservice.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/setupservice.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    },
+    {
+      "descriptor": "eventservice.xml",
+      "source": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/eventservice.xml",
+      "added_in_live": [],
+      "absent_in_live": [],
+      "same_action_names": true
+    }
+  ]
+}

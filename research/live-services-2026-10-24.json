@@ -1,0 +1,1297 @@
+{
+  "observed_utc": "2026-10-24T17:28:21Z",
+  "firmware": "WeMo_WW_2.00.11565.PVT-OWRT-SNSV2",
+  "scope": "SSDP discovery and HTTP GET of advertised XML descriptions only",
+  "setup_sha256": "6ad37c8b162410f2d16190dbc484b598d67da863384737c09df4ad4831ed2d60",
+  "services": [
+    {
+      "type": "urn:Belkin:service:WiFiSetup:1",
+      "descriptor": "/setupservice.xml",
+      "sha256": "289a9cd3304134368490460cc8195937280d79c8b9055ff77a78319ba70088cd",
+      "actions": [
+        {
+          "name": "GetApList",
+          "arguments": [
+            {
+              "name": "ApList",
+              "direction": "out",
+              "relatedStateVariable": "ApList"
+            }
+          ]
+        },
+        {
+          "name": "GetNetworkList",
+          "arguments": [
+            {
+              "name": "NetworkList",
+              "direction": "out",
+              "relatedStateVariable": "NetworkList"
+            }
+          ]
+        },
+        {
+          "name": "ConnectHomeNetwork",
+          "arguments": [
+            {
+              "name": "ssid",
+              "direction": "in",
+              "relatedStateVariable": "ssid"
+            },
+            {
+              "name": "auth",
+              "direction": "in",
+              "relatedStateVariable": "auth"
+            },
+            {
+              "name": "password",
+              "direction": "in",
+              "relatedStateVariable": "password"
+            },
+            {
+              "name": "encrypt",
+              "direction": "in",
+              "relatedStateVariable": "encrypt"
+            },
+            {
+              "name": "channel",
+              "direction": "in",
+              "relatedStateVariable": "channel"
+            }
+          ]
+        },
+        {
+          "name": "GetNetworkStatus",
+          "arguments": [
+            {
+              "name": "NetworkStatus",
+              "direction": "out",
+              "relatedStateVariable": "NetworkStatus"
+            }
+          ]
+        },
+        {
+          "name": "CloseSetup",
+          "arguments": []
+        },
+        {
+          "name": "StopPair",
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:timesync:1",
+      "descriptor": "/timesyncservice.xml",
+      "sha256": "e3c012af8daa04d0a7afb5b8ea645b438eb99c293f9294154b0dc65e73f621e6",
+      "actions": [
+        {
+          "name": "TimeSync",
+          "arguments": [
+            {
+              "name": "UTC",
+              "direction": "in",
+              "relatedStateVariable": "UTC"
+            },
+            {
+              "name": "TimeZone",
+              "direction": "in",
+              "relatedStateVariable": "TimeZone"
+            },
+            {
+              "name": "dst",
+              "direction": "in",
+              "relatedStateVariable": "dst"
+            },
+            {
+              "name": "DstSupported",
+              "direction": "in",
+              "relatedStateVariable": "DstSupported"
+            }
+          ]
+        },
+        {
+          "name": "GetTime",
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:basicevent:1",
+      "descriptor": "/eventservice.xml",
+      "sha256": "8e31b07b95dcece791f2a5a1b45bd9f8ff66680cc368a1b5a3aff95ccab5621a",
+      "actions": [
+        {
+          "name": "SetBinaryState",
+          "arguments": [
+            {
+              "name": "BinaryState",
+              "direction": "in",
+              "relatedStateVariable": "BinaryState"
+            },
+            {
+              "name": "Duration",
+              "direction": "in",
+              "relatedStateVariable": "Duration"
+            },
+            {
+              "name": "EndAction",
+              "direction": "in",
+              "relatedStateVariable": "EndAction"
+            },
+            {
+              "name": "UDN",
+              "direction": "in",
+              "relatedStateVariable": "UDN"
+            },
+            {
+              "name": "CountdownEndTime",
+              "direction": "out",
+              "relatedStateVariable": "CountdownEndTime"
+            },
+            {
+              "name": "deviceCurrentTime",
+              "direction": "out",
+              "relatedStateVariable": "deviceCurrentTime"
+            }
+          ]
+        },
+        {
+          "name": "SetLogLevelOption",
+          "arguments": [
+            {
+              "name": "Level",
+              "direction": "in",
+              "relatedStateVariable": "Level"
+            },
+            {
+              "name": "Option",
+              "direction": "in",
+              "relatedStateVariable": "Option"
+            }
+          ]
+        },
+        {
+          "name": "GetFriendlyName",
+          "arguments": [
+            {
+              "name": "FriendlyName",
+              "direction": "in",
+              "relatedStateVariable": "FriendlyName"
+            }
+          ]
+        },
+        {
+          "name": "ReSetup",
+          "arguments": [
+            {
+              "name": "Reset",
+              "direction": "in",
+              "relatedStateVariable": "Reset"
+            }
+          ]
+        },
+        {
+          "name": "SetHomeId",
+          "arguments": [
+            {
+              "name": "HomeId",
+              "direction": "in",
+              "relatedStateVariable": "HomeId"
+            }
+          ]
+        },
+        {
+          "name": "GetHomeId",
+          "arguments": []
+        },
+        {
+          "name": "GetHomeInfo",
+          "arguments": []
+        },
+        {
+          "name": "SetDeviceId",
+          "arguments": [
+            {
+              "name": "SetDeviceId",
+              "direction": "in",
+              "relatedStateVariable": "DeviceId"
+            }
+          ]
+        },
+        {
+          "name": "GetDeviceId",
+          "arguments": []
+        },
+        {
+          "name": "GetMacAddr",
+          "arguments": []
+        },
+        {
+          "name": "GetSerialNo",
+          "arguments": []
+        },
+        {
+          "name": "GetPluginUDN",
+          "arguments": []
+        },
+        {
+          "name": "GetSmartDevInfo",
+          "arguments": []
+        },
+        {
+          "name": "ShareHWInfo",
+          "arguments": [
+            {
+              "name": "Mac",
+              "direction": "in",
+              "relatedStateVariable": "Mac"
+            },
+            {
+              "name": "Serial",
+              "direction": "in",
+              "relatedStateVariable": "Serial"
+            },
+            {
+              "name": "Udn",
+              "direction": "in",
+              "relatedStateVariable": "Udn"
+            },
+            {
+              "name": "RestoreState",
+              "direction": "in",
+              "relatedStateVariable": "RestoreState"
+            },
+            {
+              "name": "HomeId",
+              "direction": "in",
+              "relatedStateVariable": "HomeId"
+            },
+            {
+              "name": "PluginKey",
+              "direction": "in",
+              "relatedStateVariable": "PluginKey"
+            }
+          ]
+        },
+        {
+          "name": "ChangeFriendlyName",
+          "arguments": [
+            {
+              "name": "FriendlyName",
+              "direction": "in",
+              "relatedStateVariable": "FriendlyName"
+            }
+          ]
+        },
+        {
+          "name": "SetSmartDevInfo",
+          "arguments": [
+            {
+              "name": "SmartDevURL",
+              "direction": "in",
+              "relatedStateVariable": "SmartDevURL"
+            }
+          ]
+        },
+        {
+          "name": "GetRuleOverrideStatus",
+          "arguments": [
+            {
+              "name": "RuleOverrideStatus",
+              "direction": "in",
+              "relatedStateVariable": "RuleOverrideStatus"
+            }
+          ]
+        },
+        {
+          "name": "GetDeviceIcon",
+          "arguments": [
+            {
+              "name": "DeviceIcon",
+              "direction": "in",
+              "relatedStateVariable": "DeviceIcon"
+            }
+          ]
+        },
+        {
+          "name": "GetIconURL",
+          "arguments": [
+            {
+              "name": "URL",
+              "direction": "out",
+              "relatedStateVariable": "URL"
+            }
+          ]
+        },
+        {
+          "name": "GetLogFileURL",
+          "arguments": [
+            {
+              "name": "LOGURL",
+              "direction": "out",
+              "relatedStateVariable": "LOGURL"
+            }
+          ]
+        },
+        {
+          "name": "ChangeDeviceIcon",
+          "arguments": [
+            {
+              "name": "PictureSize",
+              "direction": "in",
+              "relatedStateVariable": "PictureSize"
+            },
+            {
+              "name": "PictureHeight",
+              "direction": "in",
+              "relatedStateVariable": "PictureWidth"
+            },
+            {
+              "name": "PictureColorDeep",
+              "direction": "in",
+              "relatedStateVariable": "PictureColorDeep"
+            }
+          ]
+        },
+        {
+          "name": "GetBinaryState",
+          "arguments": [
+            {
+              "name": "BinaryState",
+              "direction": "out",
+              "relatedStateVariable": "BinaryState"
+            }
+          ]
+        },
+        {
+          "name": "SetMultiState",
+          "arguments": [
+            {
+              "name": "state",
+              "direction": "in",
+              "relatedStateVariable": "StateList"
+            },
+            {
+              "name": "state",
+              "direction": "in",
+              "relatedStateVariable": "StateList"
+            },
+            {
+              "name": "state",
+              "direction": "in",
+              "relatedStateVariable": "StateList"
+            }
+          ]
+        },
+        {
+          "name": "SetJardenStatus",
+          "arguments": [
+            {
+              "name": "mode",
+              "direction": "in",
+              "relatedStateVariable": "mode"
+            },
+            {
+              "name": "time",
+              "direction": "in",
+              "relatedStateVariable": "timeVariable"
+            }
+          ]
+        },
+        {
+          "name": "GetJardenStatus",
+          "arguments": [
+            {
+              "name": "mode",
+              "direction": "out",
+              "relatedStateVariable": "mode"
+            },
+            {
+              "name": "time",
+              "direction": "out",
+              "relatedStateVariable": "timeVariable"
+            },
+            {
+              "name": "startTime",
+              "direction": "out",
+              "relatedStateVariable": "timeVariable"
+            }
+          ]
+        },
+        {
+          "name": "GetWatchdogFile",
+          "arguments": [
+            {
+              "name": "WDFile",
+              "direction": "out",
+              "relatedStateVariable": "WDFile"
+            }
+          ]
+        },
+        {
+          "name": "GetSignalStrength",
+          "arguments": [
+            {
+              "name": "SignalStrength",
+              "direction": "in",
+              "relatedStateVariable": "SignalStrength"
+            }
+          ]
+        },
+        {
+          "name": "SetServerEnvironment",
+          "arguments": [
+            {
+              "name": "ServerEnvironment",
+              "direction": "in",
+              "relatedStateVariable": "ServerEnvironment"
+            },
+            {
+              "name": "TurnServerEnvironment",
+              "direction": "in",
+              "relatedStateVariable": "TurnServerEnvironment"
+            },
+            {
+              "name": "ServerEnvironmentType",
+              "direction": "in",
+              "relatedStateVariable": "ServerEnvironmentType"
+            }
+          ]
+        },
+        {
+          "name": "GetServerEnvironment",
+          "arguments": [
+            {
+              "name": "ServerEnvironment",
+              "direction": "out",
+              "relatedStateVariable": "ServerEnvironment"
+            },
+            {
+              "name": "TurnServerEnvironment",
+              "direction": "out",
+              "relatedStateVariable": "TurnServerEnvironment"
+            },
+            {
+              "name": "ServerEnvironmentType",
+              "direction": "out",
+              "relatedStateVariable": "ServerEnvironmentType"
+            }
+          ]
+        },
+        {
+          "name": "GetIconVersion",
+          "arguments": [
+            {
+              "name": "IconVersion",
+              "direction": "out",
+              "relatedStateVariable": "IconVersion"
+            }
+          ]
+        },
+        {
+          "name": "GetSimulatedRuleData",
+          "arguments": [
+            {
+              "name": "UDN",
+              "direction": "in",
+              "relatedStateVariable": "UDN"
+            },
+            {
+              "name": "RuleData",
+              "direction": "out",
+              "relatedStateVariable": "RuleData"
+            }
+          ]
+        },
+        {
+          "name": "NotifyManualToggle",
+          "arguments": [
+            {
+              "name": "UDN",
+              "direction": "in",
+              "relatedStateVariable": "UDN"
+            },
+            {
+              "name": "ManualToggle",
+              "direction": "out",
+              "relatedStateVariable": "ManualToggle"
+            }
+          ]
+        },
+        {
+          "name": "SimulateOverTemp",
+          "arguments": [
+            {
+              "name": "overTemp",
+              "direction": "in",
+              "relatedStateVariable": "overTemp"
+            },
+            {
+              "name": "overTempStatus",
+              "direction": "out",
+              "relatedStateVariable": "overTempStatus"
+            }
+          ]
+        },
+        {
+          "name": "ControlCloudUpload",
+          "arguments": [
+            {
+              "name": "EnableUpload",
+              "direction": "in",
+              "relatedStateVariable": "EnableUpload"
+            }
+          ]
+        },
+        {
+          "name": "StartIperf",
+          "arguments": []
+        },
+        {
+          "name": "StopIperf",
+          "arguments": []
+        },
+        {
+          "name": "GetGPIO",
+          "arguments": [
+            {
+              "name": "GPIO",
+              "direction": "in",
+              "relatedStateVariable": null
+            }
+          ]
+        },
+        {
+          "name": "SetGPIO",
+          "arguments": [
+            {
+              "name": "GPIO",
+              "direction": "in",
+              "relatedStateVariable": null
+            },
+            {
+              "name": "Value",
+              "direction": "in",
+              "relatedStateVariable": null
+            }
+          ]
+        },
+        {
+          "name": "GetHKSetupInfo",
+          "arguments": [
+            {
+              "name": "HKSetupKey",
+              "direction": "out",
+              "relatedStateVariable": null
+            },
+            {
+              "name": "HKSetupCode",
+              "direction": "out",
+              "relatedStateVariable": null
+            }
+          ]
+        },
+        {
+          "name": "SetSetupDoneStatus",
+          "arguments": []
+        },
+        {
+          "name": "GetSetupDoneStatus",
+          "arguments": [
+            {
+              "name": "SetupDone",
+              "direction": "out",
+              "relatedStateVariable": null
+            }
+          ]
+        },
+        {
+          "name": "setHKSetupState",
+          "arguments": [
+            {
+              "name": "HKSetupDone",
+              "direction": "in",
+              "relatedStateVariable": "HKSetupDone"
+            }
+          ]
+        },
+        {
+          "name": "getHKSetupState",
+          "arguments": [
+            {
+              "name": "HKSetupDone",
+              "direction": "out",
+              "relatedStateVariable": "HKSetupDone"
+            }
+          ]
+        },
+        {
+          "name": "setAutoFWUpdate",
+          "arguments": [
+            {
+              "name": "enableAutoUpdate",
+              "direction": "in",
+              "relatedStateVariable": null
+            }
+          ]
+        },
+        {
+          "name": "SetEnforceSecurity",
+          "arguments": [
+            {
+              "name": "SecurityEnabled",
+              "direction": "in",
+              "relatedStateVariable": null
+            }
+          ]
+        },
+        {
+          "name": "GetEnforceSecurity",
+          "arguments": [
+            {
+              "name": "SecurityEnabled",
+              "direction": "out",
+              "relatedStateVariable": null
+            }
+          ]
+        },
+        {
+          "name": "removeHomekitData",
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:firmwareupdate:1",
+      "descriptor": "/firmwareupdate.xml",
+      "sha256": "ea576db60c4ba96c42bfbc92f540f21761451e3e49b757b56a6371cf00d31554",
+      "actions": [
+        {
+          "name": "UpdateFirmware",
+          "arguments": [
+            {
+              "name": "NewFirmwareVersion",
+              "direction": "in",
+              "relatedStateVariable": "NewFirmwareVersion"
+            },
+            {
+              "name": "ReleaseDate",
+              "direction": "in",
+              "relatedStateVariable": "ReleaseDate"
+            },
+            {
+              "name": "URL",
+              "direction": "in",
+              "relatedStateVariable": "URL"
+            },
+            {
+              "name": "Signature",
+              "direction": "in",
+              "relatedStateVariable": "Signature"
+            },
+            {
+              "name": "DownloadStartTime",
+              "direction": "in",
+              "relatedStateVariable": "DownloadStartTime"
+            },
+            {
+              "name": "WithUnsignedImage",
+              "direction": "in",
+              "relatedStateVariable": "WithUnsignedImage"
+            }
+          ]
+        },
+        {
+          "name": "GetFirmwareVersion",
+          "arguments": [
+            {
+              "name": "FirmwareVersion",
+              "direction": "out",
+              "relatedStateVariable": "FirmwareVersion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:rules:1",
+      "descriptor": "/rulesservice.xml",
+      "sha256": "47003415987af41f77aaa7efbbbb3104fdf1408c839a22397752c413e3fac219",
+      "actions": [
+        {
+          "name": "UpdateWeeklyCalendar",
+          "arguments": [
+            {
+              "name": "Mon",
+              "direction": "in",
+              "relatedStateVariable": "Mon"
+            },
+            {
+              "name": "Tues",
+              "direction": "in",
+              "relatedStateVariable": "Tues"
+            },
+            {
+              "name": "Wed",
+              "direction": "in",
+              "relatedStateVariable": "Wed"
+            },
+            {
+              "name": "Thurs",
+              "direction": "in",
+              "relatedStateVariable": "Thurs"
+            },
+            {
+              "name": "Fri",
+              "direction": "in",
+              "relatedStateVariable": "Fri"
+            },
+            {
+              "name": "Sat",
+              "direction": "in",
+              "relatedStateVariable": "Sat"
+            },
+            {
+              "name": "Sun",
+              "direction": "in",
+              "relatedStateVariable": "Sun"
+            }
+          ]
+        },
+        {
+          "name": "EditWeeklycalendar",
+          "arguments": [
+            {
+              "name": "action",
+              "direction": "in",
+              "relatedStateVariable": "action"
+            }
+          ]
+        },
+        {
+          "name": "GetRulesDBPath",
+          "arguments": [
+            {
+              "name": "RulesDBPath",
+              "direction": "out",
+              "relatedStateVariable": "RulesDBPath"
+            }
+          ]
+        },
+        {
+          "name": "SetRulesDBVersion",
+          "arguments": [
+            {
+              "name": "RulesDBVersion",
+              "direction": "in",
+              "relatedStateVariable": "RulesDBVersion"
+            }
+          ]
+        },
+        {
+          "name": "GetRulesDBVersion",
+          "arguments": [
+            {
+              "name": "RulesDBVersion",
+              "direction": "out",
+              "relatedStateVariable": "RulesDBVersion"
+            }
+          ]
+        },
+        {
+          "name": "SetRuleID",
+          "arguments": [
+            {
+              "name": "RuleID",
+              "direction": "in",
+              "relatedStateVariable": "RuleID"
+            },
+            {
+              "name": "RuleMsg",
+              "direction": "in",
+              "relatedStateVariable": "RuleMsg"
+            },
+            {
+              "name": "RuleFreq",
+              "direction": "in",
+              "relatedStateVariable": "RuleFreq"
+            }
+          ]
+        },
+        {
+          "name": "DeleteRuleID",
+          "arguments": [
+            {
+              "name": "RuleID",
+              "direction": "in",
+              "relatedStateVariable": "RuleID"
+            }
+          ]
+        },
+        {
+          "name": "SimulatedRuleData",
+          "arguments": [
+            {
+              "name": "DeviceList",
+              "direction": "in",
+              "relatedStateVariable": "DeviceList"
+            },
+            {
+              "name": "DeviceCount",
+              "direction": "in",
+              "relatedStateVariable": "DeviceCount"
+            }
+          ]
+        },
+        {
+          "name": "FetchRules",
+          "arguments": [
+            {
+              "name": "ruleDbPath",
+              "direction": "out",
+              "relatedStateVariable": "ruleDbPath"
+            },
+            {
+              "name": "ruleDbVersion",
+              "direction": "out",
+              "relatedStateVariable": "ruleDbVersion"
+            },
+            {
+              "name": "errorInfo",
+              "direction": "out",
+              "relatedStateVariable": "errorInfo"
+            }
+          ]
+        },
+        {
+          "name": "StoreRules",
+          "arguments": [
+            {
+              "name": "ruleDbVersion",
+              "direction": "in",
+              "relatedStateVariable": "ruleDbVersion"
+            },
+            {
+              "name": "processDb",
+              "direction": "in",
+              "relatedStateVariable": "processDb"
+            },
+            {
+              "name": "ruleDbBody",
+              "direction": "in",
+              "relatedStateVariable": "ruleDbBody"
+            },
+            {
+              "name": "errorInfo",
+              "direction": "out",
+              "relatedStateVariable": "errorInfo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:metainfo:1",
+      "descriptor": "/metainfoservice.xml",
+      "sha256": "68b88ff3dce8256baca41870fc6341c285426d3ea165f2aba0ab135eb1777646",
+      "actions": [
+        {
+          "name": "GetMetaInfo",
+          "arguments": [
+            {
+              "name": "MetaInfo",
+              "direction": "out",
+              "relatedStateVariable": "MetaInfo"
+            }
+          ]
+        },
+        {
+          "name": "GetExtMetaInfo",
+          "arguments": [
+            {
+              "name": "ExtMetaInfo",
+              "direction": "out",
+              "relatedStateVariable": "ExtMetaInfo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:remoteaccess:1",
+      "descriptor": "/remoteaccess.xml",
+      "sha256": "3f84f42b1c812eb258ce8902a68db80e412af1e21545d2d0a75691aa3f041078",
+      "actions": [
+        {
+          "name": "RemoteAccess",
+          "arguments": [
+            {
+              "name": "DeviceId",
+              "direction": "in",
+              "relatedStateVariable": "DeviceId"
+            },
+            {
+              "name": "dst",
+              "direction": "in",
+              "relatedStateVariable": "dst"
+            },
+            {
+              "name": "HomeId",
+              "direction": "in",
+              "relatedStateVariable": "HomeId"
+            },
+            {
+              "name": "DeviceName",
+              "direction": "in",
+              "relatedStateVariable": "DeviceName"
+            },
+            {
+              "name": "MacAddr",
+              "direction": "in",
+              "relatedStateVariable": "MacAddr"
+            },
+            {
+              "name": "pluginprivateKey",
+              "direction": "in",
+              "relatedStateVariable": "pluginprivateKey"
+            },
+            {
+              "name": "smartprivateKey",
+              "direction": "in",
+              "relatedStateVariable": "smartprivateKey"
+            },
+            {
+              "name": "smartUniqueId",
+              "direction": "in",
+              "relatedStateVariable": "smartUniqueId"
+            },
+            {
+              "name": "numSmartDev",
+              "direction": "in",
+              "relatedStateVariable": "numSmartDev"
+            },
+            {
+              "name": "ArpMac",
+              "direction": "out",
+              "relatedStateVariable": "ArpMac"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:deviceinfo:1",
+      "descriptor": "/deviceinfoservice.xml",
+      "sha256": "a67015f7d9850a38a6e442c28c9ee3b4533c101acf97f49414afcfd3312b381c",
+      "actions": [
+        {
+          "name": "GetDeviceInformation",
+          "arguments": [
+            {
+              "name": "UTC",
+              "direction": "out",
+              "relatedStateVariable": "UTC"
+            },
+            {
+              "name": "TimeZone",
+              "direction": "out",
+              "relatedStateVariable": "TimeZone"
+            },
+            {
+              "name": "dst",
+              "direction": "out",
+              "relatedStateVariable": "dst"
+            },
+            {
+              "name": "DstSupported",
+              "direction": "out",
+              "relatedStateVariable": "DstSupported"
+            },
+            {
+              "name": "DeviceInformation",
+              "direction": "out",
+              "relatedStateVariable": "DeviceInformation"
+            },
+            {
+              "name": "Payload",
+              "direction": "out",
+              "relatedStateVariable": null
+            },
+            {
+              "name": "HKSetupState",
+              "direction": "out",
+              "relatedStateVariable": null
+            },
+            {
+              "name": "CountdownTime",
+              "direction": "out",
+              "relatedStateVariable": "CountdownTime"
+            },
+            {
+              "name": "TimeSync",
+              "direction": "out",
+              "relatedStateVariable": "TimeSync"
+            }
+          ]
+        },
+        {
+          "name": "GetInformation",
+          "arguments": [
+            {
+              "name": "UTC",
+              "direction": "out",
+              "relatedStateVariable": "UTC"
+            },
+            {
+              "name": "TimeZone",
+              "direction": "out",
+              "relatedStateVariable": "TimeZone"
+            },
+            {
+              "name": "dst",
+              "direction": "out",
+              "relatedStateVariable": "dst"
+            },
+            {
+              "name": "DstSupported",
+              "direction": "out",
+              "relatedStateVariable": "DstSupported"
+            },
+            {
+              "name": "Information",
+              "direction": "out",
+              "relatedStateVariable": "Information"
+            },
+            {
+              "name": "TimeSync",
+              "direction": "out",
+              "relatedStateVariable": "TimeSync"
+            }
+          ]
+        },
+        {
+          "name": "OpenInstaAP",
+          "arguments": []
+        },
+        {
+          "name": "CloseInstaAP",
+          "arguments": []
+        },
+        {
+          "name": "GetConfigureState",
+          "arguments": [
+            {
+              "name": "ConfigureState",
+              "direction": "out",
+              "relatedStateVariable": "ConfigureState"
+            }
+          ]
+        },
+        {
+          "name": "InstaConnectHomeNetwork",
+          "arguments": [
+            {
+              "name": "ssid",
+              "direction": "in",
+              "relatedStateVariable": "ssid"
+            },
+            {
+              "name": "auth",
+              "direction": "in",
+              "relatedStateVariable": "auth"
+            },
+            {
+              "name": "password",
+              "direction": "in",
+              "relatedStateVariable": "password"
+            },
+            {
+              "name": "encrypt",
+              "direction": "in",
+              "relatedStateVariable": "encrypt"
+            },
+            {
+              "name": "channel",
+              "direction": "in",
+              "relatedStateVariable": "channel"
+            },
+            {
+              "name": "brlist",
+              "direction": "in",
+              "relatedStateVariable": "brlist"
+            }
+          ]
+        },
+        {
+          "name": "UpdateBridgeList",
+          "arguments": [
+            {
+              "name": "BridgeList",
+              "direction": "in",
+              "relatedStateVariable": "BridgeList"
+            }
+          ]
+        },
+        {
+          "name": "GetRouterInformation",
+          "arguments": [
+            {
+              "name": "mac",
+              "direction": "out",
+              "relatedStateVariable": "mac"
+            },
+            {
+              "name": "ssid",
+              "direction": "out",
+              "relatedStateVariable": "ssid"
+            },
+            {
+              "name": "auth",
+              "direction": "out",
+              "relatedStateVariable": "auth"
+            },
+            {
+              "name": "password",
+              "direction": "out",
+              "relatedStateVariable": "password"
+            },
+            {
+              "name": "encrypt",
+              "direction": "out",
+              "relatedStateVariable": "encrypt"
+            },
+            {
+              "name": "channel",
+              "direction": "out",
+              "relatedStateVariable": "channel"
+            }
+          ]
+        },
+        {
+          "name": "InstaRemoteAccess",
+          "arguments": [
+            {
+              "name": "DeviceId",
+              "direction": "in",
+              "relatedStateVariable": "DeviceId"
+            },
+            {
+              "name": "dst",
+              "direction": "in",
+              "relatedStateVariable": "dst"
+            },
+            {
+              "name": "HomeId",
+              "direction": "in",
+              "relatedStateVariable": "HomeId"
+            },
+            {
+              "name": "DeviceName",
+              "direction": "in",
+              "relatedStateVariable": "DeviceName"
+            },
+            {
+              "name": "MacAddr",
+              "direction": "in",
+              "relatedStateVariable": "MacAddr"
+            },
+            {
+              "name": "pluginprivateKey",
+              "direction": "in",
+              "relatedStateVariable": "pluginprivateKey"
+            },
+            {
+              "name": "smartprivateKey",
+              "direction": "in",
+              "relatedStateVariable": "smartprivateKey"
+            },
+            {
+              "name": "smartUniqueId",
+              "direction": "in",
+              "relatedStateVariable": "smartUniqueId"
+            },
+            {
+              "name": "numSmartDev",
+              "direction": "in",
+              "relatedStateVariable": "numSmartDev"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:smartsetup:1",
+      "descriptor": "/smartsetup.xml",
+      "sha256": "a64d752ecac01772b21d47dc8182d479587440839f2ef122662383da907c9623",
+      "actions": [
+        {
+          "name": "PairAndRegister",
+          "arguments": [
+            {
+              "name": "PairingData",
+              "direction": "in",
+              "relatedStateVariable": "PairingData"
+            },
+            {
+              "name": "RegistrationData",
+              "direction": "in",
+              "relatedStateVariable": "RegistrationData"
+            },
+            {
+              "name": "PairingStatus",
+              "direction": "out",
+              "relatedStateVariable": "PairingStatus"
+            }
+          ]
+        },
+        {
+          "name": "GetRegistrationData",
+          "arguments": [
+            {
+              "name": "SmartDeviceData",
+              "direction": "out",
+              "relatedStateVariable": "SmartDeviceData"
+            },
+            {
+              "name": "RegistrationData",
+              "direction": "out",
+              "relatedStateVariable": "RegistrationData"
+            }
+          ]
+        },
+        {
+          "name": "GetRegistrationStatus",
+          "arguments": [
+            {
+              "name": "RegistrationStatus",
+              "direction": "out",
+              "relatedStateVariable": "RegistrationStatus"
+            },
+            {
+              "name": "StatusCode",
+              "direction": "out",
+              "relatedStateVariable": "StatusCode"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "urn:Belkin:service:manufacture:1",
+      "descriptor": "/manufacture.xml",
+      "sha256": "57d54c3a71e684f271cfac8b9ee7e539ddacbae72784af3f0b4f4feec16d4913",
+      "actions": [
+        {
+          "name": "GetManufactureData",
+          "arguments": [
+            {
+              "name": "ManufactureData",
+              "direction": "out",
+              "relatedStateVariable": "ManufactureData"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

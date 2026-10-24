@@ -1,0 +1,20 @@
+[
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/patches-3.18/0056-watchdog-add-MT7621-support.patch",
+    "sha256": "c6b24301bc6fbc5e2a0116c7bc3e29ddfabadc6492d8117cf4b10a215d62bcd5",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "c6b24301bc6fbc5e2a0116c7bc3e29ddfabadc6492d8117cf4b10a215d62bcd5",
+      "bytes_utf8": 5730
+    }
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/config-3.18",
+    "sha256": "b8ff57238ba4fa4d7fdeb99a2c5bd9b2c322dc0ad74886c2e0ed4ab7a521d833",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "b8ff57238ba4fa4d7fdeb99a2c5bd9b2c322dc0ad74886c2e0ed4ab7a521d833",
+      "bytes_utf8": 6035
+    }
+  }
+]

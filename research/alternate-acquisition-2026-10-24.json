@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-24",
+  "scope": "Local vendor-package string extraction, public non-GitHub web searches, DNS and archive index queries. No device requests, firmware changes, credentials obtained, contacts, posts, or GitHub access.",
+  "new_lead": {
+    "binary": "11420 packaged /sbin/fw_check",
+    "sha256": "edc297f9b48414867bc55398ea6d1af970265376629b4d0ea0b61ec1866e0fb7",
+    "endpoint": "https://api.xwemo.com:8443/apis/http/firmware/upgrades/%s",
+    "related_strings": [
+      "createAuthSignature",
+      "Authorization",
+      "nvram get plugin_key",
+      "nvram get home_id"
+    ],
+    "limits": "Strings establish endpoint and authentication-related code references, not fully traced request semantics. Existing ELF helper cannot disassemble this binary because it lacks the expected section symbol tables. Binary was not executed."
+  },
+  "results": {
+    "dns": "Google public resolver returned status 3 (NXDOMAIN) for api.xwemo.com and fw.xbcs.net at query time. This does not prove their historical infrastructure or every alternate host is unavailable.",
+    "wayback": "Both xwemo queries and both vendor-storage 11565 queries returned empty arrays. Absence is scoped to these indexes and URL patterns.",
+    "commoncrawl": "Six targeted queries over December 2025, December 2024, and November/December 2023 snapshots. Four no-capture responses; two gateway errors retried separately. Not an exhaustive Common Crawl scan.",
+    "vendor_catalog": "Belkin Open Source Code Center still lists F7C063 2.00.11420. No 11565 link located.",
+    "bootloader_search": "Searches for F7C063/MT7688/SNSV2 bootloader produced no matching downloadable bootloader. RT5350/F7C027 and Insight serial-recovery guides are other hardware, not proof for this Mini."
+  },
+  "sources": [
+    "https://www.belkin.com/nl/support-article/?articleNum=51238",
+    "https://index.commoncrawl.org/collinfo.json",
+    "https://sheldor.blogspot.com/2014/01/openwrt-for-wemo-part-2-flashing.html",
+    "https://www.realmtech.net/2016-04/openwrt-on-a-belkin-wemo-hard-way"
+  ],
+  "evidence_files": [
+    "vendor-update-endpoints.json",
+    "xwemo-endpoint-acquisition.json",
+    "commoncrawl-firmware-search.json",
+    "vendor-storage-11565-index.json",
+    "commoncrawl-firmware-retry.json"
+  ],
+  "outcome": {
+    "exact_11565_obtained": false,
+    "matching_bootloader_obtained": false,
+    "recovery_verified": false,
+    "safe_flash_authorized": false
+  },
+  "limits": "Negative searches do not prove no copy exists. A vendor update image may omit bootloader and device-specific partitions; obtaining it would not by itself establish recovery."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/kernel/gpio-button-hotplug/src/gpio-button-hotplug.c",
+    "sha256": "4ae006e4156da353dba7e52a547e693a3094da8581af653afec853e64abfa04d",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "4ae006e4156da353dba7e52a547e693a3094da8581af653afec853e64abfa04d",
+      "bytes_utf8": 15975
+    }
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV3/base-files/etc/config/system",
+    "sha256": "22529f7b97d15dc4ad2cb733373345bfd71c1fe01836f021c300025a75f76836",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "22529f7b97d15dc4ad2cb733373345bfd71c1fe01836f021c300025a75f76836",
+      "bytes_utf8": 516
+    }
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoLightV2/base-files/etc/config/system",
+    "sha256": "ac1dde872cb53c176e94ce0767cf77029be27a1cdda1e0f60b8971ee42a065e0",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "ac1dde872cb53c176e94ce0767cf77029be27a1cdda1e0f60b8971ee42a065e0",
+      "bytes_utf8": 556
+    }
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/config/system",
+    "sha256": "ab8d14f87737f935935666c1a13a0f2e3e0e48d9e2dc2c55b093d315771e3f7f",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "ab8d14f87737f935935666c1a13a0f2e3e0e48d9e2dc2c55b093d315771e3f7f",
+      "bytes_utf8": 518
+    }
+  }
+]

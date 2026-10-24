@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24T20:06:30.888437+00:00",
+  "source": "Local vendor GPL package for 11420, not exact 11565",
+  "sha256": "1e56abecd1d15a06157f673ece45db4f07ca6905e8454bfd02b018129acd810b",
+  "device_contacted": false,
+  "findings": [
+    "Init script starts /sbin/pmortemd",
+    "Binary and static client library reference /tmp/pmortemd.socket",
+    "Listener disassembly at 0x401384 sets family 1; sockaddr family set to 1 at 0x4013ec (AF_UNIX), path pointer 0x401908",
+    "Binary strings describe incoming PID, stack address, stack bytes, /proc/%d/maps, console and syslog",
+    "No Wi-Fi listener or shell entry established by this evidence",
+    "PLT relocation socket at 0x411c74 resolves call stub 0x401ad0; call 0x401390 receives AF_UNIX=1, SOCK_STREAM=2, protocol=0"
+  ],
+  "limitations": [
+    "Section headers stripped; program headers and dynamic PLT relocations used for socket call evidence",
+    "This audit does not prove exact 11565 behavior",
+    "No safe shell entry, bootloader dump, or Wi-Fi recovery verified"
+  ],
+  "artifacts": [
+    "artifacts/pmortem-analysis/strings.json",
+    "artifacts/pmortem-analysis/annotated.txt"
+  ]
+}
