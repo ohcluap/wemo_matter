@@ -1,0 +1,303 @@
+{
+  "sdk_revision": "ff2472ff8d681496bf6e01450948ac95afc8898f",
+  "device_changed": false,
+  "github_activity": false,
+  "variant": "optional root clusters removed, LTO, quiet logs",
+  "removed_clusters": [
+    "OTA Software Update Provider",
+    "OTA Software Update Requestor",
+    "Diagnostic Logs",
+    "User Label"
+  ],
+  "removed_device_type": "OTA requestor (18)",
+  "artifacts": {
+    "wemo-matter-outlet-minimal": {
+      "bytes": 1815796,
+      "sha256": "ad8ef808b7f01f2efaa2b597e656a5bdd4927069831429d35ef5e356c9b0bf9f"
+    },
+    "minimal/app.squashfs": {
+      "bytes": 614400,
+      "sha256": "fcc29ed728a4b97717598c95be2bcf41850fd99698aedcc4ba559558513331e0"
+    },
+    "minimal/app.xz": {
+      "bytes": 576092,
+      "sha256": "8d30e6bddc3a7bc407820a3420f3db87547e60a5e3938c6ec246c0883c904281"
+    },
+    "chip-tool": {
+      "bytes": 6648120,
+      "sha256": "8305d61155b16566280f0e895b3327d6096847cd12db9c05c7cd6838ee223a68"
+    }
+  },
+  "comparison": {
+    "previous_lto_elf_bytes": 1841756,
+    "previous_lto_squashfs_bytes": 626688,
+    "new_elf_bytes": 1815796,
+    "new_squashfs_bytes": 614400,
+    "elf_reduction_percent": 1.409524388681238,
+    "squashfs_reduction_percent": 1.9607843137254943
+  },
+  "commissioning": {
+    "run_id": "d7836dda",
+    "utc": "2026-10-24T20:07:27.518616+00:00",
+    "target": "MIPS32r2 soft-float full outlet under QEMU 24KEc user emulation",
+    "physical_device_tested": false,
+    "tests": [
+      "commissioning",
+      "outlet-device-type",
+      "off-command",
+      "off-readback",
+      "on-command",
+      "on-readback",
+      "toggle-command",
+      "toggle-readback",
+      "missing-relay-rejected",
+      "failed-relay-preserves-state",
+      "relay-retry-on",
+      "relay-retry-off",
+      "subscription-initial-report",
+      "simulated-relay-callbacks",
+      "restart-session-read",
+      "restart-on-command",
+      "restart-on-readback"
+    ],
+    "passed": true,
+    "persistent_storage_profile": false,
+    "time64_enosys_injection": false,
+    "controller_sha256": "8305d61155b16566280f0e895b3327d6096847cd12db9c05c7cd6838ee223a68",
+    "app_sha256": "ad8ef808b7f01f2efaa2b597e656a5bdd4927069831429d35ef5e356c9b0bf9f",
+    "internal_network_verified": true,
+    "memory_limit_bytes": 67108864,
+    "swap_disabled": true,
+    "resource_samples": [
+      {
+        "label": "startup",
+        "cgroup_current_bytes": 12492800,
+        "cgroup_peak_bytes": 15626240,
+        "process_status": [
+          "VmPeak:\t 2325432 kB",
+          "VmSize:\t 2325428 kB",
+          "VmHWM:\t   18912 kB",
+          "VmRSS:\t   18912 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "commissioning",
+        "cgroup_current_bytes": 17883136,
+        "cgroup_peak_bytes": 20410368,
+        "process_status": [
+          "VmPeak:\t 2325944 kB",
+          "VmSize:\t 2325940 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "outlet-device-type",
+        "cgroup_current_bytes": 17833984,
+        "cgroup_peak_bytes": 20410368,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "off-command",
+        "cgroup_current_bytes": 18186240,
+        "cgroup_peak_bytes": 20697088,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "off-readback",
+        "cgroup_current_bytes": 18587648,
+        "cgroup_peak_bytes": 20697088,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "on-command",
+        "cgroup_current_bytes": 18169856,
+        "cgroup_peak_bytes": 20717568,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "on-readback",
+        "cgroup_current_bytes": 17309696,
+        "cgroup_peak_bytes": 20717568,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "toggle-command",
+        "cgroup_current_bytes": 18423808,
+        "cgroup_peak_bytes": 20717568,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "toggle-readback",
+        "cgroup_current_bytes": 18432000,
+        "cgroup_peak_bytes": 20717568,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "missing-relay-rejected",
+        "cgroup_current_bytes": 18051072,
+        "cgroup_peak_bytes": 20729856,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "failed-relay-preserves-state",
+        "cgroup_current_bytes": 18165760,
+        "cgroup_peak_bytes": 20729856,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "relay-retry-on",
+        "cgroup_current_bytes": 18272256,
+        "cgroup_peak_bytes": 20729856,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "relay-retry-off",
+        "cgroup_current_bytes": 17985536,
+        "cgroup_peak_bytes": 20729856,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "subscription-initial-report",
+        "cgroup_current_bytes": 18190336,
+        "cgroup_peak_bytes": 20729856,
+        "process_status": [
+          "VmPeak:\t 2326072 kB",
+          "VmSize:\t 2326068 kB",
+          "VmHWM:\t   23544 kB",
+          "VmRSS:\t   23544 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "startup",
+        "cgroup_current_bytes": 15106048,
+        "cgroup_peak_bytes": 17313792,
+        "process_status": [
+          "VmPeak:\t 2325564 kB",
+          "VmSize:\t 2325560 kB",
+          "VmHWM:\t   20292 kB",
+          "VmRSS:\t   20292 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "restart-session-read",
+        "cgroup_current_bytes": 17797120,
+        "cgroup_peak_bytes": 19947520,
+        "process_status": [
+          "VmPeak:\t 2325820 kB",
+          "VmSize:\t 2325820 kB",
+          "VmHWM:\t   22760 kB",
+          "VmRSS:\t   22760 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "restart-on-command",
+        "cgroup_current_bytes": 17711104,
+        "cgroup_peak_bytes": 19996672,
+        "process_status": [
+          "VmPeak:\t 2325820 kB",
+          "VmSize:\t 2325820 kB",
+          "VmHWM:\t   22760 kB",
+          "VmRSS:\t   22760 kB",
+          "Threads:\t2"
+        ]
+      },
+      {
+        "label": "restart-on-readback",
+        "cgroup_current_bytes": 17645568,
+        "cgroup_peak_bytes": 19996672,
+        "process_status": [
+          "VmPeak:\t 2325820 kB",
+          "VmSize:\t 2325820 kB",
+          "VmHWM:\t   22760 kB",
+          "VmRSS:\t   22760 kB",
+          "Threads:\t2"
+        ]
+      }
+    ],
+    "network_removed": true
+  },
+  "peak_container_bytes": 20729856,
+  "limitations": [
+    "QEMU on modern Linux, not the physical Wemo or Google Home",
+    "64 MiB cgroup is not available stock-device RAM",
+    "Restart test preserves simulated /tmp; does not verify device reboot persistence",
+    "Subscription initial report tested, not ongoing notifications",
+    "App-only SquashFS still exceeds older 576 KiB partition; exact 11565 free space unknown",
+    "No verified safe shell, initial install, remote recovery, or bootloader dump",
+    "OTA protocol requester removed; no remote app updater implemented",
+    "Experimental mirrored nlio/nlassert substitutions remain",
+    "ZAP generated successfully with provisional Groupcast/Scenes and upstream type-discriminator notices; not certification"
+  ]
+}

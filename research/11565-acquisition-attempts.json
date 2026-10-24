@@ -1,0 +1,594 @@
+{
+  "date": "2026-10-24",
+  "physical_device_contacted": false,
+  "raw_responses": "artifacts/11565-acquisition-responses.json (ignored local evidence)",
+  "attempts": [
+    {
+      "url": "https://fw.xbcs.net/wemo/NewFirmware.txt",
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=fw.xbcs.net/wemo/*&output=json&filter=statuscode:200&collapse=urlkey&filter=urlkey:.*11565.*",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=fw.xbcs.net/wemo/NewFirmware.txt&output=json&filter=statuscode:200&collapse=digest",
+      "status": 200,
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=fw.xbcs.net/wemo/NewFirmware.txt&output=json&filter=statuscode:200&collapse=digest",
+      "body_bytes_utf8": 3,
+      "body_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "parsed_response": []
+    },
+    {
+      "url": "https://archive.org/wayback/available?url=fw.xbcs.net/wemo/NewFirmware.txt&timestamp=20250101",
+      "status": 200,
+      "final_url": "https://archive.org/wayback/available?url=fw.xbcs.net/wemo/NewFirmware.txt&timestamp=20250101",
+      "body_bytes_utf8": 94,
+      "body_sha256": "3d1293bf483c68de4ff953e3b41351600f1b96fcfcf4826763eeb2967918b765",
+      "parsed_response": {
+        "url": "fw.xbcs.net/wemo/NewFirmware.txt",
+        "archived_snapshots": {},
+        "timestamp": "20250101"
+      }
+    },
+    {
+      "url": "https://archive.org/advancedsearch.php?q=wemo%20firmware&output=json&rows=20",
+      "status": 200,
+      "final_url": "https://archive.org/advancedsearch.php?q=wemo%20firmware&output=json&rows=20",
+      "body_bytes_utf8": 300721,
+      "body_sha256": "267ddb76a636ec7e0bdf253a7e69b833456d45e6b25da0e5e9595930a421ab43",
+      "parsed_response": {
+        "numFound": 36,
+        "returned_items": [
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2019-12-14_18-24-45",
+            "title": "github.com-arendst-Tasmota_-_2019-12-14_18-24-45"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-04-30_16-47-36",
+            "title": "github.com-arendst-Tasmota_-_2020-04-30_16-47-36"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-05-03_08-47-31",
+            "title": "github.com-arendst-Tasmota_-_2020-05-03_08-47-31"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-03-29_21-29-18",
+            "title": "github.com-arendst-Tasmota_-_2020-03-29_21-29-18"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2023-10-30_21-28-35",
+            "title": "github.com-arendst-Tasmota_-_2023-10-30_21-28-35"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-09-29_06-47-25",
+            "title": "github.com-arendst-Tasmota_-_2020-09-29_06-47-25"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2021-01-25_22-06-27",
+            "title": "github.com-arendst-Tasmota_-_2021-01-25_22-06-27"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-09-28_19-31-38",
+            "title": "github.com-arendst-Tasmota_-_2020-09-28_19-31-38"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2022-05-09_13-12-03",
+            "title": "github.com-arendst-Tasmota_-_2022-05-09_13-12-03"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2023-10-30_17-27-25",
+            "title": "github.com-arendst-Tasmota_-_2023-10-30_17-27-25"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2022-08-22_15-27-52",
+            "title": "github.com-arendst-Tasmota_-_2022-08-22_15-27-52"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2021-01-25_16-59-55",
+            "title": "github.com-arendst-Tasmota_-_2021-01-25_16-59-55"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-05-02_08-26-23",
+            "title": "github.com-arendst-Tasmota_-_2020-05-02_08-26-23"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2019-11-04_09-38-11",
+            "title": "github.com-arendst-Tasmota_-_2019-11-04_09-38-11"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-11-11_15-42-07",
+            "title": "github.com-arendst-Tasmota_-_2020-11-11_15-42-07"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-04-28_16-27-10",
+            "title": "github.com-arendst-Tasmota_-_2020-04-28_16-27-10"
+          },
+          {
+            "identifier": "github.com-kristate-krackinfo_-_2017-10-18_17-53-54",
+            "title": "github.com-kristate-krackinfo_-_2017-10-18_17-53-54"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-09-28_20-49-50",
+            "title": "github.com-arendst-Tasmota_-_2020-09-28_20-49-50"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-01-04_18-03-53",
+            "title": "github.com-arendst-Tasmota_-_2020-01-04_18-03-53"
+          },
+          {
+            "identifier": "github.com-arendst-Tasmota_-_2020-04-27_08-35-43",
+            "title": "github.com-arendst-Tasmota_-_2020-04-27_08-35-43"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.belkin.com/support-article/?articleNum=51238",
+      "status": 200,
+      "final_url": "https://www.belkin.com/support-article/?articleNum=51238",
+      "body_bytes_utf8": 646987,
+      "body_sha256": "a5d4b9f250618db86280c72e608bf4b49360d337edc5641b2032d4e78cb29c22",
+      "link_count": 858,
+      "relevant_links": [
+        "https://s3.belkin.com/support/assets/wemo/license/FW_LICENSE_WeMo_SNSv2_v2.00.11420.pdf",
+        "https://s3.belkin.com/support/assets/wemo/gpl/wemo_gpl_snsv2_package-11420.tar.gz"
+      ]
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=fw.xbcs.net/*&output=json&filter=statuscode:200&collapse=urlkey&fl=original,timestamp,mimetype&limit=1000",
+      "status": 200,
+      "body_bytes_utf8": 933,
+      "body_sha256": "f5c972fa9543c764f723360fcf15c831d3da0169ac881790cb0e6510c8185169",
+      "parsed_response": [
+        [
+          "original",
+          "timestamp",
+          "mimetype"
+        ],
+        [
+          "http://fw.xbcs.net:80/",
+          "20150530004049",
+          "text/html"
+        ],
+        [
+          "http://fw.xbcs.net:80/bm/prod-111/",
+          "20121007001708",
+          "text/html"
+        ],
+        [
+          "http://fw.xbcs.net/icons/back.gif",
+          "20150826035007",
+          "image/gif"
+        ],
+        [
+          "http://fw.xbcs.net/icons/blank.gif",
+          "20150826030534",
+          "image/gif"
+        ],
+        [
+          "http://fw.xbcs.net/icons/folder.gif",
+          "20150826034822",
+          "image/gif"
+        ],
+        [
+          "http://fw.xbcs.net/icons/unknown.gif",
+          "20180125171601",
+          "image/gif"
+        ],
+        [
+          "https://fw.xbcs.net/plugin/device/firmware.txt",
+          "20130330190652",
+          "text/plain"
+        ],
+        [
+          "http://fw.xbcs.net:80/wemo/4395-prod/",
+          "20120610181525",
+          "text/html"
+        ],
+        [
+          "http://fw.xbcs.net/wemo/owrt/",
+          "20180125171559",
+          "text/html"
+        ],
+        [
+          "http://fw.xbcs.net/wemo/switchsensor/",
+          "20140915111056",
+          "text/html"
+        ],
+        [
+          "http://fw.xbcs.net:80/wemo/switchsensor/us/",
+          "20170611151338",
+          "text/html"
+        ],
+        [
+          "http://fw.xbcs.net/wemo/switchsensor/us/WeMo_US_2.00.2769.PVT_SNS.bin.gpg",
+          "20220327131705",
+          "application/octet-stream"
+        ]
+      ]
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=firmware.xbcs.net/*&output=json&filter=statuscode:200&collapse=urlkey&fl=original,timestamp,mimetype&limit=1000",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://archive.org/advancedsearch.php?q=wemo%20firmware&output=json&rows=100&fl[]=identifier&fl[]=title",
+      "status": 200,
+      "body_bytes_utf8": 4931,
+      "body_sha256": "72191663dbabc9ae1584f61c547f997c82631f2d552898e083cc9d0a1f6b5445",
+      "parsed_response": {
+        "responseHeader": {
+          "status": 0,
+          "QTime": 338,
+          "params": {
+            "query": "((text:wemo OR text:wemo OR text__reviews:wemo)(text:firmware OR text:firmware OR text__reviews:firmware)) OR (text:&quot;wemo firmware&quot; OR text:&quot;wemo firmware&quot; OR text__reviews:&quot;wemo firmware&quot;)",
+            "qin": "wemo firmware",
+            "fields": "identifier,title",
+            "wt": "json",
+            "rows": 100,
+            "start": 0
+          }
+        },
+        "response": {
+          "numFound": 36,
+          "start": 0,
+          "docs": [
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-09-29_06-47-25",
+              "title": "github.com-arendst-Tasmota_-_2020-09-29_06-47-25"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-01-10_13-01-15",
+              "title": "github.com-arendst-Tasmota_-_2022-01-10_13-01-15"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-03-29_21-29-18",
+              "title": "github.com-arendst-Tasmota_-_2020-03-29_21-29-18"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2023-10-30_21-28-35",
+              "title": "github.com-arendst-Tasmota_-_2023-10-30_21-28-35"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2021-01-25_22-06-27",
+              "title": "github.com-arendst-Tasmota_-_2021-01-25_22-06-27"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-09-28_19-31-38",
+              "title": "github.com-arendst-Tasmota_-_2020-09-28_19-31-38"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-05-09_13-12-03",
+              "title": "github.com-arendst-Tasmota_-_2022-05-09_13-12-03"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2023-10-30_17-27-25",
+              "title": "github.com-arendst-Tasmota_-_2023-10-30_17-27-25"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2019-12-14_18-24-45",
+              "title": "github.com-arendst-Tasmota_-_2019-12-14_18-24-45"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-04-30_16-47-36",
+              "title": "github.com-arendst-Tasmota_-_2020-04-30_16-47-36"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2021-01-25_16-59-55",
+              "title": "github.com-arendst-Tasmota_-_2021-01-25_16-59-55"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-05-02_08-26-23",
+              "title": "github.com-arendst-Tasmota_-_2020-05-02_08-26-23"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2019-11-04_09-38-11",
+              "title": "github.com-arendst-Tasmota_-_2019-11-04_09-38-11"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-11-11_15-42-07",
+              "title": "github.com-arendst-Tasmota_-_2020-11-11_15-42-07"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-04-28_16-27-10",
+              "title": "github.com-arendst-Tasmota_-_2020-04-28_16-27-10"
+            },
+            {
+              "identifier": "github.com-kristate-krackinfo_-_2017-10-18_17-53-54",
+              "title": "github.com-kristate-krackinfo_-_2017-10-18_17-53-54"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-12-12_22-07-14",
+              "title": "github.com-arendst-Tasmota_-_2022-12-12_22-07-14"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-05-03_08-47-31",
+              "title": "github.com-arendst-Tasmota_-_2020-05-03_08-47-31"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-09-28_20-49-50",
+              "title": "github.com-arendst-Tasmota_-_2020-09-28_20-49-50"
+            },
+            {
+              "identifier": "github.com-kristate-krackinfo_-_2017-10-17_11-46-03",
+              "title": "github.com-kristate-krackinfo_-_2017-10-17_11-46-03"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2021-01-24_17-10-51",
+              "title": "github.com-arendst-Tasmota_-_2021-01-24_17-10-51"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-08-22_15-27-52",
+              "title": "github.com-arendst-Tasmota_-_2022-08-22_15-27-52"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-01-04_18-03-53",
+              "title": "github.com-arendst-Tasmota_-_2020-01-04_18-03-53"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-05-09_20-54-44",
+              "title": "github.com-arendst-Tasmota_-_2022-05-09_20-54-44"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-04-26_08-49-02",
+              "title": "github.com-arendst-Tasmota_-_2020-04-26_08-49-02"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-04-27_08-35-43",
+              "title": "github.com-arendst-Tasmota_-_2020-04-27_08-35-43"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-04-28_09-10-01",
+              "title": "github.com-arendst-Tasmota_-_2020-04-28_09-10-01"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-05-04_09-08-30",
+              "title": "github.com-arendst-Tasmota_-_2020-05-04_09-08-30"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-08-20_11-46-33",
+              "title": "github.com-arendst-Tasmota_-_2022-08-20_11-46-33"
+            },
+            {
+              "identifier": "github.com-kristate-krackinfo_-_2017-10-19_15-38-53",
+              "title": "github.com-kristate-krackinfo_-_2017-10-19_15-38-53"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-06-20_15-44-15",
+              "title": "github.com-arendst-Tasmota_-_2022-06-20_15-44-15"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-06-21_21-03-37",
+              "title": "github.com-arendst-Tasmota_-_2022-06-21_21-03-37"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2022-08-22_19-59-55",
+              "title": "github.com-arendst-Tasmota_-_2022-08-22_19-59-55"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-11-11_16-31-50",
+              "title": "github.com-arendst-Tasmota_-_2020-11-11_16-31-50"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2020-04-29_20-53-57",
+              "title": "github.com-arendst-Tasmota_-_2020-04-29_20-53-57"
+            },
+            {
+              "identifier": "github.com-arendst-Tasmota_-_2019-12-08_08-06-17",
+              "title": "github.com-arendst-Tasmota_-_2019-12-08_08-06-17"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url": "https://archive.org/advancedsearch.php?q=%22F7C063%22%20OR%20%22SNSV2%22%20OR%20%22WeMo_WW_2.00.11565%22&output=json&rows=100&fl[]=identifier&fl[]=title",
+      "status": 200,
+      "body_bytes_utf8": 450,
+      "body_sha256": "376b8777090ab2b04a3dea7ebb63958b27c2a896824968907cb6020734102191",
+      "parsed_response": {
+        "responseHeader": {
+          "status": 0,
+          "QTime": 58,
+          "params": {
+            "query": "(text:F7C063 OR text:F7C063 OR text__reviews:F7C063) OR (text:SNSV2 OR text:SNSV2 OR text__reviews:SNSV2) OR (text:WeMo_WW_2.00.11565 OR text:WeMo_WW_2.00.11565 OR text__reviews:WeMo_WW_2.00.11565)",
+            "qin": "&quot;F7C063&quot; OR &quot;SNSV2&quot; OR &quot;WeMo_WW_2.00.11565&quot;",
+            "fields": "identifier,title",
+            "wt": "json",
+            "rows": 100,
+            "start": 0
+          }
+        },
+        "response": {
+          "numFound": 0,
+          "start": 0,
+          "docs": []
+        }
+      }
+    },
+    {
+      "url": "https://web.archive.org/web/20180125171559id_/http://fw.xbcs.net/wemo/owrt/",
+      "status": 200,
+      "body_bytes_utf8": 379291,
+      "body_sha256": "d04f92ae119207775c35d19ea2f42839a9f3d47e65344a6fdbe79f167022b742",
+      "link_count": 1414,
+      "relevant_links": [
+        "WeMo_WW_2.00.10906.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10936.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10936.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10954.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10954.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10971.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10971.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT-SC.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11008.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11008.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11010.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11010.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT-SC.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT.PVT_SNSV2.bin.gpg"
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20130330190652id_/https://fw.xbcs.net/plugin/device/firmware.txt",
+      "status": 200,
+      "body_bytes_utf8": 400,
+      "body_sha256": "0d4e6d30c514eb808924e41f5c41c09eb8a7e30c169b9666428a2ed25972b922",
+      "link_count": 0,
+      "relevant_links": [],
+      "manifest": "Embedded Plug-in Device\nWeMo_US_2.00.2176.PVT\n54e4dd462473210640326580a3c2531e\nhttp://fw.xbcs.net/wemo/switchsensor/us/WeMo_US_2.00.2176.PVT_SNS.bin.gpg\nFirmware Release Notes WeMoUS 2176:\n- Range extenders with the same SSID as your main router are now supported.\n- Want to have 100 different rules for WeMo? Here you go.\n- Support for WeMo Smart NetCam products\n- Improved Hardware & UPnP security\n"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=fw.xbcs.net/wemo/owrt/*&output=json&collapse=urlkey&fl=original,timestamp,statuscode&limit=1000",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=firmware.xbcs.net/*&output=json&collapse=urlkey&fl=original,timestamp,statuscode&limit=100",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=fw.xbcs.net/wemo/owrt/&output=json&filter=statuscode:200&collapse=digest&fl=timestamp,original&limit=1000",
+      "status": 200,
+      "body_bytes_utf8": 235,
+      "body_sha256": "bf1c944323f71577a607ee23123a6e7f9749cc0a10b79501f576bc0d825b4bef",
+      "parsed_response": [
+        [
+          "timestamp",
+          "original"
+        ],
+        [
+          "20180125171559",
+          "http://fw.xbcs.net/wemo/owrt/"
+        ],
+        [
+          "20210531152158",
+          "http://fw.xbcs.net/wemo/owrt/"
+        ],
+        [
+          "20221219043940",
+          "http://fw.xbcs.net/wemo/owrt/"
+        ],
+        [
+          "20230117025750",
+          "http://fw.xbcs.net/wemo/owrt/"
+        ]
+      ]
+    },
+    {
+      "url": "https://archive.org/wayback/available?url=http%3A%2F%2Ffw.xbcs.net%2Fwemo%2Fowrt%2FWeMo_WW_2.00.11565.OWRT.PVT_SNSV2.bin.gpg",
+      "status": 200,
+      "body_bytes_utf8": 107,
+      "body_sha256": "744f38b96d33e06ba78cfbaa8454479b09738fa208fcb59050d42c05964268ee",
+      "parsed_response": {
+        "url": "http://fw.xbcs.net/wemo/owrt/WeMo_WW_2.00.11565.OWRT.PVT_SNSV2.bin.gpg",
+        "archived_snapshots": {}
+      }
+    },
+    {
+      "url": "https://archive.org/wayback/available?url=http%3A%2F%2Ffw.xbcs.net%2Fwemo%2Fowrt%2FWeMo_WW_2.00.11565.OWRT-SC.PVT_SNSV2.bin.gpg",
+      "status": 200,
+      "body_bytes_utf8": 110,
+      "body_sha256": "cf2e6ebf0a89fa52451d47ddc099e1ee3bb99695d13e50d1b726ad1980bec3fd",
+      "parsed_response": {
+        "url": "http://fw.xbcs.net/wemo/owrt/WeMo_WW_2.00.11565.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "archived_snapshots": {}
+      }
+    },
+    {
+      "url": "https://web.archive.org/web/20210531152158id_/http://fw.xbcs.net/wemo/owrt/",
+      "status": 200,
+      "body_bytes_utf8": 393075,
+      "body_sha256": "ff88f9b792bde81e89fb239564d0c8ec7167a4a7a016375fd9b1bd054c244b15",
+      "link_count": 1465,
+      "relevant_links": [
+        "WeMo_WW_2.00.10906.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10936.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10936.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10954.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10954.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10971.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10971.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT-SC.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11008.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11008.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11010.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11010.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT-SC.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11059.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11059.OWRT.PVT_SNSV2.bin.gpg"
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20221219043940id_/http://fw.xbcs.net/wemo/owrt/",
+      "status": 200,
+      "body_bytes_utf8": 393075,
+      "body_sha256": "53ed44683b1c88546e7f839f0d18c0e0070986decf38287a4d03ab5368f44d0a",
+      "link_count": 1465,
+      "relevant_links": [
+        "WeMo_WW_2.00.10906.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10936.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10936.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10954.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10954.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10971.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10971.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT-SC.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11008.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11008.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11010.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11010.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT-SC.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11059.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11059.OWRT.PVT_SNSV2.bin.gpg"
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20230117025750id_/http://fw.xbcs.net/wemo/owrt/",
+      "status": 200,
+      "body_bytes_utf8": 393075,
+      "body_sha256": "68aabbf3518f37cf8d5062ae068e54af951dc2712d8807ef2af7fc2346b3abc0",
+      "link_count": 1465,
+      "relevant_links": [
+        "WeMo_WW_2.00.10906.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10936.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10936.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10954.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10954.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10971.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10971.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT-SC.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.10989.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11008.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11008.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11010.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11010.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT-SC.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT.DVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11027.OWRT.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11059.OWRT-SC.PVT_SNSV2.bin.gpg",
+        "WeMo_WW_2.00.11059.OWRT.PVT_SNSV2.bin.gpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "scope": "Static analysis of archived 11420; no live SOAP calls or device changes",
+  "library_sha256": "8873584413902933a19a7de5de7a00c9a6276df9fc53fa55b08d174eb51a239d",
+  "findings": [
+    {
+      "action": "GetManufactureData",
+      "call_chain": "GetManufactureData -> CreateManufactureData",
+      "write_evidence": "fopen at 0x1b568 uses path constant 0x4d3a0 (/tmp/Belkin_settings/ManufactureData.xml) and mode constant 0x56a64 (w); fwrite at 0x1b618.",
+      "response_fields": [
+        "CountryCode",
+        "FirmwareVersion",
+        "APMacAddress",
+        "STAMacAddress",
+        "SSID",
+        "TargetCountry",
+        "SerialNumber"
+      ],
+      "conclusion": "Not a passive dump or free-space getter; do not invoke under no-change constraint."
+    },
+    {
+      "actions": [
+        "GetDeviceInformation",
+        "GetInformation"
+      ],
+      "evidence": "Both reference handleTimeSync. That helper has SetBelkinParameter at 0x18f90 and pthread_create at 0x1906c.",
+      "conclusion": "Names alone do not prove read-only behavior; input-dependent time-sync branch requires separate analysis before any live use."
+    },
+    {
+      "action": "GetExtMetaInfo",
+      "helper": "PopulatePluginParams",
+      "observed_fields": [
+        "client state",
+        "ICE running",
+        "NAT initialization",
+        "last auth value",
+        "uptime",
+        "firmware update state",
+        "UTC time",
+        "home ID",
+        "Wi-Fi MAC",
+        "remote access enabled",
+        "device type"
+      ],
+      "conclusion": "Traced fields do not provide flash free space, bootloader bytes or recovery state."
+    },
+    {
+      "action": "GetMetaInfo",
+      "observed_fields": [
+        "Wi-Fi MAC",
+        "serial",
+        "SKU",
+        "firmware string",
+        "AP SSID",
+        "device type"
+      ],
+      "conclusion": "Identity fields cannot establish exact bootloader or a flash backup."
+    }
+  ],
+  "artifacts": [
+    "artifacts/binary-analysis/CreateManufactureData-read-audit.txt",
+    "artifacts/binary-analysis/GetDeviceConfig-read-audit.txt",
+    "artifacts/binary-analysis/GetDeviceInformation-read-audit.txt",
+    "artifacts/binary-analysis/GetExtMetaInfo-read-audit.txt",
+    "artifacts/binary-analysis/GetInformation-read-audit.txt",
+    "artifacts/binary-analysis/GetManufactureData-read-audit.txt",
+    "artifacts/binary-analysis/GetMetaInfo-read-audit.txt",
+    "artifacts/binary-analysis/GetSmartDevInfo-read-audit.txt",
+    "artifacts/binary-analysis/handleTimeSync-read-audit.txt",
+    "artifacts/binary-analysis/PopulatePluginParams-read-audit.txt"
+  ],
+  "safe_shell_verified": false,
+  "recovery_verified": false,
+  "next_action": "Do not spend live requests on these metadata actions for firmware acquisition. Continue exact-version acquisition or identify a distinct audited passive read channel."
+}

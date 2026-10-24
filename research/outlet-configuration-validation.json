@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "idempotent source adaptation",
+    "plug-in unit type 266 revision 5",
+    "color and dimming clusters removed",
+    "required OnOff feature retained",
+    "required Scenes CopyScene retained"
+  ],
+  "source_sha256": {
+    "examples/lighting-app/lighting-common/lighting-app.zap": "436b21df4ea727c12b98b9dc5c41af44cb8ac2f3245d96328bc924ddef95db0d",
+    "examples/lighting-app/linux/main.cpp": "fd2d7c6d2e33660ed93cefa8217cd42dc42c2666cf7abb4c8a7aa5b8d7aa8175",
+    "examples/lighting-app/linux/WemoRelayBackend.h": "f9601d338b78741dac0d050b71ffa9f3d3f31893b2b1029f543af96e471b04b1"
+  }
+}

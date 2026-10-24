@@ -1,0 +1,121 @@
+{
+  "scope": "Static 11420 archive evidence; not verified on installed 11565",
+  "physical_device_contacted": false,
+  "source_evidence": [
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/wemo",
+      "sha256": "aeb4c35b98b32f0a87486d5a1768094df2b4b5e725feeca0a0da0b0277ae63dd",
+      "lines": [
+        {
+          "number": 23,
+          "text": "   touch /tmp/wemoApp.starting"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/update_test.sh",
+      "sha256": "1ffa158bedd705a1272f5fb9a941fab71700954ff80793e6be947350ca3a758f",
+      "lines": [
+        {
+          "number": 17,
+          "text": "sleep 60"
+        },
+        {
+          "number": 18,
+          "text": "for file in /tmp/*.starting; do"
+        },
+        {
+          "number": 34,
+          "text": "\t\tfw_setenv bootstate 0"
+        },
+        {
+          "number": 37,
+          "text": "\t\tfw_setenv bootstate 2"
+        },
+        {
+          "number": 39,
+          "text": "\tfw_setenv check_boot 0"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+      "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+      "lines": [
+        {
+          "number": 71,
+          "text": "\t[ -f /proc/mounts ] || /sbin/mount_root"
+        },
+        {
+          "number": 100,
+          "text": "   set -- $(grep -i Belkin_settings /proc/mtd | sed s/:// | sed s/mtd//)"
+        },
+        {
+          "number": 103,
+          "text": "      mkdir /tmp/Belkin_settings"
+        },
+        {
+          "number": 104,
+          "text": "      mount -t jffs2 /dev/mtdblock${belkin_part} /tmp/Belkin_settings"
+        },
+        {
+          "number": 272,
+          "text": "\tcheckboot=`fw_printenv -n check_boot`"
+        },
+        {
+          "number": 273,
+          "text": "\tif [ \"${checkboot}x\" == \"1x\" ]; then"
+        },
+        {
+          "number": 275,
+          "text": "\t\tif [ \"${boot_state}x\" == \"1x\" -o \"${boot_state}x\" == \"3x\" ]; then"
+        },
+        {
+          "number": 276,
+          "text": "\t\t\tif [ -f /sbin/update_test.sh ]; then"
+        },
+        {
+          "number": 278,
+          "text": "\t\t\t\t/sbin/update_test.sh 0 &"
+        }
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/dts/MT7628snsv2.dts",
+      "sha256": "7fb63c22a816eb0da35ea765be314882d73f81a73e93464b864f25704a79b445",
+      "lines": [
+        {
+          "number": 57,
+          "text": "\t\t\t\t\tlabel = \"rootfs_data\";"
+        },
+        {
+          "number": 77,
+          "text": "\t\t\t\t\tlabel = \"Belkin_settings\";"
+        }
+      ]
+    }
+  ],
+  "binary_evidence": {
+    "file": "artifacts/binary-analysis/libRemoteAccess.so",
+    "sha256": "94001f7c7447939caca62540582da3ba51927c5ed80298d993657fd8f9f6bcb8",
+    "function": "core_init_early",
+    "command_string_address": "0x32af8",
+    "command": "rm -f /tmp/*.starting",
+    "call_site": "system loaded at 0xeac8; jalr at 0xeacc; delay slot sets argument to 0x30000+0x2af8",
+    "disassembly": "artifacts/binary-analysis/core-init-startup-flags.txt"
+  },
+  "findings": [
+    "Boot invokes update_test only with check_boot=1 and bootstate=1 or 3.",
+    "update_test uses presence of startup flags after its wait, not a direct Matter or LAN reachability check.",
+    "Archived core_init_early removes all matching startup flags, not just the stock app flag.",
+    "A custom Matter .starting flag can therefore be removed by stock initialization; it is not an independent safety gate.",
+    "The source has shared overlay/settings regions. Switching firmware slots alone does not establish removal of persistent additions stored there."
+  ],
+  "next_action": "Keep recovery independent of stock startup flags. Establish exact-version startup and an out-of-band rollback or disable mechanism before any app installation.",
+  "limitations": [
+    "Static call site does not prove runtime timing or reachability on the physical device.",
+    "No exact bootloader, backup, restoration trial or safe shell established.",
+    "No vendor code executed; no state or firmware changed on the device."
+  ],
+  "recovery_verified": false
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-24",
+  "host_setup": {
+    "runtime": "Ubuntu-22.04 WSL2",
+    "packages_installed": true,
+    "native_compiler": "GCC 11.4.0",
+    "cross_compiler": "Ubuntu mipsel GCC 10.3.0",
+    "emulator": "QEMU user 6.2.0",
+    "docker": "Docker Desktop launch attempted, Linux engine did not become available; no reset requested by agent"
+  },
+  "validation": {
+    "program": "scripts/mips_toolchain_smoke.S",
+    "purpose": "Exit-only instruction/ABI toolchain smoke test, not Matter",
+    "cpu": "24KEc",
+    "elf": "ELF32 little-endian MIPS32r2 o32 soft-float static",
+    "qemu_exit_code": 0,
+    "sha256": "dc8790da0857261d6b1a40e49e66f2133e7f3db17d58d26f6d254c38803d1296"
+  },
+  "source_acquisition": {
+    "host": "pigweed.googlesource.com",
+    "previous_pin_available": false,
+    "fetched_revision": "ff2472ff8d681496bf6e01450948ac95afc8898f",
+    "checkout": "Incomplete due Windows path length; core.longpaths set locally before later cleanup",
+    "submodules_fetched": false,
+    "cleanup": "Removed only newly created incomplete mirror checkout and incomplete OpenWrt SDK download"
+  },
+  "blocking_condition": {
+    "error": "OSError Errno 28 No space left on device while downloading toolchain",
+    "host_free_bytes_after_cleanup": 250089472,
+    "minimum_requested_working_space": "Provide approximately 10 GB free or another build volume; this is a practical initial allowance, not a measured complete-build requirement"
+  },
+  "matter_build_completed": false,
+  "smaller_app_tested": false,
+  "shell_followup": "BCT.sh stops stock network services and unloads radio modules before starting a test program. It is not a safe diagnostic shell path and was not executed. pmortemd init only starts daemon; daemon semantics remain unaudited. No safe shell access established.",
+  "device_changes": false
+}

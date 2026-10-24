@@ -1,0 +1,29 @@
+[
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/wemo",
+    "sha256": "aeb4c35b98b32f0a87486d5a1768094df2b4b5e725feeca0a0da0b0277ae63dd",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "aeb4c35b98b32f0a87486d5a1768094df2b4b5e725feeca0a0da0b0277ae63dd",
+      "bytes_utf8": 1031
+    }
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+    "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+      "bytes_utf8": 9667
+    }
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/dts/MT7628snsv2.dts",
+    "sha256": "7fb63c22a816eb0da35ea765be314882d73f81a73e93464b864f25704a79b445",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "7fb63c22a816eb0da35ea765be314882d73f81a73e93464b864f25704a79b445",
+      "bytes_utf8": 2493
+    }
+  }
+]

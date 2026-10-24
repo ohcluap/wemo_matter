@@ -3,10 +3,22 @@
 import json
 from pathlib import Path
 import subprocess
-sdk = Path(__file__).resolve().parents[1] / 'sources/connectedhomeip'
-assert subprocess.check_output(['git','-C',str(sdk),'rev-parse','HEAD'],text=True).strip() == '3bcdd56ba54fb88b2afb4bfef575014671df7aa7'
+import argparse
+import copy
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--sdk', type=Path, default=Path(__file__).resolve().parents[1] / 'sources/connectedhomeip')
+sdk = parser.parse_args().sdk.resolve()
+git = ['git', '-c', f'safe.directory={sdk}', '-C', str(sdk)]
+revision = subprocess.check_output([*git, 'rev-parse', 'HEAD'], text=True).strip()
+assert revision in ('3bcdd56ba54fb88b2afb4bfef575014671df7aa7', 'ff2472ff8d681496bf6e01450948ac95afc8898f'), revision
+
 def original(path):
-    return subprocess.check_output(['git','-C',str(sdk),'show',f'HEAD:{path}'],text=True)
+    return subprocess.check_output([*git, 'show', f'HEAD:{path}'], text=True)
+
+# Reset files modified by optional size experiments before selecting a profile.
+if revision == 'ff2472ff8d681496bf6e01450948ac95afc8898f':
+    for path in ('examples/platform/linux/Options.cpp', 'examples/lighting-app/linux/BUILD.gn'):
+        (sdk / path).write_text(original(path))
 relative = 'examples/lighting-app/lighting-common/lighting-app.zap'
 data = json.loads(original(relative))
 ep = data['endpointTypes'][1]
@@ -19,7 +31,22 @@ for cluster in ep['clusters']:
     if cluster['name'] == 'On/Off':
         for attribute in cluster['attributes']:
             if attribute['name'] == 'FeatureMap':
-                attribute['defaultValue'] = '0'
+                attribute['defaultValue'] = '1' if revision.startswith('ff2472ff') else '0'
+if revision == 'ff2472ff8d681496bf6e01450948ac95afc8898f':
+    ep['deviceVersions'] = [5]
+    template = json.loads(original('examples/lighting-app/silabs/data_model/lighting-wifi-app.zap'))
+    scenes = next(c for endpoint in template['endpointTypes'] for c in endpoint['clusters'] if c['name'] == 'Scenes Management')
+    ep['clusters'].append(copy.deepcopy(scenes))
+    root = data['endpointTypes'][0]
+    root['clusters'] = [c for c in root['clusters'] if c['name'] != 'Thread Network Diagnostics']
+    for cluster in root['clusters']:
+        if cluster['name'] == 'Access Control':
+            extension = copy.deepcopy(next(a for a in cluster['attributes'] if a['name'] == 'ACL'))
+            extension.update(name='Extension', code=1)
+            cluster['attributes'].append(extension)
+        elif cluster['name'] == 'Diagnostic Logs':
+            cluster['commands'].append(dict(name='RetrieveLogsResponse', code=1, mfgCode=None, source='server', isIncoming=0, isEnabled=1))
+
 data['endpoints'][1]['endpointTypeName'] = name
 (sdk/relative).write_text(json.dumps(data,indent=2)+'\n')
 relative = 'examples/lighting-app/linux/main.cpp'

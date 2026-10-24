@@ -1,0 +1,64 @@
+{
+  "checked_utc": "2026-10-24T21:08:57.918765+00:00",
+  "goal_achieved": false,
+  "requirements": [
+    {
+      "requirement": "Safe Wi-Fi-only access on actual firmware 11565",
+      "status": "unverified",
+      "evidence": "research/local-access-assessment-2026-10-24.json; research/remote-diagnostic-execution-audit.json"
+    },
+    {
+      "requirement": "Independent recovery before device changes",
+      "status": "unverified",
+      "evidence": "research/stock-health-contract.json; research/install-recovery-audit.json",
+      "gap": "Exact installed bootloader and recovery transport unavailable; stock firmware trial flags do not establish app recovery."
+    },
+    {
+      "requirement": "Measured storage and RAM fit alongside stock software",
+      "status": "unverified",
+      "evidence": "research/ram-unpack-feasibility.json",
+      "gap": "571300-byte app/decoder package; actual available storage/RAM and filesystem overhead unknown."
+    },
+    {
+      "requirement": "Install app alongside stock OS",
+      "status": "not performed",
+      "reason": "Recovery prerequisite unmet."
+    },
+    {
+      "requirement": "Direct Matter physical relay on/off",
+      "status": "not demonstrated",
+      "evidence": "17 isolated emulator commissioning tests use simulated relay, not hardware."
+    },
+    {
+      "requirement": "Physical reboot persistence and continued stock control",
+      "status": "not demonstrated",
+      "reason": "No app installed; container restart does not prove physical persistence."
+    },
+    {
+      "requirement": "Preserve OS, bootloader, radio and user data",
+      "status": "preserved during this continuation",
+      "evidence": "Offline analysis and isolated build/testing only; no device mutation or unrelated data deletion."
+    },
+    {
+      "requirement": "No GitHub activity outside owned repos or third-party messages",
+      "status": "respected during this continuation",
+      "evidence": "No GitHub tool calls, clones or messages; web search excluded github.com."
+    }
+  ],
+  "last_access_followup": {
+    "function": "GetHomeInfo in archived libUPnPHndlr.so",
+    "evidence": "Loads g_szPluginPrivatekey at 0xe970 as argument to createAuthSignature at 0xe98c; later passes returned structure offset 0x44 to encryptWithMacKeydata.",
+    "limitation": "This trace does not demonstrate export of the raw key needed by remotePktDecrypt. No live key retrieval attempted.",
+    "artifact": "artifacts/binary-analysis/GetHomeInfo-access-audit.txt"
+  },
+  "impasse": {
+    "condition": "No verified Wi-Fi-only entry and independent recovery for exact installed firmware; device changes prohibited until recovery verified.",
+    "recurrence": "Remained unresolved through decoder build, minimal decoder tests, metadata access audit and this recovery-source follow-up. Those offline results did not remove this prerequisite.",
+    "why_more_builds_do_not_resolve_it": "They can change packaging but cannot prove exact-device boot recovery or permit installation.",
+    "evidence_needed_to_reopen_installation_work": [
+      "Trustworthy exact-board bootloader/firmware evidence establishing an accessible recovery mechanism and a safe way to validate it.",
+      "A verified recovery method that remains usable when the added app prevents normal access."
+    ],
+    "limits": "This is an evidence impasse, not proof that no solution exists anywhere. Physical access and third-party contact remain outside authorized scope."
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://index.commoncrawl.org/CC-MAIN-2024-51-index?url=fw.xbcs.net%2F%2A&output=json&filter=status%3A200&pageSize=1",
+    "status": 404,
+    "body": "{\"message\": \"No Captures found for: fw.xbcs.net/\"}"
+  },
+  {
+    "url": "https://index.commoncrawl.org/CC-MAIN-2023-50-index?url=fw.xbcs.net%2F%2A&output=json&filter=status%3A200&pageSize=1",
+    "status": 504,
+    "body": "<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.31.8</center>\r\n</body>\r\n</html>\r\n"
+  }
+]

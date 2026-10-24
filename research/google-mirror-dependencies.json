@@ -1,0 +1,32 @@
+[
+  {
+    "path": "third_party/pigweed/repo",
+    "pin": "c14c119c51a82f6e044f81b7dad0a322091d4121",
+    "success": true,
+    "detail": "HEAD is now at c14c119 pw_web: Update nodejs deps\n"
+  },
+  {
+    "path": "third_party/mbedtls/repo",
+    "pin": "6a58fa8122c9bb8ee1644733d21b5677c93f1169",
+    "success": true,
+    "detail": "HEAD is now at 6a58fa8 Merge pull request #1331 from Mbed-TLS/mbedtls-2.28.10_mergeback\n"
+  },
+  {
+    "path": "third_party/jsoncpp/repo",
+    "pin": "8519b8381f3c741ad1421f88237b1deda0b11412",
+    "success": true,
+    "detail": "HEAD is now at 8519b83 fix: avoid quadratic re-scan of comments after a value (#1689)\n"
+  },
+  {
+    "path": "third_party/nanopb/repo",
+    "pin": "98bf4db69897b53434f3d0ba72e0a3ab1a902824",
+    "success": true,
+    "detail": "HEAD is now at 98bf4db Publishing nanopb-0.4.9\n"
+  },
+  {
+    "path": "third_party/perfetto/repo",
+    "pin": "c1bbc165292877349b219a12498c1e768015a9e8",
+    "success": false,
+    "detail": "error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500\nfatal: expected 'packfile'\n"
+  }
+]

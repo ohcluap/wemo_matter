@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-24",
+  "preserved": [
+    "League of Legends and game files",
+    "All project repositories and local worktrees",
+    "All 27 pre-existing Docker volumes",
+    "Installed Anaconda environments"
+  ],
+  "removed": [
+    "Downloaded package cache: AppData/Local/pip/Cache",
+    "Downloaded package cache: AppData/Local/npm-cache/_cacache",
+    "Only top-level .conda and .tar.bz2 package archives in C:/ProgramData/Anaconda3/pkgs"
+  ],
+  "anaconda_archive_bytes_removed": 1466402077,
+  "pip_npm_observed_free_space_gain_bytes": 790319104,
+  "docker_images_before": 0,
+  "docker_build_cache_before_bytes": 0,
+  "local_codex_worktrees_bytes": 28333249,
+  "docker_trim": "fstrim -v /mnt/docker-desktop-disk completed; reported 1025546317824 logical bytes discarded, NOT host bytes recovered",
+  "docker_compaction": "Administrator launch cancelled by user; diskpart did not run",
+  "docker_restarted": true,
+  "existing_volumes_verified_after_restart": 27,
+  "free_bytes_now": 10409779200,
+  "attribution": "Free space rose substantially following trim/cache cleanup; entire change cannot be attributed precisely to these operations.",
+  "new_build_volume": "wemo-matter-sdk-build",
+  "github_access": false,
+  "physical_wemo_changes": false,
+  "build_image": "wemo-matter-app-builder:bookworm",
+  "build_image_id": "sha256:c5e5a0c8704758bfa6dd7adffa47e33ea503b563ef50d11406d8fa956ef5547a",
+  "sdk_revision": "ff2472ff8d681496bf6e01450948ac95afc8898f",
+  "experimental_dependency_substitutions": {
+    "nlio": "14828a5b174139f835bbd5b4223d0bb9a94add5f",
+    "nlassert": "195a9361a3b5a43ef81485762fe18954f0a79d46"
+  },
+  "smaller_matter_app_built": false,
+  "remaining_build_requirements": [
+    "Acquire compatible ZAP >=2026.9.9 through a permitted non-GitHub source",
+    "Adapt outlet-only application to mirror SDK revision and complete build",
+    "Measure full executable and compressed payload; perform offline commissioning tests"
+  ],
+  "initial_gn_failure": "Windows Git checkout materialized symlink examples/lighting-app/linux/build_overrides as plain text; moving source into Linux build volume",
+  "component_validation": {
+    "test": "Real Matter SDK TLV golden bytes, roundtrip, truncated input, output bounds",
+    "result": "PASS",
+    "network": "Docker --network none",
+    "target": "MIPS32r2 o32 little-endian soft-float static musl",
+    "bytes_stripped": 39304,
+    "sha256": "37f148ddab85dc41b844713b710d7453e9f4a479013c5fa38d143a3e2f70916d",
+    "scope": "Component test only; not a complete Matter device app or its size estimate"
+  },
+  "size_config_finding": "Current SDK already defaults optimize_for_size=true; explicitly setting this alone does not establish a size reduction.",
+  "linux_sdk_copy_complete": true,
+  "symlinks_restored": 125,
+  "gn_configuration": "PASS: 6374 targets, optional all-clusters bundle disabled",
+  "full_build": "Ninja reached code generation; failed because zap-cli is missing. Current SDK requires ZAP >=2026.9.9.",
+  "additional_validation": [
+    "PASS: software floating point, pthreads, mutex, atomics, monotonic clock, entropy, IPv6 socket creation",
+    "PASS: simulated relay routing, input validation, on/off, idempotence, failure/retry, restart state"
+  ],
+  "qrcode_dependency": {
+    "host": "gitlab.com/Nayuki/QR-Code-generator",
+    "revision": "8518684c0f33d004fa93971be2c6a8eca3167d1e",
+    "exact_sdk_pin": true,
+    "copied_into_linux_volume": true
+  },
+  "source_leads": {
+    "silabs_slt": "https://www.silabs.com/documents/public/software/slt-cli-1.2.2-linux-x64.zip returned 403, including checksum URL",
+    "google_zap_mirror": "pigweed.googlesource.com/third_party/github/project-chip/zap returned 404",
+    "docker_base_recipe": "Official chip-build and chip-build-minimal Dockerfiles do not bundle ZAP"
+  }
+}

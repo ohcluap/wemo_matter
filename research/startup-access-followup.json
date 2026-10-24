@@ -1,0 +1,136 @@
+[
+  {
+    "file": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/waspd",
+    "hits": [
+      [
+        4,
+        "WASPDEBUG=1"
+      ],
+      [
+        5,
+        "API_DEBUG_FILE=/tmp/Belkin_settings/wasp_debug_level"
+      ],
+      [
+        7,
+        "if [ $WASPDEBUG -eq 0 ]; then"
+      ],
+      [
+        9,
+        "    if [ -e $API_DEBUG_FILE ]; then"
+      ],
+      [
+        10,
+        "        rm $API_DEBUG_FILE"
+      ],
+      [
+        14,
+        "    if [ ! -e $API_DEBUG_FILE ]; then"
+      ],
+      [
+        15,
+        "        echo 21 > $API_DEBUG_FILE"
+      ]
+    ]
+  },
+  {
+    "file": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/firmware_update.sh",
+    "hits": [
+      [
+        202,
+        "# bootpart is changed temporaily to get backward compatibility for WNC old bootloaders (SDK_1.0.00.002 ~ 004)"
+      ]
+    ]
+  },
+  {
+    "file": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/resetwifi",
+    "hits": [
+      [
+        4,
+        "echo $$ > /tmp/resetwifi.pid"
+      ],
+      [
+        33,
+        "#change white led to toggle state as canceling reset script meaning state has to change"
+      ],
+      [
+        46,
+        "    rm -f /tmp/resetwifi.pid"
+      ],
+      [
+        73,
+        "rm -f /tmp/resetwifi.pid"
+      ],
+      [
+        74,
+        "# now we passed the timer, we will reset wifi..."
+      ],
+      [
+        85,
+        "logger \"WIFI Resetting...\""
+      ]
+    ]
+  },
+  {
+    "file": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/factoryreset",
+    "hits": [
+      [
+        10,
+        "logger \"Factory Resetting will happen if the button is not release in 3 sec...\""
+      ],
+      [
+        31,
+        "# now we passed the timer, we will factory reset..."
+      ],
+      [
+        52,
+        "/sbin/jffs2reset -y"
+      ]
+    ]
+  },
+  {
+    "file": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/triggerswitch",
+    "hits": [
+      [
+        5,
+        "if [ -f /tmp/resetwifi.pid ]; then"
+      ],
+      [
+        6,
+        "    kill $(cat /tmp/resetwifi.pid)"
+      ]
+    ]
+  },
+  {
+    "file": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+    "hits": [
+      [
+        71,
+        "\t[ -f /proc/mounts ] || /sbin/mount_root"
+      ],
+      [
+        72,
+        "\t[ -f /proc/jffs2_bbc ] && echo \"S\" > /proc/jffs2_bbc"
+      ],
+      [
+        86,
+        "\tgrep -q debugfs /proc/filesystems && /bin/mount -o noatime -t debugfs debugfs /sys/kernel/debug"
+      ],
+      [
+        99,
+        "   lock /tmp/.switch2jffs"
+      ],
+      [
+        104,
+        "      mount -t jffs2 /dev/mtdblock${belkin_part} /tmp/Belkin_settings"
+      ],
+      [
+        106,
+        "   lock -u /tmp/.switch2jffs"
+      ],
+      [
+        139,
+        "\t\t   nvram reset"
+      ]
+    ]
+  }
+]
