@@ -11,6 +11,7 @@ The objective is direct Matter control of the physical F7C063 alongside its stoc
 - The compact MIPS app passed 17 isolated commissioning/control tests using a simulated relay. This is not Google Home or physical-device validation.
 - The compressed app and minimal static decoder total 571,300 bytes. Ten isolated decoder checks passed. Actual storage/RAM fit remains unverified; stock files, filesystem overhead and recovery reserve must fit too.
 - Archived 11420 startup, HTTP, diagnostic and boot logic were audited. These findings do not prove the installed 11565 implementation or bootloader behavior.
+- Additional storage-daemon, HTTP XML/range and startup-export checks found no verified firmware read route; see [evidence and limitations](research/additional-passive-read-routes.md).
 - See [hardware completion audit](research/hardware-completion-audit.json), [decoder measurements](research/ram-unpack-feasibility.json), and [compact app results](research/compact-matter-progress.json).
 
 Build outputs, downloaded sources, device credentials and full extracted source payloads stay local. The scripts require the prepared SDK volume and pinned dependencies described in the research; this is not a one-command installation package. No third-party contact is authorized. Historical notes mentioning a pending maintainer request are superseded: the request was cancelled and was never sent.
