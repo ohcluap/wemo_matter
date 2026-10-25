@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-24T20:59:37.026364+00:00",
+  "scope": "Official Google documentation and offline archived 11420 sources; no device requests",
+  "google_home": {
+    "home_mini_supports_matter_wifi": true,
+    "source": "https://support.google.com/googlehome/answer/12391458?hl=en-GB",
+    "onnetwork_development_example": "https://developers.home.google.com/codelabs/matter-device-virtual",
+    "limits": "Model support only; actual speaker software/account setup and uncertified app commissioning not verified. Virtual-device instructions require a developer project with matching VID/PID; iPhone workflow not established."
+  },
+  "compressed_app_deployment": {
+    "artifact_bytes": 565248,
+    "artifact": "artifacts/full-app/mirror-results/compact/app.squashfs",
+    "base_kernel_config": "target/linux/generic/config-3.18",
+    "base_config_evidence": {
+      "CONFIG_SQUASHFS": "y",
+      "CONFIG_SQUASHFS_XZ": "y",
+      "CONFIG_BLK_DEV_LOOP": "not set"
+    },
+    "profile_override": "No enabling loop setting found in inspected mt7628 files, snsv2 configs or top-level .config files. Package selection and generated final kernel config are not established.",
+    "conclusion": "App-only SquashFS size is a packaging measurement, not proof this file can be mounted by stock firmware. Do not use protected flash partitions to avoid loop support.",
+    "alternative": "XZ-to-RAM execution requires a proven stock decompressor or an additional loader, plus executable tmpfs, memory headroom, and safe persistent startup. None is verified on 11565."
+  },
+  "persistence_source_followup": {
+    "source": "sources/connectedhomeip/src/platform/Linux/CHIPLinuxStorageIni.cpp",
+    "observed": "CommitConfig writes a temporary file, calls DataSync (fdatasync) then rename. This function does not sync the parent directory after rename.",
+    "limitation": "This source observation does not establish loss on the target JFFS2 implementation. Existing SIGKILL tests do not emulate sudden power loss, and Windows source must be compared with native pinned build before any patch."
+  },
+  "next_actions": [
+    "Resolve executable compressed-image loading cost without replacing the kernel.",
+    "Validate persistent state on a fresh temporary filesystem, separately from process restart.",
+    "Retain exact-firmware access and independent recovery as prerequisites to any device installation."
+  ],
+  "physical_device_modified": false,
+  "recovery_verified": false
+}

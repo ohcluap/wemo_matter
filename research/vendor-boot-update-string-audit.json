@@ -1,0 +1,327 @@
+[
+  {
+    "path": "wemo_gpl_snsv2_package-11420/include/belkin.mk",
+    "size": 3923,
+    "sha256": "e1da726e3427d4efafffc0abe3130bc58b866050c218f99443c58f98ef281e74",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/.config.old",
+    "size": 1614,
+    "sha256": "db94d39484f9cd4c4b06c75062307af05613c99d1526a3193e09a9e7ee0cbf75",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/Makefile",
+    "size": 663,
+    "sha256": "65b917b39407b4b11dd2e17ef32c4bb29d7a290bf310018aca8e3a342290a9b5",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libbelkin_nvram.so",
+    "size": 49275,
+    "sha256": "76fdfc5e20758d9efc60341ceed510c1dfdf5283ee43f49cebd0f2169c286e53",
+    "terms": [
+      "bootstate"
+    ],
+    "selected_strings": [
+      "bootstate"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libUPnPHndlr.so",
+    "size": 455461,
+    "sha256": "8873584413902933a19a7de5de7a00c9a6276df9fc53fa55b08d174eb51a239d",
+    "terms": [
+      "WithUnsignedImage"
+    ],
+    "selected_strings": [
+      "WithUnsignedImage"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libAddlInfra.so",
+    "size": 151669,
+    "sha256": "9ee50e36879ec6b3de171938c351b6a99ba8699c6b1c364c8891e71e1897e51c",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libRemoteAccess.so",
+    "size": 247759,
+    "sha256": "94001f7c7447939caca62540582da3ba51927c5ed80298d993657fd8f9f6bcb8",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libDeviceControl.so",
+    "size": 54978,
+    "sha256": "3d7981d2df7e1038425ee64abca88888edd651daed624106b40cc0d7d352239a",
+    "terms": [
+      "bootstate",
+      "SNSV2"
+    ],
+    "selected_strings": [
+      "<%s:%s:%d> [%d:\"%s\"] Current bootstate: %d",
+      "<%s:%s:%d> [%d:\"%s\"] Could not fetch bootstate from fw_printenv",
+      "fw_setenv bootstate 2",
+      "fw_setenv bootstate 0",
+      "<%s:%s:%d> [%d:\"%s\"] Invalid bootstate [%d]",
+      "fw_printenv -n bootstate"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/usr/include/itc.h",
+    "size": 4575,
+    "sha256": "63d6592e9aca3f62552cee6ea0fbe738a5524902d4c0d41b8ecf95794db00722",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/ver.txt",
+    "size": 52,
+    "sha256": "113e93bfb72596a43ef9efb8283fbfec721c5e4b7942aa16d155763c7bd12e7b",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/firmware_update.sh",
+    "size": 6160,
+    "sha256": "f16c45caf7d16cef0c94bf7f1ad35a599f1e031c09a4e7e9e5e6d2671e5ea114",
+    "terms": [
+      "bootstate",
+      "check_boot"
+    ],
+    "selected_strings": [
+      "curr_partition=`fw_printenv | grep bootstate | cut -d '=' -f 2`",
+      "fw_setenv bootstate $newstate",
+      "check_boot=`fw_printenv -n check_boot`",
+      "if [ \"${check_boot}x\" != \"0x\" ]; then",
+      "   fw_setenv check_boot 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/go_dummy.sh",
+    "size": 440,
+    "sha256": "fd19e7330b8c33dedc1597795671452f95e4f7678556204640cc18296f5b572d",
+    "terms": [
+      "bootstate"
+    ],
+    "selected_strings": [
+      "bootstate=$(fw_printenv | grep bootstate)",
+      "if [ \"${bootstate}\" == \"bootstate=1\" ]; then",
+      "    fw_setenv bootstate 2",
+      "if [ \"${bootstate}\" == \"bootstate=3\" ]; then",
+      "    fw_setenv bootstate 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/web/firmwareupdate.xml",
+    "size": 1754,
+    "sha256": "ea576db60c4ba96c42bfbc92f540f21761451e3e49b757b56a6371cf00d31554",
+    "terms": [
+      "WithUnsignedImage"
+    ],
+    "selected_strings": [
+      "<name>WithUnsignedImage</name>",
+      "<relatedStateVariable>WithUnsignedImage</relatedStateVariable>",
+      "<name>WithUnsignedImage</name>"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/wemoApp",
+    "size": 20919,
+    "sha256": "b74e13974f9e4604c4d02d0cffc026d4e8ff3fc75e95856dfcb169340a6f124a",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/update_test.sh",
+    "size": 1098,
+    "sha256": "1ffa158bedd705a1272f5fb9a941fab71700954ff80793e6be947350ca3a758f",
+    "terms": [
+      "bootstate",
+      "check_boot"
+    ],
+    "selected_strings": [
+      "boot_state=`fw_printenv -n bootstate`",
+      "fw_setenv bootstate 0",
+      "fw_setenv bootstate 2",
+      "fw_setenv check_boot 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/wemo_ctrl",
+    "size": 58343,
+    "sha256": "b28ab9be91ceac3e8d6b71b3eb1fe641c65114e47083c9d635d56331743f1fbc",
+    "terms": [
+      "WithUnsignedImage"
+    ],
+    "selected_strings": [
+      "WithUnsignedImage"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/NatClient/Makefile",
+    "size": 1766,
+    "sha256": "955cf9f6f267c4a33b9b563c5955e0e9d446e9d319f9d3b000bb998aa019c3f8",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/tools/belkin/image.mk",
+    "size": 3833,
+    "sha256": "59dad4724d44456f0ac3676980f9f5d4b620d0712d73d49b3ec3daad3c594140",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/base-files/etc/init.d/boot",
+    "size": 7387,
+    "sha256": "6162678ab88002f1746dd4ba8a6f0f0f9b89f46e4eb93882a2959dca1a09486f",
+    "terms": [
+      "bootstate",
+      "check_boot"
+    ],
+    "selected_strings": [
+      "checkboot=`fw_printenv -n check_boot`",
+      "boot_state=$(fw_printenv -n bootstate)",
+      "fw_setenv check_boot 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/base-files/sbin/flashFW.sh",
+    "size": 1095,
+    "sha256": "e948331b27901b5f55c60706586e258bf8960a532138bca31261fbe01f4a67bf",
+    "terms": [
+      "bootstate",
+      "check_boot"
+    ],
+    "selected_strings": [
+      "CURR_PARTITION=`fw_printenv | grep bootstate | cut -d '=' -f 2`",
+      "    fw_setenv bootstate 1",
+      "    fw_setenv check_boot 0",
+      "    fw_setenv bootstate 3",
+      "    fw_setenv check_boot 0",
+      "        fw_setenv bootstate 3",
+      "        fw_setenv check_boot 0",
+      "        fw_setenv bootstate 1",
+      "        fw_setenv check_boot 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/image/Makefile",
+    "size": 44767,
+    "sha256": "182d59340716c6b5a04c857f2e1cfd45718f5752d6a637718ca6f4b9f652a828",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoDimmer/base-files/etc/init.d/boot",
+    "size": 9304,
+    "sha256": "310474a8de3bc2493c72b2e9de950f21ae97ffbc3b53b2c435d6eafd65a323e8",
+    "terms": [
+      "bootstate",
+      "check_boot"
+    ],
+    "selected_strings": [
+      "checkboot=`fw_printenv -n check_boot`",
+      "boot_state=$(fw_printenv -n bootstate)",
+      "fw_setenv check_boot 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV3/base-files/etc/init.d/boot",
+    "size": 9616,
+    "sha256": "1bd01fb63b0e99d5a1523774fba18304272580511c81daae35db349ef117a241",
+    "terms": [
+      "bootstate",
+      "check_boot"
+    ],
+    "selected_strings": [
+      "checkboot=`fw_printenv -n check_boot`",
+      "boot_state=$(fw_printenv -n bootstate)",
+      "fw_setenv check_boot 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoLightV2/base-files/etc/init.d/boot",
+    "size": 10662,
+    "sha256": "403450b8ac809d8a77cfe785ed8f9282b0f2a735de433bbc5d7e95cbc7e3d883",
+    "terms": [
+      "bootstate",
+      "check_boot"
+    ],
+    "selected_strings": [
+      "checkboot=`fw_printenv -n check_boot`",
+      "boot_state=$(fw_printenv -n bootstate)",
+      "fw_setenv check_boot 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/profiles/01-wemo.mk",
+    "size": 3624,
+    "sha256": "448e87df9f8066645e255fe5ceb9bac48c026951cc965dae891ecb0ecf298c07",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+    "size": 9667,
+    "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+    "terms": [
+      "bootstate",
+      "check_boot"
+    ],
+    "selected_strings": [
+      "checkboot=`fw_printenv -n check_boot`",
+      "boot_state=$(fw_printenv -n bootstate)",
+      "fw_setenv check_boot 0"
+    ]
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/configs/snsv2",
+    "size": 1109,
+    "sha256": "03e14d4112ef964cc376e8a78cba20ce8d17b8d896fc4cac52250f1f2621b767",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/configs/snsv2-x86",
+    "size": 1022,
+    "sha256": "0d35692d555f43a9a067e85f3448e89c6f85ce9f2f3339da2d3673535ad83307",
+    "terms": [
+      "SNSV2"
+    ],
+    "selected_strings": []
+  }
+]

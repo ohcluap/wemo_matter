@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-24",
+  "image": "wemo-matter-build-and-test:bookworm",
+  "image_id": "sha256:eed5ccf1ca1d1a17d20da937832507a6b6004badadbd3c083b8c45cf59478b56",
+  "volume": "wemo-matter-sdk-build",
+  "sdk_revision": "ff2472ff8d681496bf6e01450948ac95afc8898f",
+  "zap": {
+    "package": "experimental/matter/zap/linux-amd64",
+    "tag": "version:v2026.09.09.2",
+    "url": "https://chrome-infra-packages.appspot.com/dl/experimental/matter/zap/linux-amd64/+/version:v2026.09.09.2",
+    "zip_sha256": "18ec355e3f2ac4ff79f0cd4d1b0a5b60e3aa9add16f4f8bf42d8fb5da1e9bbf8",
+    "reported_version": "2026.9.9",
+    "feature_level": 110,
+    "reported_source_hash": "400f05e0c15b5b2643d9019b9be92fc6b803397f"
+  },
+  "network": "none during generation, compilation, and emulator tests",
+  "compiler": "OpenWrt GCC 13.3.0 musl MIPS32r2 o32 soft-float",
+  "device_modified": false,
+  "third_party_github_access": false,
+  "state": "Docker environment operational; baseline, outlet, and LTO outlet built; all startup/shutdown and compression-roundtrip tests passed",
+  "dependency_substitutions": {
+    "nlio": "14828a5b174139f835bbd5b4223d0bb9a94add5f",
+    "nlassert": "195a9361a3b5a43ef81485762fe18954f0a79d46"
+  },
+  "measurements": {
+    "baseline": {
+      "stripped": {
+        "bytes": 2132928,
+        "sha256": "798c12392bf8ce4e91b8c14bc906cb6080ec9c7a303c50e04032de31452dcdce"
+      },
+      "squashfs": {
+        "bytes": 679936,
+        "sha256": "08ba731c741670063aef11177a439f028e97b83e4e886280949cdc6742b44233"
+      },
+      "xz": {
+        "bytes": 630768,
+        "sha256": "3038821edb9e33a8fed115e355a034bfce057f878c6b24276c16c8420f940337"
+      },
+      "startup_test": {
+        "test": "MIPS loopback startup and SIGTERM shutdown",
+        "commissioning_tested": false,
+        "physical_device_tested": false,
+        "passed": true,
+        "udp_5540_bound": true,
+        "stayed_running": true,
+        "qemu_peak_sampled_rss_kib": 20832,
+        "memory_note": "QEMU host RSS is not device RAM usage",
+        "exit_code": 0
+      }
+    },
+    "outlet": {
+      "stripped": {
+        "bytes": 2058496,
+        "sha256": "81df852c0e5737123ff76aab1bda572976dc6b7d74cd63043f22d6faba533916"
+      },
+      "squashfs": {
+        "bytes": 655360,
+        "sha256": "c1b57b3b1253da4a5df5385c6ed6f68f855cc7b9da52686fd7e58c5143083566"
+      },
+      "xz": {
+        "bytes": 613292,
+        "sha256": "3eb283c21ef49dbd6f455792c1efbb70f96fd319f23fe9752163d9cc27fecf6e"
+      },
+      "startup_test": {
+        "test": "MIPS loopback startup and SIGTERM shutdown",
+        "commissioning_tested": false,
+        "physical_device_tested": false,
+        "passed": true,
+        "udp_5540_bound": true,
+        "stayed_running": true,
+        "qemu_peak_sampled_rss_kib": 18748,
+        "memory_note": "QEMU host RSS is not device RAM usage",
+        "exit_code": 0
+      }
+    },
+    "lto": {
+      "stripped": {
+        "bytes": 1841756,
+        "sha256": "00a35c87bea9f735017ed47a1e0dc5feca1db4d8c356208166f98509e7cb0190"
+      },
+      "squashfs": {
+        "bytes": 626688,
+        "sha256": "2f3739ea204ab210f306b4e3045ae095489ad32acd1ac3b7c94967788525e471"
+      },
+      "xz": {
+        "bytes": 584060,
+        "sha256": "05a30bc0707a25d72a43137c16cd40fa0468c445b283dabbc796ee0c4f7e3406"
+      },
+      "startup_test": {
+        "test": "MIPS loopback startup and SIGTERM shutdown",
+        "commissioning_tested": false,
+        "physical_device_tested": false,
+        "passed": true,
+        "udp_5540_bound": true,
+        "stayed_running": true,
+        "qemu_peak_sampled_rss_kib": 18364,
+        "memory_note": "QEMU host RSS is not device RAM usage",
+        "exit_code": 0
+      }
+    }
+  },
+  "compressed_scope": "Application executable only, no installer, rollback supervisor, or state reserve. SquashFS compression roundtrip verified.",
+  "device_fit": "Not established. Best SquashFS executable-only image is 626688 bytes: exceeds nominal 11420 rootfs_data (327680) and Belkin_settings (589824) individually. Raw XZ is 584060 bytes, leaving only 5764 bytes against nominal settings partition before filesystem overhead, existing vendor data, application state, or recovery; not a viable fit claim. Actual 11565 free space remains unknown.",
+  "conformance": "Outlet ZAP generation no longer reports device-type/cluster/feature conformance failures. It still labels Groupcast and Scenes as provisional; this is not certification.",
+  "host_free_bytes": 1394724864,
+  "remaining_work": [
+    "Full commissioning/control/subscription/restart integration tests for this SDK revision",
+    "Further size reduction or verified available storage and RAM",
+    "Safe initial shell/file-transfer access on 11565",
+    "Verified recovery and interrupted-update behavior before any device installation"
+  ],
+  "configuration_validation": "research/outlet-configuration-validation.json",
+  "relative_reduction": {
+    "stripped": 0.13651281243436253,
+    "squashfs": 0.07831325301204817,
+    "xz": 0.07404941277934196
+  }
+}

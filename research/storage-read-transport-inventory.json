@@ -1,0 +1,195 @@
+{
+  "source_version": "11420 SNSV2 vendor binaries; NOT installed 11565",
+  "method": "Static ELF dynamic-symbol inventory, no vendor code execution",
+  "files": [
+    {
+      "file": "nvram",
+      "sha256": "790e69c562b81537eb1aa35bba4afb13547a4509d55c57281e08a1dff615551a",
+      "selected_undefined_symbols": [
+        "syscall"
+      ]
+    },
+    {
+      "file": "hkstore",
+      "sha256": "c82d72d12433addc4fbad6317b86bf97abd7903e68b5cf14470beb1c1f972bc9",
+      "selected_undefined_symbols": [
+        "syscall"
+      ]
+    },
+    {
+      "file": "libbelkin_nvram.so",
+      "sha256": "76fdfc5e20758d9efc60341ceed510c1dfdf5283ee43f49cebd0f2169c286e53",
+      "selected_undefined_symbols": [
+        "mmap",
+        "sem_init",
+        "shm_open",
+        "shm_unlink",
+        "syscall"
+      ]
+    },
+    {
+      "file": "libhkstore.so",
+      "sha256": "6f28bccc3443677d336bdc95fc539ce06b700f6d8e5e6448f3cdfb7635ef2220",
+      "selected_undefined_symbols": [
+        "mmap",
+        "sem_init",
+        "shm_open",
+        "shm_unlink",
+        "syscall"
+      ]
+    }
+  ],
+  "interpretation": "Both libraries import POSIX shared-memory functions. None of these four binaries imports the selected socket functions. This is not proof that the entire firmware has no network-accessible wrapper.",
+  "device_requests_sent": 0,
+  "startup_inventory": {
+    "scope": [
+      "package/belkin/WeMo_SNSV2/files/",
+      "package/base-files/files/",
+      "target/linux/ramips/base-files/",
+      "target/linux/ramips/mt7628/WemoSNSV2/base-files/"
+    ],
+    "text_files_checked": 155,
+    "maximum_file_size": 300000,
+    "hits": [
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/lib/functions.sh",
+        "sha256": "974bafbb226d2a879ccd282be6fb6ea7d8268aec48d681d1b4afe94f533bff54",
+        "line_references": {
+          "flash_device": [
+            252,
+            254
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/lib/functions/system.sh",
+        "sha256": "4ff9233d8765ef3024818d746d08563e4a810b82669946e834c8d866d88b0cda",
+        "line_references": {
+          "flash_device": [
+            5,
+            7
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/usr/include/ulog.h",
+        "sha256": "9a8fe2b69ada73524c96ada7c48158fea7573f6100c641817393d403e6378b4d",
+        "line_references": {
+          "http_root": [
+            38,
+            39,
+            40
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/usr/include/logger.h",
+        "sha256": "980041068216ecd38b851ce2418661e265bb3b582ab48531c14eb945fac95b74",
+        "line_references": {
+          "http_root": [
+            186
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/fw_env.config",
+        "sha256": "812f400f03edb6ab671bb0b2ad0414192349c619aaad7d78310241e14894fc1b",
+        "line_references": {
+          "flash_device": [
+            1
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/nvram.config",
+        "sha256": "2cb15a9a9428acd004564141eb7481e93a6cf1fe2d2508c4119e1df3f1c377ec",
+        "line_references": {
+          "flash_device": [
+            1
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/homekitstore.config",
+        "sha256": "0307f55eb9243c6d889d6602cd9d8d9f8b3baa4c6c2ce9f34206f349506f8243",
+        "line_references": {
+          "flash_device": [
+            1
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/waspd",
+        "sha256": "440822b6f140ca8d85e26ab7219bc8cc0e935ed00ee393136a33309db9e9c4d6",
+        "line_references": {
+          "http_root": [
+            5,
+            223,
+            229
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/firmware_update.sh",
+        "sha256": "f16c45caf7d16cef0c94bf7f1ad35a599f1e031c09a4e7e9e5e6d2671e5ea114",
+        "line_references": {
+          "http_root": [
+            210
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/startWemo.sh",
+        "sha256": "d92ef415c902ddf0c2462ffceeccd19aa5ae8b6c89cc7a270cf6d57168ff0ffe",
+        "line_references": {
+          "http_root": [
+            5
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/factoryreset",
+        "sha256": "f681f3fefa812e544aae03fa90f6bdf6558a5d560875ffd87d7f976072297404",
+        "line_references": {
+          "http_root": [
+            53
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/base-files/etc/init.d/boot",
+        "sha256": "6162678ab88002f1746dd4ba8a6f0f0f9b89f46e4eb93882a2959dca1a09486f",
+        "line_references": {
+          "http_root": [
+            96,
+            99,
+            100
+          ],
+          "flash_device": [
+            100,
+            159,
+            165,
+            169
+          ]
+        }
+      },
+      {
+        "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+        "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+        "line_references": {
+          "http_root": [
+            100,
+            103,
+            104
+          ],
+          "flash_device": [
+            104,
+            151,
+            152
+          ]
+        }
+      }
+    ],
+    "limitation": "Text/reference inventory only; not a complete runtime filesystem or binary dataflow audit."
+  }
+}

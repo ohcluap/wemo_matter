@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-24",
+  "target_firmware": "WeMo_WW_2.00.11565.PVT-OWRT-SNSV2",
+  "live_service_count": 10,
+  "live_action_count": 83,
+  "live_operations": [
+    "Two targeted SSDP M-SEARCH requests",
+    "HTTP GET setup.xml and ten advertised service descriptors",
+    "HTTP GET /PluginLogs.txt returned 404"
+  ],
+  "soap_actions_this_pass": [],
+  "device_mutations_this_pass": [],
+  "firmware_backup_obtained": false,
+  "bootloader_obtained": false,
+  "wifi_only_recovery_verified": false,
+  "offline_binary_version": "11420; not installed 11565",
+  "offline_binary_sha256": "8873584413902933a19a7de5de7a00c9a6276df9fc53fa55b08d174eb51a239d",
+  "findings": [
+    {
+      "function": "GetWatchdogFile",
+      "address": "0xd7d8",
+      "evidence": "At 0xd978..0xd98c calls pthread_create with uploadLogFileThread as entry point. Not a passive watchdog-status getter. Not invoked."
+    },
+    {
+      "function": "GetLogFilePath",
+      "address": "0xbd6c",
+      "evidence": "Formats http://%s:%d/PluginLogs.txt; action response name GetLogFileURL. Only existing resource GET attempted; no log generation."
+    },
+    {
+      "function": "OpenWebFile/GetFileInfo/PostFile",
+      "evidence": "Functions at 0xa800/0xa890/0xa760 log and return zero; no backing-file read/write in these particular 11420 bodies. Their presence does not establish an arbitrary filesystem API. Does not characterize every libupnp HTTP path."
+    },
+    {
+      "comparison": "All ten live service action-name sets match packaged 11420 XML. This is schema evidence only, not implementation or security equivalence."
+    }
+  ],
+  "remaining_requirements": [
+    "Safe exact-image and bootloader acquisition path",
+    "Independent recovery when kernel or Wi-Fi fails",
+    "Actual partition map and bootloader rollback logic",
+    "Native Matter installation mechanism with verified recovery"
+  ],
+  "candidate_followup": "Offline audit of libupnp serving configuration and path handling; no traversal, arbitrary-file probes, exploit payloads, upload, update, reset or boot changes authorized by this report."
+}

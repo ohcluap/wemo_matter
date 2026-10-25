@@ -1,0 +1,158 @@
+[
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libulog.so",
+    "strings": [
+      "/tmp/Belkin_settings/debug.console"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/wifi/mt7628.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/usr/include/ulog.h",
+    "strings": [
+      "#define ULOG_CONSOLE                \"/tmp/Belkin_settings/debug.console\""
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/waspd",
+    "strings": [
+      "#!/bin/sh /etc/rc.common"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/autoupdate",
+    "strings": [
+      "#!/bin/sh /etc/rc.common"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/wemohk",
+    "strings": [
+      "#!/bin/sh /etc/rc.common"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/wemo",
+    "strings": [
+      "#!/bin/sh /etc/rc.common"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/init.d/pmortemd",
+    "strings": [
+      "#!/bin/sh /etc/rc.common"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/firmware_update.sh",
+    "strings": [
+      "#! /bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/BCT.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/Test_GPIO.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/chkping.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/startWemo.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/go_dummy.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/identify_hw.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/change_name.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/Associate.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/JoinGuest.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/resetwifi",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/update_test.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/longpress",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/factoryreset",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/manual_load_monitor.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/Demo_GPIO.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/triggerswitch",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/startWemoHK.sh",
+    "strings": [
+      "#!/bin/sh"
+    ]
+  }
+]

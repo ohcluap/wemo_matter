@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://web.archive.org/cdx/search/cdx?url=s3.belkin.com%2Fsupport%2Fassets%2Fwemo%2F%2A11565%2A&output=json&filter=statuscode%3A200&collapse=urlkey&limit=100",
+    "status": 200,
+    "body": "[]\n"
+  },
+  {
+    "url": "https://web.archive.org/cdx/search/cdx?url=cache-www.belkin.com%2Fsupport%2Fassets%2Fwemo%2F%2A11565%2A&output=json&filter=statuscode%3A200&collapse=urlkey&limit=100",
+    "status": 200,
+    "body": "[]\n"
+  }
+]

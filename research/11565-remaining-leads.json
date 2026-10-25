@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-24",
+  "device_contact": false,
+  "third_party_message_sent": false,
+  "archive_requests": [
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=firmware.xbcs.net%2F%2A&output=json&filter=statuscode%3A200&collapse=urlkey&limit=500",
+      "status": 200,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "body": "[]\n"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=fw.xbcs.net%2F%2A11565%2A&output=json&filter=statuscode%3A200&collapse=urlkey&limit=100",
+      "status": 200,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "body": "[]\n"
+    }
+  ],
+  "capture_repository": {
+    "url": "https://github.com/synergylabs/iot-capture",
+    "tree_sha": "53327bb6415048dfd2aeb1328f0d162d6732d218",
+    "entries": 1227,
+    "truncated": false,
+    "releases": [],
+    "finding": "No firmware or bootloader artifact identified by tree filename screening; not a full file-content or history audit."
+  }
+}

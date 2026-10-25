@@ -4,6 +4,18 @@ Offline investigation of running a Matter application on a stock Wemo, without o
 
 **Result: no verified way to load and run our code has been found. The exact installed firmware has not been acquired.** This is a bounded preliminary assessment, not proof that a network execution path cannot exist.
 
+## Current status — 2026-10-24
+
+The objective is direct Matter control of the physical F7C063 alongside its stock OS. **No app has been installed on the plug; safe Wi-Fi-only access and independent recovery remain unverified.**
+
+- The compact MIPS app passed 17 isolated commissioning/control tests using a simulated relay. This is not Google Home or physical-device validation.
+- The compressed app and minimal static decoder total 571,300 bytes. Ten isolated decoder checks passed. Actual storage/RAM fit remains unverified; stock files, filesystem overhead and recovery reserve must fit too.
+- Archived 11420 startup, HTTP, diagnostic and boot logic were audited. These findings do not prove the installed 11565 implementation or bootloader behavior.
+- Additional storage-daemon, HTTP XML/range and startup-export checks found no verified firmware read route; see [evidence and limitations](research/additional-passive-read-routes.md).
+- See [hardware completion audit](research/hardware-completion-audit.json), [decoder measurements](research/ram-unpack-feasibility.json), and [compact app results](research/compact-matter-progress.json).
+
+Build outputs, downloaded sources, device credentials and full extracted source payloads stay local. The scripts require the prepared SDK volume and pinned dependencies described in the research; this is not a one-command installation package. No third-party contact is authorized. Historical notes mentioning a pending maintainer request are superseded: the request was cancelled and was never sent.
+
 ## Device and acquisition
 
 Prior read-only device observations identify firmware `WeMo_WW_2.00.11565.PVT-OWRT-SNSV2` and hardware revision `v2`. The user-supplied exterior-label photo on 2026-10-19 confirms **Wemo Mini, model F7C063** (FCC ID `K7SF7C063`). The label does not identify its bootloader or flash layout. The API's model number `1.0` is generic. See [sanitized device record](research/device.json).
@@ -31,11 +43,11 @@ Paths below are relative to the extracted 11420 source tree, locally `sources/sn
 | Finding | Evidence | Implication |
 | --- | --- | --- |
 | MT7688 platform | `target/linux/ramips/mt7628/profiles/01-wemo.mk:9`; binary ELF headers | Existing vendor binaries are 32-bit little-endian MIPS, dynamically linked against uClibc. A Mac/ARM or ordinary desktop Linux Matter executable cannot simply run here. |
-| SSH excluded from normal product profile | `01-wemo.mk:10`; `GNUmakefile:20–41` | Development build explicitly adds Dropbear; production recipe does not. A build option is not a way to enable SSH on the installed device. |
+| SSH excluded from normal product profile | `01-wemo.mk:10`; `GNUmakefile:20â€“41` | Development build explicitly adds Dropbear; production recipe does not. A build option is not a way to enable SSH on the installed device. |
 | Ordinary Telnet installation disabled | `package/utils/busybox/Makefile:113` | Telnet init-script installation is commented out. Generic failsafe Telnet code also exists, but this does not establish normal LAN access or a safe way to enter it. |
-| TFTP utilities configured | `configs/snsv2:31–37` | Presence of utilities does not demonstrate a listening server, upload permissions, or code execution. The prior TCP-only check says nothing about UDP TFTP. |
-| Fixed vendor startup | `package/belkin/WeMo_SNSV2/files/etc/init.d/wemo:27`; `files/sbin/startWemo.sh:3–5` | Startup launches vendor processes. No user application/plugin launch interface was identified in the inspected startup files. |
-| Firmware updater verifies signatures, then writes flash | `files/sbin/firmware_update.sh:39–100,187,201` | This is a firmware-replacement path, not a RAM-only application loader. No signature bypass is established. |
+| TFTP utilities configured | `configs/snsv2:31â€“37` | Presence of utilities does not demonstrate a listening server, upload permissions, or code execution. The prior TCP-only check says nothing about UDP TFTP. |
+| Fixed vendor startup | `package/belkin/WeMo_SNSV2/files/etc/init.d/wemo:27`; `files/sbin/startWemo.sh:3â€“5` | Startup launches vendor processes. No user application/plugin launch interface was identified in the inspected startup files. |
+| Firmware updater verifies signatures, then writes flash | `files/sbin/firmware_update.sh:39â€“100,187,201` | This is a firmware-replacement path, not a RAM-only application loader. No signature bypass is established. |
 | Diagnostic action exists | `files/sbin/web/eventservice.xml:502`; `files/lib/libUPnPHndlr.so` strings | `StartIperf` exists as an action/symbol. That does not imply arbitrary command execution; production build recipe also removes iperf. |
 | Vendor application uses shared libraries | `files/sbin/wemoApp`, `files/lib/*.so` | Binary strings include command-execution imports and internal file paths. Imports alone do not establish remotely controllable arguments or an exploitable path. |
 

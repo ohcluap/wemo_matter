@@ -1,0 +1,11 @@
+is_debug = false
+symbol_level = 0
+is_clang = false
+chip_support_thread_meshcop = false
+matter_enable_tracing_support = false
+chip_config_network_layer_ble = false
+chip_mdns = "minimal"
+chip_inet_config_enable_ipv4 = true
+config_use_interactive_mode = false
+chip_enable_all_clusters = false
+matter_commandline_enable_perfetto_tracing = false

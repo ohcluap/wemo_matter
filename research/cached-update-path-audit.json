@@ -1,0 +1,49 @@
+{
+  "scope": "Offline 11420 SNSV2 files under 3 MB; string references are not complete control flow",
+  "hits": [
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libbelkin_api.so",
+      "strings": [
+        "mv %s /tmp/firmware.img; sh -x /sbin/firmware_update.sh /tmp/firmware.img"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libUPnPHndlr.so",
+      "strings": [
+        "/tmp/firmware.bin.gpg",
+        "rm /tmp/firmware.bin.gpg",
+        "rm -f /tmp/firmware.bin.gpg",
+        "rm -f /tmp/firmware.img"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/firmware_update.sh",
+      "strings": [
+        "logfile=/tmp/update.log",
+        "FIRMWARE_NAME=firmware.bin",
+        "errfile=\"/update.errs\"",
+        "mv $1 $FIRMWARE_NAME",
+        "mtd write $FIRMWARE_NAME $mtd_other"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/waspd",
+      "strings": [
+        "/tmp/Belkin_settings/pseudo_vars.old.bin",
+        "/tmp/Belkin_settings/pseudo_vars.bin"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/update_test.sh",
+      "strings": [
+        "   # /tmp/update.log",
+        "   sh -x $0 1 >> /tmp/update.log 2>&1",
+        "   rm /update.errs",
+        "   rm /update.status",
+        "rm -rf /update_tmp",
+        "rm -f /tmp/update.log"
+      ]
+    }
+  ],
+  "assessment": "Archived updater changes directory to /tmp at line 27 and uses firmware.bin. Download/library paths reference /tmp/firmware.bin.gpg and /tmp/firmware.img. These are outside the configured /tmp/Belkin_settings HTTP root. No HTTP cache-export route established; no path traversal or update requests sent."
+}

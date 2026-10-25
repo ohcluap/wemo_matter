@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-24",
+  "device_changes": false,
+  "external_github_activity": false,
+  "shell_result": "No safe initial shell access established",
+  "shell_evidence": {
+    "ssh": "11420 Profile/WemoSNSV2 explicitly includes -dropbear",
+    "telnet": "Generic failsafe hook starts telnetd, but SNSV2 rc.button/failsafe disables button trigger and configs/snsv2 sets preinit timeout 0. This is not proof of an accessible failsafe shell on installed 11565.",
+    "tftp": "configs/snsv2 enables TFTP/TFTPD; scoped startup-text scan found no tftpd launch. Installed tools do not imply a listener or command execution. No network TFTP probe performed.",
+    "logging": "debug.console appears in libulog and logging header; no evidence that this is an interactive shell"
+  },
+  "build_availability": {
+    "sdk_checkout_present": false,
+    "previous_application_binary_present": false,
+    "docker_linux_engine_reachable": false,
+    "evidence": "docker image ls returned missing dockerDesktopLinuxEngine named pipe; artifacts listing contains vendor archives and analysis data only. No new compressed build or runtime test completed."
+  },
+  "fit_budget": {
+    "old_payload_bytes": 655360,
+    "nominal_single_settings_partition_bytes": 589824,
+    "minimum_single_copy_reduction_before_any_overhead": 65536,
+    "two_copies_bytes": 1310720,
+    "combined_nominal_writable_bytes": 917504,
+    "two_copy_shortfall_before_any_overhead": 393216,
+    "equal_copy_upper_bound_combined_no_overhead_bytes": 458752,
+    "warning": "Combining filesystems is arithmetic only, not a recommended deployment design. Free space unknown. Stock settings and filesystem reserve reduce all real limits."
+  },
+  "optimization_experiments_not_yet_run": [
+    "Measure raw executable XZ versus existing SquashFS bundle; decompression into RAM needs an available decoder and measured RAM budget",
+    "Benchmark size-oriented compiler optimization and link-time optimization with same required Matter features",
+    "Use link map to remove unused sample-app CLI/QR-display/logging components where separable; retain mandatory Matter commissioning, crypto, persistence and on/off functions",
+    "Compare dynamically linked build only after obtaining exact stock libc/C++ ABI evidence; bundling extra runtime libraries can erase savings",
+    "Retest commissioning, reconnect, restart state, memory, stock-service coexistence and Google Home interoperability after every effective reduction"
+  ],
+  "update_constraints": [
+    "Do not use alternate firmware slot or factory/calibration regions as app storage",
+    "Keep old persistent app during download and validation; RAM staging does not make subsequent persistent overwrite power-loss safe",
+    "Persistent two-version rollback or another demonstrated interruption-safe commit method required; no capacity proven",
+    "Missing/crashing Matter app must not stop stock services; proof requires safe execution access first"
+  ],
+  "conclusion": "A safe installer cannot yet be built from the verified local control interface. Native on-device Matter remains technically plausible but initial execution access, storage fit and persistent recovery are unresolved."
+}

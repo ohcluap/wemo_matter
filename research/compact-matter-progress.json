@@ -1,0 +1,600 @@
+{
+  "source_revision": "ff2472ff8d681496bf6e01450948ac95afc8898f",
+  "device_changed": false,
+  "github_activity": false,
+  "variants": {
+    "lean": {
+      "artifacts": {
+        "wemo-matter-outlet-lean": {
+          "bytes": 1705248,
+          "sha256": "2c5feea35d5abf8a768e17cf7543e8d02c92393cf51c67a927433298e3ddd704"
+        },
+        "lean/app.squashfs": {
+          "bytes": 573440,
+          "sha256": "35373f6b53439338bf991f1a1bd20ef46935f45bfea8fb917908b453f636f05f"
+        },
+        "lean/app.xz": {
+          "bytes": 541200,
+          "sha256": "25f95fc690c8fcea5749f1240088e6bd2ea4b30533317236dfe67035c2c281bc"
+        }
+      },
+      "commissioning": {
+        "run_id": "e8e0aaa9",
+        "utc": "2026-10-24T20:33:17.054168+00:00",
+        "target": "MIPS32r2 soft-float full outlet under QEMU 24KEc user emulation",
+        "physical_device_tested": false,
+        "tests": [
+          "commissioning",
+          "outlet-device-type",
+          "off-command",
+          "off-readback",
+          "on-command",
+          "on-readback",
+          "toggle-command",
+          "toggle-readback",
+          "missing-relay-rejected",
+          "failed-relay-preserves-state",
+          "relay-retry-on",
+          "relay-retry-off",
+          "subscription-initial-report",
+          "simulated-relay-callbacks",
+          "restart-session-read",
+          "restart-on-command",
+          "restart-on-readback"
+        ],
+        "passed": true,
+        "persistent_storage_profile": false,
+        "time64_enosys_injection": false,
+        "controller_sha256": "8305d61155b16566280f0e895b3327d6096847cd12db9c05c7cd6838ee223a68",
+        "app_sha256": "2c5feea35d5abf8a768e17cf7543e8d02c92393cf51c67a927433298e3ddd704",
+        "internal_network_verified": true,
+        "memory_limit_bytes": 67108864,
+        "swap_disabled": true,
+        "resource_samples": [
+          {
+            "label": "startup",
+            "cgroup_current_bytes": 25247744,
+            "cgroup_peak_bytes": 27721728,
+            "process_status": [
+              "VmPeak:\t 2325428 kB",
+              "VmSize:\t 2325428 kB",
+              "VmHWM:\t   18068 kB",
+              "VmRSS:\t   18068 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "commissioning",
+            "cgroup_current_bytes": 29777920,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2325944 kB",
+              "VmSize:\t 2325944 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "outlet-device-type",
+            "cgroup_current_bytes": 30015488,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2325944 kB",
+              "VmSize:\t 2325944 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "off-command",
+            "cgroup_current_bytes": 29585408,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "off-readback",
+            "cgroup_current_bytes": 29597696,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "on-command",
+            "cgroup_current_bytes": 29384704,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "on-readback",
+            "cgroup_current_bytes": 29552640,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "toggle-command",
+            "cgroup_current_bytes": 29458432,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "toggle-readback",
+            "cgroup_current_bytes": 29298688,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "missing-relay-rejected",
+            "cgroup_current_bytes": 29495296,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "failed-relay-preserves-state",
+            "cgroup_current_bytes": 29622272,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "relay-retry-on",
+            "cgroup_current_bytes": 29581312,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "relay-retry-off",
+            "cgroup_current_bytes": 29454336,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "subscription-initial-report",
+            "cgroup_current_bytes": 29413376,
+            "cgroup_peak_bytes": 32305152,
+            "process_status": [
+              "VmPeak:\t 2326076 kB",
+              "VmSize:\t 2326076 kB",
+              "VmHWM:\t   22528 kB",
+              "VmRSS:\t   22528 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "startup",
+            "cgroup_current_bytes": 15167488,
+            "cgroup_peak_bytes": 17739776,
+            "process_status": [
+              "VmPeak:\t 2325560 kB",
+              "VmSize:\t 2325556 kB",
+              "VmHWM:\t   20028 kB",
+              "VmRSS:\t   20028 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "restart-session-read",
+            "cgroup_current_bytes": 17629184,
+            "cgroup_peak_bytes": 20226048,
+            "process_status": [
+              "VmPeak:\t 2325820 kB",
+              "VmSize:\t 2325816 kB",
+              "VmHWM:\t   22336 kB",
+              "VmRSS:\t   22336 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "restart-on-command",
+            "cgroup_current_bytes": 17367040,
+            "cgroup_peak_bytes": 20226048,
+            "process_status": [
+              "VmPeak:\t 2325820 kB",
+              "VmSize:\t 2325816 kB",
+              "VmHWM:\t   22336 kB",
+              "VmRSS:\t   22336 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "restart-on-readback",
+            "cgroup_current_bytes": 17137664,
+            "cgroup_peak_bytes": 20226048,
+            "process_status": [
+              "VmPeak:\t 2325820 kB",
+              "VmSize:\t 2325816 kB",
+              "VmHWM:\t   22336 kB",
+              "VmRSS:\t   22336 kB",
+              "Threads:\t2"
+            ]
+          }
+        ],
+        "network_removed": true
+      },
+      "simulated_device_files_bytes": {
+        "chip_config.ini": 122,
+        "chip_counters.ini": 79,
+        "chip_factory.ini": 44,
+        "wemo-simulator.kvs": 1765,
+        "wemo-relay\\value": 1
+      },
+      "peak_emulator_container_bytes": 32305152
+    },
+    "compact": {
+      "artifacts": {
+        "wemo-matter-outlet-compact": {
+          "bytes": 1669844,
+          "sha256": "13f73561c016d31e84a201d7a76d5f2745ce7d225df64390ecb2db7e4283fe8e"
+        },
+        "compact/app.squashfs": {
+          "bytes": 565248,
+          "sha256": "7001647ab61fcdddf592242370cfc15d8b3def3e4fc440c8ae5ac2ae94e44beb"
+        },
+        "compact/app.xz": {
+          "bytes": 529288,
+          "sha256": "8c4db79f34a7477433bd6c1c3e76ddf26cc61ae0bf3b2c02472050fcbd163a07"
+        }
+      },
+      "commissioning": {
+        "run_id": "d41b8e4c",
+        "utc": "2026-10-24T20:35:25.214595+00:00",
+        "target": "MIPS32r2 soft-float full outlet under QEMU 24KEc user emulation",
+        "physical_device_tested": false,
+        "tests": [
+          "commissioning",
+          "outlet-device-type",
+          "off-command",
+          "off-readback",
+          "on-command",
+          "on-readback",
+          "toggle-command",
+          "toggle-readback",
+          "missing-relay-rejected",
+          "failed-relay-preserves-state",
+          "relay-retry-on",
+          "relay-retry-off",
+          "subscription-initial-report",
+          "simulated-relay-callbacks",
+          "restart-session-read",
+          "restart-on-command",
+          "restart-on-readback"
+        ],
+        "passed": true,
+        "persistent_storage_profile": false,
+        "time64_enosys_injection": false,
+        "controller_sha256": "8305d61155b16566280f0e895b3327d6096847cd12db9c05c7cd6838ee223a68",
+        "app_sha256": "13f73561c016d31e84a201d7a76d5f2745ce7d225df64390ecb2db7e4283fe8e",
+        "internal_network_verified": true,
+        "memory_limit_bytes": 67108864,
+        "swap_disabled": true,
+        "resource_samples": [
+          {
+            "label": "startup",
+            "cgroup_current_bytes": 13029376,
+            "cgroup_peak_bytes": 14999552,
+            "process_status": [
+              "VmPeak:\t 2325428 kB",
+              "VmSize:\t 2325424 kB",
+              "VmHWM:\t   17876 kB",
+              "VmRSS:\t   17876 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "commissioning",
+            "cgroup_current_bytes": 17895424,
+            "cgroup_peak_bytes": 19767296,
+            "process_status": [
+              "VmPeak:\t 2325940 kB",
+              "VmSize:\t 2325936 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "outlet-device-type",
+            "cgroup_current_bytes": 17678336,
+            "cgroup_peak_bytes": 19783680,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "off-command",
+            "cgroup_current_bytes": 17203200,
+            "cgroup_peak_bytes": 19791872,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "off-readback",
+            "cgroup_current_bytes": 17272832,
+            "cgroup_peak_bytes": 20312064,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "on-command",
+            "cgroup_current_bytes": 17383424,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "on-readback",
+            "cgroup_current_bytes": 17506304,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "toggle-command",
+            "cgroup_current_bytes": 17248256,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "toggle-readback",
+            "cgroup_current_bytes": 17068032,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "missing-relay-rejected",
+            "cgroup_current_bytes": 17649664,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "failed-relay-preserves-state",
+            "cgroup_current_bytes": 17313792,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "relay-retry-on",
+            "cgroup_current_bytes": 17846272,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "relay-retry-off",
+            "cgroup_current_bytes": 17301504,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "subscription-initial-report",
+            "cgroup_current_bytes": 17756160,
+            "cgroup_peak_bytes": 20332544,
+            "process_status": [
+              "VmPeak:\t 2326068 kB",
+              "VmSize:\t 2326064 kB",
+              "VmHWM:\t   22752 kB",
+              "VmRSS:\t   22752 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "startup",
+            "cgroup_current_bytes": 15351808,
+            "cgroup_peak_bytes": 18026496,
+            "process_status": [
+              "VmPeak:\t 2325560 kB",
+              "VmSize:\t 2325556 kB",
+              "VmHWM:\t   20224 kB",
+              "VmRSS:\t   20224 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "restart-session-read",
+            "cgroup_current_bytes": 17334272,
+            "cgroup_peak_bytes": 19820544,
+            "process_status": [
+              "VmPeak:\t 2325816 kB",
+              "VmSize:\t 2325816 kB",
+              "VmHWM:\t   22796 kB",
+              "VmRSS:\t   22796 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "restart-on-command",
+            "cgroup_current_bytes": 17461248,
+            "cgroup_peak_bytes": 19820544,
+            "process_status": [
+              "VmPeak:\t 2325816 kB",
+              "VmSize:\t 2325816 kB",
+              "VmHWM:\t   22796 kB",
+              "VmRSS:\t   22796 kB",
+              "Threads:\t2"
+            ]
+          },
+          {
+            "label": "restart-on-readback",
+            "cgroup_current_bytes": 17297408,
+            "cgroup_peak_bytes": 19820544,
+            "process_status": [
+              "VmPeak:\t 2325816 kB",
+              "VmSize:\t 2325816 kB",
+              "VmHWM:\t   22796 kB",
+              "VmRSS:\t   22796 kB",
+              "Threads:\t2"
+            ]
+          }
+        ],
+        "network_removed": true
+      },
+      "simulated_device_files_bytes": {
+        "chip_config.ini": 122,
+        "chip_counters.ini": 79,
+        "chip_factory.ini": 44,
+        "wemo-simulator.kvs": 1765,
+        "wemo-relay\\value": 1
+      },
+      "peak_emulator_container_bytes": 20332544
+    }
+  },
+  "recovery_audit": "research/remote-diagnostic-execution-audit.json",
+  "changes": {
+    "lean": [
+      "Transport trace disabled independently of other tracing",
+      "Sample diagnostic JSON named pipe removed"
+    ],
+    "compact": [
+      "JSON test DAC file loader rejected; existing example attestation retained",
+      "JSON CLI access-restriction fixture loader rejected; runtime access control retained"
+    ]
+  },
+  "storage": {
+    "prior_app_only_squashfs_bytes": 614400,
+    "compact_app_only_squashfs_bytes": 565248,
+    "reduction_bytes": 49152,
+    "reduction_percent": 8.0,
+    "old_nominal_settings_partition_bytes": 589824,
+    "nominal_headroom_before_stock_data_or_overhead_bytes": 24576,
+    "safe_fit_verified": false
+  },
+  "limitations": [
+    "Emulated with simulated relay and internal Docker network, not Google Home or Wemo",
+    "Initial subscription report only; app restart preserves test /tmp, not device reboot persistence",
+    "Existing example credentials are test credentials, not production certification",
+    "Exact 11565 implementation, usable diagnostic access and independent recovery unverified",
+    "No room proven for stock data, filesystem overhead, state growth, backup or rollback",
+    "C++ locale/iostream storage backend remains a size candidate; changing persistence needs dedicated format and interruption tests"
+  ],
+  "disk_recovery": {
+    "removed_only_redundant_artifacts": [
+      "artifacts/zap-cipd-linux-amd64.zip",
+      "artifacts/controller-source.tar"
+    ],
+    "extracted_sources_preserved": true,
+    "other_projects_and_docker_volumes_preserved": true,
+    "interrupted_writes": [
+      "scripts/configure_outlet.py",
+      "research/compact-matter-progress.json"
+    ],
+    "repair": "Script reconstructed from Git and known adaptations; regenerated Options.cpp, main.cpp, BUILD.gn and lighting-app.zap match pre-repair SHA256 hashes exactly; report regenerated from saved test evidence"
+  }
+}

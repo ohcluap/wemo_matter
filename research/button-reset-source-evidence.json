@@ -1,0 +1,39 @@
+[
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/startWemo.sh",
+    "sha256": "d92ef415c902ddf0c2462ffceeccd19aa5ae8b6c89cc7a270cf6d57168ff0ffe",
+    "content": "#!/bin/sh\n\nwhile true; do\n    /sbin/natClient &>/dev/console &\n    /sbin/wemoApp -webdir /tmp/Belkin_settings/ &>/dev/console\n    if [ -e /tmp/rebooting ]; then\n\t    exit\n    fi\n    killall natClient\n    killall wemoApp\n    if [ \"$(nvram get SAVE_MULTIPLE_LOGS)\" = \"{ NULL String }\" -o \"$(nvram get SAVE_MULTIPLE_LOGS)\" = \"\" ]; then\n\t    rm -f /tmp/messages-*\n    fi\n    cp /var/log/messages /tmp/messages-$(date +%Y-%m-%d-%H:%M)\n    sleep 2\ndone\n"
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/resetwifi",
+    "sha256": "0ca4afa7f375cd881b0ba961cd8bfba060de04af14f6e096e8e9c71bca4a6c81",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "0ca4afa7f375cd881b0ba961cd8bfba060de04af14f6e096e8e9c71bca4a6c81",
+      "bytes_utf8": 2869
+    }
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/factoryreset",
+    "sha256": "f681f3fefa812e544aae03fa90f6bdf6558a5d560875ffd87d7f976072297404",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "f681f3fefa812e544aae03fa90f6bdf6558a5d560875ffd87d7f976072297404",
+      "bytes_utf8": 1438
+    }
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/rc.button/failsafe",
+    "sha256": "429d932610f18a0a02c09bba5fe8ebc1c459205618f2e1d547ff088f0cc1aae1",
+    "content": "#!/bin/sh\n\necho \"disabled to prevent failsafe caused by button\" > /dev/null\n# [ \"${TYPE}\" = \"switch\" ] || echo ${BUTTON} > /tmp/failsafe_button\n\nreturn 0\n"
+  },
+  {
+    "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/hotplug.d/button/00-button",
+    "sha256": "7b72404a944e81ec652ebddb86f78f6f7758a489e25fc8a7059508b1becb47fc",
+    "content": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "7b72404a944e81ec652ebddb86f78f6f7758a489e25fc8a7059508b1becb47fc",
+      "bytes_utf8": 514
+    }
+  }
+]

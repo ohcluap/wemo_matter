@@ -1,0 +1,213 @@
+{
+  "scope": "Offline host xz decompression; not a MIPS or physical Wemo execution test",
+  "executable_bytes": 1669844,
+  "executable_sha256": "13f73561c016d31e84a201d7a76d5f2745ce7d225df64390ecb2db7e4283fe8e",
+  "check": "CRC32",
+  "variants": [
+    {
+      "dictionary": "256KiB",
+      "file": "app-dict-256KiB.xz",
+      "compressed_bytes": 538104,
+      "xz_reported_decoder_memory_bytes": 327736,
+      "sha256": "6b4ff7b70f4d0a4f3a18ef2da930475095f7d76d48902892af5d733c375d93ee",
+      "round_trip_verified": true,
+      "decoder_8MiB_limit_passed": true,
+      "xz_listing": "name\t/export/app-dict-256KiB.xz\nfile\t1\t1\t538104\t1669844\t0.322\tCRC32\t0\nstream\t1\t1\t0\t0\t538104\t1669844\t0.322\tCRC32\t0\nblock\t1\t1\t1\t12\t0\t538068\t1669844\t0.322\tCRC32\tcac45a86\t12\t--\t538051\t327736\t--lzma2=dict=256KiB\nsummary\t327736\tno\t50000002\ntotals\t1\t1\t538104\t1669844\t0.322\tCRC32\t0\t1\t327736\tno\t50000002\n"
+    },
+    {
+      "dictionary": "512KiB",
+      "file": "app-dict-512KiB.xz",
+      "compressed_bytes": 532424,
+      "xz_reported_decoder_memory_bytes": 589880,
+      "sha256": "bd2bf0bb426336948a5080949ecbee339b753662aae43a03131f2cbd08e11e3d",
+      "round_trip_verified": true,
+      "decoder_8MiB_limit_passed": true,
+      "xz_listing": "name\t/export/app-dict-512KiB.xz\nfile\t1\t1\t532424\t1669844\t0.319\tCRC32\t0\nstream\t1\t1\t0\t0\t532424\t1669844\t0.319\tCRC32\t0\nblock\t1\t1\t1\t12\t0\t532388\t1669844\t0.319\tCRC32\tcac45a86\t12\t--\t532372\t589880\t--lzma2=dict=512KiB\nsummary\t589880\tno\t50000002\ntotals\t1\t1\t532424\t1669844\t0.319\tCRC32\t0\t1\t589880\tno\t50000002\n"
+    },
+    {
+      "dictionary": "1MiB",
+      "file": "app-dict-1MiB.xz",
+      "compressed_bytes": 529524,
+      "xz_reported_decoder_memory_bytes": 1114168,
+      "sha256": "b3daf71b5aba45962567e09b087d7253ea67d0cc95f4403469ea1fd23bbe5295",
+      "round_trip_verified": true,
+      "decoder_8MiB_limit_passed": true,
+      "xz_listing": "name\t/export/app-dict-1MiB.xz\nfile\t1\t1\t529524\t1669844\t0.317\tCRC32\t0\nstream\t1\t1\t0\t0\t529524\t1669844\t0.317\tCRC32\t0\nblock\t1\t1\t1\t12\t0\t529488\t1669844\t0.317\tCRC32\tcac45a86\t12\t--\t529471\t1114168\t--lzma2=dict=1MiB\nsummary\t1114168\tno\t50000002\ntotals\t1\t1\t529524\t1669844\t0.317\tCRC32\t0\t1\t1114168\tno\t50000002\n"
+    },
+    {
+      "dictionary": "2MiB",
+      "file": "app-dict-2MiB.xz",
+      "compressed_bytes": 529284,
+      "xz_reported_decoder_memory_bytes": 2162744,
+      "sha256": "59dde25b008cb873ed9e2f3189208e6ce2a95b1a13f4007f01cf5843252fb79f",
+      "round_trip_verified": true,
+      "decoder_8MiB_limit_passed": true,
+      "xz_listing": "name\t/export/app-dict-2MiB.xz\nfile\t1\t1\t529284\t1669844\t0.317\tCRC32\t0\nstream\t1\t1\t0\t0\t529284\t1669844\t0.317\tCRC32\t0\nblock\t1\t1\t1\t12\t0\t529248\t1669844\t0.317\tCRC32\tcac45a86\t12\t--\t529231\t2162744\t--lzma2=dict=2MiB\nsummary\t2162744\tno\t50000002\ntotals\t1\t1\t529284\t1669844\t0.317\tCRC32\t0\t1\t2162744\tno\t50000002\n"
+    },
+    {
+      "dictionary": "4MiB",
+      "file": "app-dict-4MiB.xz",
+      "compressed_bytes": 529284,
+      "xz_reported_decoder_memory_bytes": 4259896,
+      "sha256": "a7e80ab7c5eb943ea22fa9ad3a92969b8681faa90c02c8126f2635d063ee5307",
+      "round_trip_verified": true,
+      "decoder_8MiB_limit_passed": true,
+      "xz_listing": "name\t/export/app-dict-4MiB.xz\nfile\t1\t1\t529284\t1669844\t0.317\tCRC32\t0\nstream\t1\t1\t0\t0\t529284\t1669844\t0.317\tCRC32\t0\nblock\t1\t1\t1\t12\t0\t529248\t1669844\t0.317\tCRC32\tcac45a86\t12\t--\t529231\t4259896\t--lzma2=dict=4MiB\nsummary\t4259896\tno\t50000002\ntotals\t1\t1\t529284\t1669844\t0.317\tCRC32\t0\t1\t4259896\tno\t50000002\n"
+    }
+  ],
+  "limitations": [
+    "Decoder memory estimate excludes output tmpfs, loader executable and OS.",
+    "Stock decoder availability and exact firmware free RAM/storage remain unverified.",
+    "No startup hooks or device installation performed."
+  ],
+  "original_xz": {
+    "compressed_bytes": 529288,
+    "dictionary_bytes": 67108864,
+    "xz_reported_decoder_memory_bytes": 67174456,
+    "check": "CRC64"
+  },
+  "candidate": {
+    "file": "app-dict-1MiB.xz",
+    "compressed_bytes": 529524,
+    "xz_reported_decoder_memory_bytes": 1114168,
+    "reason": "Only 236 bytes larger than original, with a 1 MiB dictionary. Loader cost not included."
+  },
+  "stock_decoder": {
+    "scope": "Archived 11420 BusyBox configuration",
+    "defaults_member": "package/utils/busybox/Config-defaults.in",
+    "UNXZ": "default n",
+    "XZ": "default n",
+    "snsv2_override_found": false,
+    "installed_11565_status": "unknown"
+  },
+  "local_decoder_source_candidates": [
+    {
+      "name": "wemo_gpl_snsv2_package-11420/dl/busybox-1.23.2.tar.bz2",
+      "size": 2252786
+    },
+    {
+      "name": "wemo_gpl_snsv2_package-11420/dl/xz-5.2.1.tar.bz2",
+      "size": 1186051
+    }
+  ],
+  "next_step": "Prioritize exact-firmware safe read access and recovery, including measured usable flash/RAM. Further size reductions cannot by themselves establish deployability.",
+  "mips_decoder_tests": {
+    "physical_device_tested": false,
+    "tests": [
+      {
+        "name": "valid-exact-executable",
+        "returncode": 0,
+        "output_bytes": 1669844,
+        "stderr": ""
+      },
+      {
+        "name": "reject-64MiB-dictionary",
+        "returncode": 1,
+        "output_bytes": 0,
+        "stderr": "/input/ram-unpack/wemo-xzdec: /input/compact/app.xz: Internal error (bug)\n"
+      },
+      {
+        "name": "reject-truncated-stream",
+        "returncode": 1,
+        "output_bytes": 1669844,
+        "stderr": "/input/ram-unpack/wemo-xzdec: /tmp/damaged.xz: Unexpected end of input\n"
+      },
+      {
+        "name": "reject-corrupted-stream",
+        "returncode": 1,
+        "output_bytes": 794304,
+        "stderr": "/input/ram-unpack/wemo-xzdec: /tmp/damaged.xz: File is corrupt\n"
+      }
+    ],
+    "passed": true,
+    "decoder_bytes": 75008,
+    "decoder_sha256": "3ffd0d307771336d8fb9df95568cc959a9ccd37c0a14610e238b95eca9baa5c4",
+    "package_bytes": 604532,
+    "cgroup_memory_peak_bytes": 19337216,
+    "cgroup_memory_limit_bytes": 67108864,
+    "limitations": [
+      "QEMU user emulation on modern Linux, not exact stock kernel or actual hardware.",
+      "Decoder may produce partial output before rejecting bad data; no output was executed.",
+      "A future loader must validate completion and executable hash before execution.",
+      "Size excludes startup code, pairing state, filesystem overhead and reserve.",
+      "An archived decoder is an experiment, not a security-reviewed production loader."
+    ]
+  },
+  "assessment": "Minimal static decoder plus compressed app is 571300 bytes, leaving 18524 bytes of the archived 589824-byte settings partition before stock files, state, JFFS2 overhead and reserve. This does not establish safe fit. Ten offline MIPS checks passed; no device code executed.",
+  "minimal_decoder_tests": {
+    "physical_device_tested": false,
+    "tests": [
+      {
+        "name": "valid-exact-executable",
+        "returncode": 0,
+        "output_bytes": 1669844,
+        "stderr": ""
+      },
+      {
+        "name": "reject-64MiB-dictionary",
+        "returncode": 4,
+        "output_bytes": 0,
+        "stderr": ""
+      },
+      {
+        "name": "reject-truncated-stream",
+        "returncode": 4,
+        "output_bytes": 1669844,
+        "stderr": ""
+      },
+      {
+        "name": "reject-corrupted-stream",
+        "returncode": 4,
+        "output_bytes": 791060,
+        "stderr": ""
+      },
+      {
+        "name": "reject-trailing-byte",
+        "returncode": 4,
+        "output_bytes": 1669844,
+        "stderr": ""
+      },
+      {
+        "name": "reject-second-stream",
+        "returncode": 4,
+        "output_bytes": 1669844,
+        "stderr": ""
+      },
+      {
+        "name": "reject-empty-input",
+        "returncode": 4,
+        "output_bytes": 0,
+        "stderr": ""
+      },
+      {
+        "name": "reject-output-over-limit",
+        "returncode": 4,
+        "output_bytes": 2097152,
+        "stderr": ""
+      },
+      {
+        "name": "reject-no-integrity-check",
+        "returncode": 4,
+        "output_bytes": 1,
+        "stderr": ""
+      },
+      {
+        "name": "reject-output-write-failure",
+        "returncode": 4
+      }
+    ],
+    "passed": true,
+    "decoder_bytes": 41776,
+    "decoder_sha256": "bdedca84eeb686b0e7af7587a1275d6640fdc2bb06e3b7d2bda19e1fb9403600",
+    "package_bytes": 571300,
+    "cgroup_memory_peak_bytes": 26935296,
+    "cgroup_memory_limit_bytes": 67108864,
+    "limitations": [
+      "QEMU user emulation on modern Linux, not exact stock kernel or actual hardware.",
+      "Decoder may produce partial output before rejecting bad data; no output was executed.",
+      "A future loader must validate completion and executable hash before execution.",
+      "Size excludes startup code, pairing state, filesystem overhead and reserve.",
+      "An archived decoder is an experiment, not a security-reviewed production loader."
+    ]
+  }
+}

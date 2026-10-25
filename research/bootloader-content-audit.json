@@ -1,0 +1,251 @@
+{
+  "scope": "All regular members of vendor-inner.tar.gz; additionally all regular members of bundled u-boot-2014.10.tar.bz2. Other compressed members not recursively decoded.",
+  "outer_files": 6179,
+  "outer_bytes": 340415788,
+  "bootloader_files": 10588,
+  "bootloader_bytes": 58330536,
+  "hits": [
+    {
+      "path": "wemo_gpl_snsv2_package-11420/include/belkin.mk",
+      "size": 3923,
+      "sha256": "e1da726e3427d4efafffc0abe3130bc58b866050c218f99443c58f98ef281e74",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/.config.old",
+      "size": 1614,
+      "sha256": "db94d39484f9cd4c4b06c75062307af05613c99d1526a3193e09a9e7ee0cbf75",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/Makefile",
+      "size": 663,
+      "sha256": "65b917b39407b4b11dd2e17ef32c4bb29d7a290bf310018aca8e3a342290a9b5",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libbelkin_nvram.so",
+      "size": 49275,
+      "sha256": "76fdfc5e20758d9efc60341ceed510c1dfdf5283ee43f49cebd0f2169c286e53",
+      "matches": [
+        "bootstate"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libAddlInfra.so",
+      "size": 151669,
+      "sha256": "9ee50e36879ec6b3de171938c351b6a99ba8699c6b1c364c8891e71e1897e51c",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libRemoteAccess.so",
+      "size": 247759,
+      "sha256": "94001f7c7447939caca62540582da3ba51927c5ed80298d993657fd8f9f6bcb8",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libDeviceControl.so",
+      "size": 54978,
+      "sha256": "3d7981d2df7e1038425ee64abca88888edd651daed624106b40cc0d7d352239a",
+      "matches": [
+        "bootstate",
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/usr/include/itc.h",
+      "size": 4575,
+      "sha256": "63d6592e9aca3f62552cee6ea0fbe738a5524902d4c0d41b8ecf95794db00722",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/ver.txt",
+      "size": 52,
+      "sha256": "113e93bfb72596a43ef9efb8283fbfec721c5e4b7942aa16d155763c7bd12e7b",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/firmware_update.sh",
+      "size": 6160,
+      "sha256": "f16c45caf7d16cef0c94bf7f1ad35a599f1e031c09a4e7e9e5e6d2671e5ea114",
+      "matches": [
+        "bootstate",
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/go_dummy.sh",
+      "size": 440,
+      "sha256": "fd19e7330b8c33dedc1597795671452f95e4f7678556204640cc18296f5b572d",
+      "matches": [
+        "bootstate"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/wemoApp",
+      "size": 20919,
+      "sha256": "b74e13974f9e4604c4d02d0cffc026d4e8ff3fc75e95856dfcb169340a6f124a",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/update_test.sh",
+      "size": 1098,
+      "sha256": "1ffa158bedd705a1272f5fb9a941fab71700954ff80793e6be947350ca3a758f",
+      "matches": [
+        "bootstate",
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/package/belkin/NatClient/Makefile",
+      "size": 1766,
+      "sha256": "955cf9f6f267c4a33b9b563c5955e0e9d446e9d319f9d3b000bb998aa019c3f8",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/tools/belkin/image.mk",
+      "size": 3833,
+      "sha256": "59dad4724d44456f0ac3676980f9f5d4b620d0712d73d49b3ec3daad3c594140",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/base-files/etc/init.d/boot",
+      "size": 7387,
+      "sha256": "6162678ab88002f1746dd4ba8a6f0f0f9b89f46e4eb93882a2959dca1a09486f",
+      "matches": [
+        "bootstate",
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/base-files/sbin/flashFW.sh",
+      "size": 1095,
+      "sha256": "e948331b27901b5f55c60706586e258bf8960a532138bca31261fbe01f4a67bf",
+      "matches": [
+        "bootstate",
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/image/Makefile",
+      "size": 44767,
+      "sha256": "182d59340716c6b5a04c857f2e1cfd45718f5752d6a637718ca6f4b9f652a828",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoDimmer/base-files/etc/init.d/boot",
+      "size": 9304,
+      "sha256": "310474a8de3bc2493c72b2e9de950f21ae97ffbc3b53b2c435d6eafd65a323e8",
+      "matches": [
+        "bootstate",
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV3/base-files/etc/init.d/boot",
+      "size": 9616,
+      "sha256": "1bd01fb63b0e99d5a1523774fba18304272580511c81daae35db349ef117a241",
+      "matches": [
+        "bootstate",
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoLightV2/base-files/etc/init.d/boot",
+      "size": 10662,
+      "sha256": "403450b8ac809d8a77cfe785ed8f9282b0f2a735de433bbc5d7e95cbc7e3d883",
+      "matches": [
+        "bootstate",
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/profiles/01-wemo.mk",
+      "size": 3624,
+      "sha256": "448e87df9f8066645e255fe5ceb9bac48c026951cc965dae891ecb0ecf298c07",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+      "size": 9667,
+      "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+      "matches": [
+        "bootstate",
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/dl/u-boot-2014.10.tar.bz2!/u-boot-2014.10/board/samsung/common/board.c",
+      "size": 7722,
+      "sha256": "44dd3b2305705dfeee19d8acaae7c280c5fcc363d45e56c4ef019c9800f928ca",
+      "matches": [
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/dl/u-boot-2014.10.tar.bz2!/u-boot-2014.10/board/samsung/common/misc.c",
+      "size": 8636,
+      "sha256": "386c7d0480e207dc7b1743c505c4fa126ab31e65f66af4465d970a53cf425ef9",
+      "matches": [
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/dl/u-boot-2014.10.tar.bz2!/u-boot-2014.10/include/bootstage.h",
+      "size": 11314,
+      "sha256": "c0ef20da1dc96688e7edf88d0e788f777d577b96b8b1ec5e4280879b3ecf16fa",
+      "matches": [
+        "bootstate"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/dl/u-boot-2014.10.tar.bz2!/u-boot-2014.10/include/samsung/misc.h",
+      "size": 752,
+      "sha256": "7286133f2b78ed994adef6b8b8d1684fe25ee217f0a43fd114ec0e6efffae30b",
+      "matches": [
+        "check_boot"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/configs/snsv2",
+      "size": 1109,
+      "sha256": "03e14d4112ef964cc376e8a78cba20ce8d17b8d896fc4cac52250f1f2621b767",
+      "matches": [
+        "SNSV2"
+      ]
+    },
+    {
+      "path": "wemo_gpl_snsv2_package-11420/configs/snsv2-x86",
+      "size": 1022,
+      "sha256": "0d35692d555f43a9a067e85f3448e89c6f85ce9f2f3339da2d3673535ad83307",
+      "matches": [
+        "SNSV2"
+      ]
+    }
+  ],
+  "bundled_uboot_sha256": "d3b132a7a9b3f3182b7aad71c2dfbd4fc15bea83e12c76134eb3ffefc07d1c71"
+}

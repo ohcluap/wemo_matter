@@ -1,0 +1,18 @@
+[
+  {
+    "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/lib/preinit/99_10_failsafe_login",
+    "text": "#!/bin/sh\n# Copyright (C) 2006 OpenWrt.org\n# Copyright (C) 2010 Vertical Communications\n\nfailsafe_netlogin () {\n\ttelnetd -l /bin/login.sh <> /dev/null 2>&1\n}\n\nfailsafe_shell() {\n\tlock /tmp/.failsafe\n\tash --login\n\techo \"Please reboot system when done with failsafe network logins\"\n}\n\nboot_hook_add failsafe failsafe_netlogin\nboot_hook_add failsafe failsafe_shell\n"
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/profiles/01-wemo.mk",
+    "text": {
+      "omitted_from_publication": "Full extracted source retained locally; consult original vendor archive and recorded member path.",
+      "sha256_utf8": "448e87df9f8066645e255fe5ceb9bac48c026951cc965dae891ecb0ecf298c07",
+      "bytes_utf8": 3624
+    }
+  },
+  {
+    "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/rc.button/failsafe",
+    "text": "#!/bin/sh\n\necho \"disabled to prevent failsafe caused by button\" > /dev/null\n# [ \"${TYPE}\" = \"switch\" ] || echo ${BUTTON} > /tmp/failsafe_button\n\nreturn 0\n"
+  }
+]

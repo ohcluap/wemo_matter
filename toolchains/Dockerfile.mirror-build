@@ -1,0 +1,4 @@
+FROM wemo-matter-app-builder:bookworm
+RUN apt-get update && apt-get install -y --no-install-recommends zstd squashfs-tools qemu-user && rm -rf /var/lib/apt/lists/*
+ENV ZAP_INSTALL_PATH=/sdk/.zap
+ENV STAGING_DIR=/opt/staging/toolchain-mipsel_24kc_gcc-13.3.0_musl
