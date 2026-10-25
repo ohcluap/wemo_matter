@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-25T02:35:33Z",
+  "firmware": "WeMo_WW_2.00.11565.PVT-OWRT-SNSV2",
+  "setup_sha256": "6ad37c8b162410f2d16190dbc484b598d67da863384737c09df4ad4831ed2d60",
+  "request": "One TFTP RRQ /etc/ver.txt octet to UDP 69, no options or retries",
+  "uploads": 0,
+  "device_commands": 0,
+  "firmware_or_bootloader_read": false,
+  "result": "No TFTP response within four seconds",
+  "limits": "No reply cannot distinguish absent service from filtering. No bootloader or recovery claim."
+}

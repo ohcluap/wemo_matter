@@ -1,0 +1,109 @@
+{
+  "scope": "Offline 11420 SNSV2 package, board base files, shared base-files and snsv2 configs; regular members under 3 MB",
+  "hits": [
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/lib/functions.sh",
+      "sha256": "974bafbb226d2a879ccd282be6fb6ea7d8268aec48d681d1b4afe94f533bff54",
+      "strings": [
+        "local PART=\"$(grep \"\\\"$1\\\"\" /proc/mtd | awk -F: '{print $1}')\"",
+        "local PREFIX=/dev/mtdblock",
+        "[ -d /dev/mtdblock ] && PREFIX=/dev/mtdblock/"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/lib/functions/system.sh",
+      "sha256": "4ff9233d8765ef3024818d746d08563e4a810b82669946e834c8d866d88b0cda",
+      "strings": [
+        "local PREFIX=/dev/mtd",
+        "[ -d /dev/mtd ] && PREFIX=/dev/mtd/",
+        "done < /proc/mtd"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/base-files/files/lib/upgrade/common.sh",
+      "sha256": "089bc9fdc794fc22a3d453830477ebbec4c84ae6d95c0421dac7326d0384904d",
+      "strings": [
+        "if grep rootfs_data /proc/mtd >/dev/null; then"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libhkstore.so",
+      "sha256": "6f28bccc3443677d336bdc95fc539ce06b700f6d8e5e6448f3cdfb7635ef2220",
+      "strings": [
+        "/proc/mtd",
+        "fopen(/proc/mtd) failed: %s"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/lib/libbelkin_nvram.so",
+      "sha256": "76fdfc5e20758d9efc60341ceed510c1dfdf5283ee43f49cebd0f2169c286e53",
+      "strings": [
+        "/proc/mtd",
+        "fopen(/proc/mtd) failed: %s"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/fw_env.config",
+      "sha256": "812f400f03edb6ab671bb0b2ad0414192349c619aaad7d78310241e14894fc1b",
+      "strings": [
+        "/dev/mtd10 0x0 0x1000 00010000"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/nvram.config",
+      "sha256": "2cb15a9a9428acd004564141eb7481e93a6cf1fe2d2508c4119e1df3f1c377ec",
+      "strings": [
+        "/dev/mtd6 0x0 00010000 00010000"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/etc/homekitstore.config",
+      "sha256": "0307f55eb9243c6d889d6602cd9d8d9f8b3baa4c6c2ce9f34206f349506f8243",
+      "strings": [
+        "/dev/mtd7 0x0 00010000 00010000"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/nvram",
+      "sha256": "790e69c562b81537eb1aa35bba4afb13547a4509d55c57281e08a1dff615551a",
+      "strings": [
+        "/proc/mtd",
+        "fopen(/proc/mtd) failed: %s"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/package/belkin/WeMo_SNSV2/files/sbin/homekitcli",
+      "sha256": "4650f772b09396c0e68e8c64b0328b5198f6064903c8a1c37b750dbe88bba437",
+      "strings": [
+        "/proc/mtd",
+        "fopen(/proc/mtd) failed: %s"
+      ]
+    },
+    {
+      "member": "wemo_gpl_snsv2_package-11420/target/linux/ramips/mt7628/WemoSNSV2/base-files/etc/init.d/boot",
+      "sha256": "38cd2fffb833afb605a73b29a33237cb3fdf9269c39c07d5b5fb3b9773dae018",
+      "strings": [
+        "   set -- $(grep -i Belkin_settings /proc/mtd | sed s/:// | sed s/mtd//)",
+        "      mount -t jffs2 /dev/mtdblock${belkin_part} /tmp/Belkin_settings",
+        "   # update /etc/fw_env.config based on /proc/mtd entry",
+        "   set -- $(grep -i Uboot_env /proc/mtd | cut -f1 -d:)",
+        "   # update /etc/nvram.config based on /proc/mtd entry",
+        "   set -- $(grep -i nvram /proc/mtd | cut -f1 -d:)",
+        "   # update /etc/homekitstore.config based on /proc/mtd entry",
+        "   set -- $(grep -i User_Factory /proc/mtd | cut -f1 -d:)",
+        "   # update /etc/hap.config based on /proc/mtd entry",
+        "   set -- $(grep -i homekit /proc/mtd | cut -f1 -d:)",
+        "   factory_sn=`dd if=/dev/mtdblock7 bs=1 count=14`",
+        "       factory_tc=`dd if=/dev/mtdblock7 bs=1 count=2 skip=16`"
+      ]
+    }
+  ],
+  "tftp_followup": {
+    "source": "BusyBox 1.23.2 networking/tftp.c in vendor archive",
+    "source_sha256": "bf8939e8e5175f3ea4c2abcb0058210fc540a1326dd285ad1d650e72a4fc2a2a",
+    "read_semantics": "RRQ maps to server-send / CMD_PUT; local file opened O_RDONLY. WRQ is a separate write path and was not sent.",
+    "startup": "No tftpd/inetd launch string found in scoped package and base-file scan; enabled build options alone do not imply a listener.",
+    "live_result": "research/stock-tftp-read-check.json",
+    "limits": "No response does not distinguish service absence from filtering; no bootloader or flash bytes acquired."
+  }
+}
